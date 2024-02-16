@@ -1,0 +1,82 @@
+.pricing_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 370px;
+  height: 600px;
+  padding: 1.5rem;
+  background: var(--background);
+  border-radius: 16px;
+}
+
+.pricing_card_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.text_container h2 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.text_container h1 {
+  margin-top: 2.5rem;
+  color: #fff;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.text_container p {
+  margin-top: 2.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.perks_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  margin-bottom: auto;
+  width: 100%;
+  height: fit-content;
+  
+}
+
+.button_container {
+  margin-top: auto;
+
+}
+
+.button_cards {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_cards:hover {
+  background-color: #000;
+  color: #fff;
+
+}
+
+.after_label {
+  margin-left: 0.5rem;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 20px;
+}
