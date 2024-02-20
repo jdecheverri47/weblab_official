@@ -60,7 +60,7 @@ function BenefitSection() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from(".title_card", {
-        y: 105,
+        y: 120,
         ease: "power4.out",
         duration: 2.5,
         skewY: 7,

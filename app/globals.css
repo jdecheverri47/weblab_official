@@ -905,7 +905,7 @@ textarea {
 }
 
 .pricing_buttons button:nth-child(1):hover ~ .circlespan {
-  left: 17%;
+  left: 18.7%;
 }
 
 .pricing_buttons button:nth-child(2):hover ~ .circlespan {
@@ -913,7 +913,7 @@ textarea {
 }
 
 .pricing_buttons button:nth-child(3):hover ~ .circlespan {
-  left: 83%;
+  left: 81.5%;
 }
 
 .btn1 {
@@ -961,7 +961,7 @@ textarea {
   }
 
   .pricing_buttons .circlespan {
-    width: 124px;
+    width: 128px;
   }
 
   .pricing_buttons {

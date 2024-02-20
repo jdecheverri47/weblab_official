@@ -1,5 +1,6 @@
 import Header from "./components/ui/Header";
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <body className={GTWalsheimPro.className + "overflow-x-hidden"}>
         <Header />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
