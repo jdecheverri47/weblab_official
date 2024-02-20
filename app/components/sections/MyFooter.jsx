@@ -1,5 +1,7 @@
 import Image from "next/image";
 import logo from "/public/images/logo.png";
+import fbLogo from "/public/images/logotipo-circular-de-facebook.png";
+import instagram from "/public/images/instagram.png";
 
 
 function MyFooter() {
@@ -20,21 +22,20 @@ function MyFooter() {
             <h2>Terms and Conditions</h2>
           </div>
           <div className="copyright">
-            <h2>©2023 WebLabs, LLC. All rights reserved.</h2>
+            <h2>©2023 WebLabs, LLC. <strong>All rights reserved.</strong> </h2>
           </div>
         </div>
         <div className="right_container">
-          <div>
+          <div className="contact_weblab_info">
             <h2>Contact Us</h2>
-            <h2>email</h2>
-            <h2>phone</h2>
+            <h2>sales@weblabcreative.com</h2>
+            <h2>+1 2878881111</h2>
           </div>
           <div className="social_media">
-            <h2>Social Media</h2>
+            <h2 className="hidden lg:block" >Social Media</h2>
             <div className="logos">
-              <h2>facebook</h2>
-              <h2>instagram</h2>
-              <h2>twitter</h2>
+              <Image src={fbLogo} alt="" priority className="w-[2rem]" />
+              <Image src={instagram} alt="" priority className="w-[2rem]" />
             </div>
           </div>
         </div>

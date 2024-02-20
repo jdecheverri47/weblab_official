@@ -124,7 +124,7 @@ function ServicesSection() {
           <div className="services_container_card">
             <div className="services_container_card_text">
               <h2>01</h2>
-              <div className="services_title_container">
+              <div className="services_title_container md:h-[6rem] 2xl:h-fit">
                 <h1>Websites Development</h1>
               </div>
               <p>
@@ -137,7 +137,7 @@ function ServicesSection() {
           <div className="services_container_card">
             <div className="services_container_card_text">
               <h2>02</h2>
-              <div className="services_title_container">
+              <div className="services_title_container md:h-[6rem] 2xl:h-fit">
                 <h1>Web App Development</h1>
               </div>
               <p>
@@ -151,7 +151,7 @@ function ServicesSection() {
           <div className="services_container_card">
             <div className="services_container_card_text">
               <h2>03</h2>
-              <div className="services_title_container">
+              <div className="services_title_container md:h-[6rem] 2xl:h-fit">
                 <h1>Mobile Development</h1>
               </div>
               <p>

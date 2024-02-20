@@ -31,7 +31,7 @@ const GTWalsheimPro = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={GTWalsheimPro.className}>
+      <body className={GTWalsheimPro.className + "overflow-x-hidden"}>
         <Header />
         {children}
       </body>

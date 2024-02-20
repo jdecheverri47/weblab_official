@@ -78,13 +78,11 @@ function ContactSection() {
 
   return (
     <section id="Contact">
-      <Circle color="purple" top="-20%" zIndex="1" left="0" />
+      <Circle color="purple" top="-20%" zIndex="0" left="0" />
       <div className="contact_container">
         <div className="contact_card">
           <div className="card_text_container">
-            <div>
-              <p>We are just one message away</p>
-            </div>
+            
             <div className="contact_title">
               <h1>Our experts are</h1>
             </div>
@@ -98,6 +96,9 @@ function ContactSection() {
               >
                 Ready for you!
               </h1>
+            </div>
+            <div>
+              <p>We are just one message away</p>
             </div>
           </div>
           <div className="card_form_container">
@@ -170,6 +171,7 @@ function ContactSection() {
             alignItems: "center",
             width: "100%",
           }}
+          className="hook_end_container"
         >
           <h1
             style={{

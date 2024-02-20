@@ -99,10 +99,12 @@ function SecondHook() {
 
   
   return (
-    <section id="SecondHook" className='relative'>
+    <section id="SecondHook">
       <Circle color="orange" left="0" bottom="80%" zIndex="0" />
       <Circle color="blue" bottom="50%" zIndex="0" right="-10%" />
-      <div className="second_hook_container">
+      {/* <Circle color="purple" bottom="0" zIndex="-1" /> */}
+
+      <div className="second_hook_container flex justify-center items-center">
         <div className='second_hook_title_container'>
           <h1>Do you want to upscale <br/> your competitors?</h1>
         </div>
