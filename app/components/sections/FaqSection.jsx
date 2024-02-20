@@ -5,7 +5,7 @@ import ButtonWeb from "../ui/ButtonWeb";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,25 +15,31 @@ function FaqSection() {
       question:
         "What is the difference between the simple and the dynamic animations?",
       answer:
-        "Simple animations are animations that are created using only CSS. Dynamic animations are animations that are created using CSS and JavaScript.",
+        "Simple animations are created using only CSS. Dynamic animations are created using CSS and JavaScript. We do use the best technologies in the market to create the most stunning animations for your website.",
     },
     {
       question: "Do you do refunds?",
       answer:
-        "Simple animations are animations that are created using only CSS. Dynamic animations are animations that are created using CSS and JavaScript.",
+        "Absolutely yes! However, due to the nature of our business, we do not offer refunds for the work that has been done. We do offer refunds for the work that's missing.",
     },
     {
       question: "How long will you take on deliver a project?",
       answer:
-        "Simple animations are animations that are created using only CSS. Dynamic animations are animations that are created using CSS and JavaScript.",
+        "It depends on the complexity of the project. We will give you an estimated time of delivery once we have all the needed details.",
     },
     {
       question:
         "Are you willing to negotiate the price of a project and the payment format?",
       answer:
-        "Simple animations are animations that are created using only CSS. Dynamic animations are animations that are created using CSS and JavaScript.",
+        "In Weblabs we are always open to negotiate the price and the payment format. We want to make sure that every client has the best deal they can get based on the project they want to develop.",
     },
   ];
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  function toggleAccordion(index) {
+    setActiveIndex(index === activeIndex ? null : index)
+  }
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -114,6 +120,7 @@ function FaqSection() {
           </div>
           <div style={{ marginTop: "1rem" }} className="button_container_faq">
             <ButtonWeb
+              href="#Contact"
               text="Contact Us"
               color="white"
               backgroundColor="black"
@@ -126,8 +133,11 @@ function FaqSection() {
           {faqData.map((faq, index) => (
             <FaqAccordion
               key={index}
+              index={index}
               question={faq.question}
               answer={faq.answer}
+              isActive={activeIndex}
+              handleClick={() => toggleAccordion(index)}
             />
           ))}
         </div>

@@ -1,24 +1,17 @@
 "use client"
 
 import '../../styles/accordion.css'
-import { useState } from 'react'
+import { useEffect } from 'react'
 
-function FaqAccordion(props) {
-
-  const [active, setActive] = useState(false)
-
-  const handleClick = () => {
-    setActive(!active)
-    console.log(active)
-  }
+function FaqAccordion({handleClick, isActive, index, question, answer}) {
 
   return (
-    <div className={`faq ${active ? 'active' : ''}`} onClick={handleClick} >
+    <div className={`faq ${isActive === index ? 'active' : ''}`} onClick={handleClick} >
       <div className='question'>
-        <h1>{props.question}</h1>
+        <h1>{question}</h1>
       </div>
       <div className='answer'>
-        <p>Simple animations are animations that are created using only CSS. Dynamic animations are animations that are created using CSS and JavaScript.</p>
+        <p>{answer}</p>
       </div>
     </div>
   )

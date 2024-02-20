@@ -11,7 +11,7 @@ function ButtonWeb(props) {
   const gradients = [
     "linear-gradient(to right, #f9d423 0%, #ff4e50 100%)",
     "linear-gradient(to right, #0acffe 0%, #495aff 100%)",
-    "linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%)"
+    "linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%)",
   ];
 
   const handleMouseMove = (e) => {
@@ -29,29 +29,30 @@ function ButtonWeb(props) {
     setBackground(randomGradient);
   };
 
-  
   return (
-    <button
-      ref={buttonRef}
-      onMouseEnter={changeBackground}
-      onMouseMove={handleMouseMove}
-      onClick={props.onClick}
-      className={styles.contact_button}
-      style={{
-        "--background": background,
-        "--x": `${mousePosition.x}px`,
-        "--y": `${mousePosition.y}px`,
-        color: props.color,
-        backgroundColor: props.backgroundColor,
-        border: `${props.borderParams}`,
-        width: props.width,
-        height: props.height,
-        margin: props.margin,
-      }}
-    >
-      <span className={styles.button_text}>{props.text}</span>
-      {props.children}
-    </button>
+    <a href={props.href}>
+      <button
+        ref={buttonRef}
+        onMouseEnter={changeBackground}
+        onMouseMove={handleMouseMove}
+        onClick={props.onClick}
+        className={styles.contact_button}
+        style={{
+          "--background": background,
+          "--x": `${mousePosition.x}px`,
+          "--y": `${mousePosition.y}px`,
+          color: props.color,
+          backgroundColor: props.backgroundColor,
+          border: `${props.borderParams}`,
+          width: props.width,
+          height: props.height,
+          margin: props.margin,
+        }}
+      >
+        <span className={styles.button_text}>{props.text}</span>
+        {props.children}
+      </button>
+    </a>
   );
 }
 

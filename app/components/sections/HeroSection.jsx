@@ -84,6 +84,7 @@ function HeroSection() {
         className="button_container"
       >
         <ButtonWeb
+          href="#Pricing"
           text="See plans"
           color="black"
           backgroundColor="white"
@@ -93,6 +94,7 @@ function HeroSection() {
         />
 
         <ButtonWeb
+        href="#Contact"
           text="Contact us"
           color="white"
           backgroundColor="black"

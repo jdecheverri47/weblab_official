@@ -22,6 +22,7 @@ function Header() {
         </ul>
         <div>
           <ButtonWeb
+            href="#Contact"
             text="Contact Us"
             color="white"
             backgroundColor="black"

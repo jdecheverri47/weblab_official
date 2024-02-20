@@ -137,6 +137,7 @@ function BenefitSection() {
               }}
             >
               <ButtonWeb
+                href="#Contact"
                 text="Contact us"
                 color="white"
                 backgroundColor="black"
