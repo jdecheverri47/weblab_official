@@ -99,6 +99,20 @@ function BenefitSection() {
           // markers: true,
         },
       });
+
+      gsap.from(".benefit_icon", {
+        opacity: 0,
+        ease: "power4.out",
+        delay: 1,
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: "#Benefits",
+          start: "top center",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+
       gsap.from(".button_container_benefits", {
         opacity: 0,
         ease: "power4.out",
@@ -137,7 +151,7 @@ function BenefitSection() {
       <div className="benefits_container">
         {currentItem && (
           <div className="container info" key={currentItem.id}>
-            <div className="w-[4.5rem] h-[4.5rem] rounded-full bg-black flex items-center justify-center">
+            <div className="w-[4.5rem] h-[4.5rem] rounded-full bg-black flex items-center justify-center benefit_icon">
               <Image alt="" src={currentItem.icon} className="w-[2.8rem]" priority />
             </div>
             <div className="title_container_benefits">
