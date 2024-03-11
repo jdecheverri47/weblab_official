@@ -138,7 +138,7 @@ function BenefitSection() {
         {currentItem && (
           <div className="container info" key={currentItem.id}>
             <div className="w-[4.5rem] h-[4.5rem] rounded-full bg-black flex items-center justify-center">
-              <Image alt="" src={currentItem.icon} className="w-[2.8rem]" />
+              <Image alt="" src={currentItem.icon} className="w-[2.8rem]" priority />
             </div>
             <div className="title_container_benefits">
               <h1 className="title_card">{currentItem.title}</h1>
