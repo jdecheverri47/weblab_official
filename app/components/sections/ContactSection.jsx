@@ -104,53 +104,35 @@ function ContactSection() {
           <div className="card_form_container">
             <form
               style={{
-                marginTop: "2rem",
+                marginTop: "3.5rem",
               }}
             >
               <div className="form_group">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" />
+                <input type="text" id="name" name="name" placeholder="Name"/>
               </div>
               <div
                 className="form_group"
                 style={{
-                  marginTop: "2rem",
+                  marginTop: "3.5rem",
                 }}
               >
-                <label
-                  htmlFor="company"
-                  style={{
-                    paddingBottom: "3px",
-                  }}
-                >
-                  Company
-                </label>
-                <input type="text" id="company" name="company" />
+                <input type="text" id="company" name="company" placeholder="Company" />
               </div>
               <div
                 className="form_group"
                 style={{
-                  marginTop: "2rem",
+                  marginTop: "3.5rem",
                 }}
               >
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" />
+                <input type="email" id="email" name="email" placeholder="Email"/>
               </div>
               <div
                 className="form_group"
                 style={{
-                  marginTop: "2rem",
+                  marginTop: "3.5rem",
                 }}
               >
-                <label
-                  htmlFor="message"
-                  style={{
-                    paddingBottom: "3px",
-                  }}
-                >
-                  Message
-                </label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" placeholder="Message"></textarea>
               </div>
               <ButtonWeb
                 text="Send Now!"

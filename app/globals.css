@@ -89,21 +89,24 @@ ul li {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  height: 10rem;
+  height: 9rem;
 }
 
 .title {
   text-align: center;
   line-height: 103.622%; /* 176.158px */
-  letter-spacing: -11.9px;
+  letter-spacing: -.34125rem;
   font-style: normal;
 }
 
 .title.hero {
-  font-size: 150px;
+  font-size: 130px;
   font-weight: 500;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subtitle_container {
@@ -113,7 +116,7 @@ ul li {
 
 .subtitle {
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
   letter-spacing: -1px;
   letter-spacing: -2.52px;
@@ -153,7 +156,7 @@ ul li {
 .blue {
   background: linear-gradient(
     90deg,
-    rgba(79, 172, 254, 0.7) 0%,
+    #4facfeb3 0%,
     rgba(0, 242, 254, 0.7) 100%
   );
   animation: liquid 6s ease-in-out infinite;
@@ -162,7 +165,7 @@ ul li {
 .purple {
   background: linear-gradient(
     90deg,
-    rgba(196, 113, 245, 0.7) 0%,
+    #c471f5b3 0%,
     rgba(250, 113, 205, 0.7) 100%
   );
   animation: liquid 6s ease-in-out infinite;
@@ -216,8 +219,6 @@ ul li {
   padding: 6rem 0;
   background-color: #fff;
   position: relative;
-  border-top-right-radius: 100px;
-  border-top-left-radius: 100px;
 }
 
 .title_container_hook {
@@ -227,11 +228,11 @@ ul li {
 
 .title_hook {
   text-align: center;
-  font-size: 70px;
+  font-size: 75px;
   font-style: normal;
   font-weight: 400;
   line-height: 103.622%; /* 99.478px */
-  letter-spacing: -6.72px;
+  letter-spacing: -.24125rem;
 }
 
 .description {
@@ -240,19 +241,19 @@ ul li {
   text-align: center;
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 103.622%; /* 49.739px */
   letter-spacing: -1.36px;
 }
 
 .left {
   left: 5rem;
-  bottom: 10%;
+  bottom: 0%;
 }
 
 .right {
   right: 5rem;
-  bottom: 5%;
+  bottom: -20%;
 }
 
 @media screen and (max-width: 768px) {
@@ -312,7 +313,7 @@ ul li {
   border-radius: 25px;
   width: 50vw;
   height: 80vh;
-  padding: 4.5rem;
+  padding: 2rem;
 }
 
 .container.info {
@@ -330,7 +331,7 @@ ul li {
   align-items: flex-start;
   gap: 1rem;
   width: 100%;
-  max-height: 5.5rem;
+  max-height: fit-content;
   overflow: hidden;
 }
 
@@ -347,7 +348,7 @@ ul li {
   padding: 10px;
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 42px;
   letter-spacing: -1.36px;
   max-width: 600px;
@@ -355,7 +356,7 @@ ul li {
 
 .description_container_benefits {
   overflow: hidden;
-  height: 10rem;
+  height: fit-content;
 }
 
 .image_cover {
@@ -494,7 +495,7 @@ ul li {
 .services_container_cards p {
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 30px;
   letter-spacing: -1.36px;
   max-width: 500px;
@@ -682,7 +683,7 @@ ul li {
   font-style: normal;
   font-weight: 500;
   line-height: 103.622%;
-  letter-spacing: -7.7px;
+  letter-spacing: -.34125rem;
   padding: 3px 0;
 }
 
@@ -692,10 +693,6 @@ ul li {
   font-weight: 400;
   line-height: 42px;
   letter-spacing: -2.36px;
-}
-
-.card_form_container {
-  margin-left: 4rem;
 }
 
 .text_blue {
@@ -720,10 +717,11 @@ label {
   font-weight: 400;
   line-height: 30px;
   letter-spacing: -1.36px;
+  color: #b2b2b2;
 }
 
 input {
-  width: 30rem;
+  width: 40rem;
   height: 100%;
   border: none;
   font-size: 32px;
@@ -735,7 +733,7 @@ input {
 }
 
 textarea {
-  width: 30rem;
+  width: 40rem;
   height: 100%;
   border: none;
   font-size: 32px;
@@ -910,7 +908,7 @@ textarea {
 }
 
 .pricing_buttons button:nth-child(1):hover ~ .circlespan {
-  left: 18.7%;
+  left: 15%;
 }
 
 .pricing_buttons button:nth-child(2):hover ~ .circlespan {
@@ -918,7 +916,7 @@ textarea {
 }
 
 .pricing_buttons button:nth-child(3):hover ~ .circlespan {
-  left: 81.5%;
+  left: 85%;
 }
 
 .btn1 {

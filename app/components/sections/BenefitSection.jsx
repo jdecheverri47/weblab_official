@@ -10,6 +10,14 @@ import Image from "next/image";
 import ButtonWeb from "../ui/ButtonWeb";
 import DesignImage from "/public/images/web_app.png";
 import handsImage from "/public/images/shaking_hands.jpg";
+import techSupport from "/public/images/support_team.jpg";
+import platform from "/public/images/platform.jpg";
+
+import heart from "/public/images/amor.png";
+import money from "/public/images/gran-venta.png";
+import rocket from "/public/images/puesta-en-marcha.png";
+import settings from "/public/images/ajuste.png";
+
 import LeftArrow from "../ui/LeftArrow";
 import RightArrow from "../ui/RightArrow";
 
@@ -31,6 +39,7 @@ function BenefitSection() {
       description:
         "We care the most about deliver top products with great aesthetics combined with functionalities",
       image: DesignImage,
+      icon: heart,
     },
     {
       id: 2,
@@ -38,20 +47,23 @@ function BenefitSection() {
       description:
         "We care the most about deliver top products with great aesthetics combined with functionalities",
       image: handsImage,
+      icon: money,
     },
     {
       id: 3,
       title: "Uninterrupted Support and Maintenance",
       description:
         "We care the most about deliver top products with great aesthetics combined with functionalities",
-      image: DesignImage,
+      image: techSupport,
+      icon: settings
     },
     {
       id: 4,
       title: "Any Platform, Every Possibility",
       description:
         "We care the most about deliver top products with great aesthetics combined with functionalities",
-      image: DesignImage,
+      image: platform,
+      icon: rocket,
     },
   ];
 
@@ -125,13 +137,17 @@ function BenefitSection() {
       <div className="benefits_container">
         {currentItem && (
           <div className="container info" key={currentItem.id}>
+            <div className="w-[4.5rem] h-[4.5rem] rounded-full bg-black flex items-center justify-center">
+              <Image alt="" src={currentItem.icon} className="w-[2.8rem]" />
+            </div>
             <div className="title_container_benefits">
               <h1 className="title_card">{currentItem.title}</h1>
             </div>
             <div className="description_container_benefits">
               <p className="description_benefits">{currentItem.description}</p>
             </div>
-            <div className="button_container_benefits"
+            <div
+              className="button_container_benefits"
               style={{
                 padding: "10px",
               }}
@@ -174,8 +190,8 @@ function BenefitSection() {
             <ButtonWeb
               color="white"
               backgroundColor="black"
-              width="6rem"
-              height="3rem"
+              width="5.5rem"
+              height="2.4rem"
               onClick={prevIndex}
             >
               <div style={{ position: "absolute", zIndex: "2" }}>
@@ -185,8 +201,8 @@ function BenefitSection() {
             <ButtonWeb
               color="white"
               backgroundColor="black"
-              width="6rem"
-              height="3rem"
+              width="5.5rem"
+              height="2.4rem"
               margin="0 0 0 1rem"
               onClick={nextIndex}
             >

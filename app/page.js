@@ -20,7 +20,7 @@ export default function Home() {
       <ContactSection />
       <PricingSection />
       <FaqSection />
-      <MyFooter />
+      <MyFooter /> 
     </main>
   );
 }

@@ -106,8 +106,9 @@ function ServicesSection() {
         duration: 4,
       }, 0);
 
-      return () => ctx.revert();
     });
+    return () => ctx.revert();
+
   }, []);
   return (
     <section id="Services">

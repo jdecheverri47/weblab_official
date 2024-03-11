@@ -36,12 +36,12 @@ function HookSection() {
       tl.fromTo(
         ".title_container_hook",
         {
-          yPercent: -10,
+          yPercent: 0,
           ease: "none",
           duration: 1,
         },
         {
-          yPercent: 45,
+          yPercent: 40,
           ease: "none",
           duration: 1,
         },
@@ -52,14 +52,14 @@ function HookSection() {
         ".description.left",
         {
           opacity: 0,
-          duration: 0.5,
+          duration: 0.3,
         },
         0.5
       );
       tl.to(
         ".description.left",
         {
-          yPercent: -100,
+          yPercent: -140,
           ease: "none",
           duration: 1,
         },
@@ -70,7 +70,7 @@ function HookSection() {
         ".description.right",
         {
           opacity: 0,
-          duration: 0.5,
+          duration: 0.3,
         },
         0.5
       );
@@ -78,7 +78,7 @@ function HookSection() {
       tl.to(
         ".description.right",
         {
-          yPercent: -100,
+          yPercent: -140,
           ease: "none",
           duration: 1,
         },
