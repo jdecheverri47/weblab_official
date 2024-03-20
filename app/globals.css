@@ -10,7 +10,6 @@ p {
   font-family: "Inter", sans-serif;
 }
 
-
 /* Navbar styles */
 
 header {
@@ -22,13 +21,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(10px);
 }
 
 nav {
   display: flex;
   align-items: center;
   padding: 1rem 6rem;
-  background-color: #fff;
   width: 100%;
   height: fit-content;
 }
@@ -89,10 +88,11 @@ ul li {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  height: 9rem;
+  height: 9.1rem;
 }
 
 .title {
+  opacity: 0;
   text-align: center;
   line-height: 103.622%; /* 176.158px */
   letter-spacing: -.34125rem;
@@ -110,11 +110,13 @@ ul li {
 }
 
 .subtitle_container {
+  position: relative;
   overflow: hidden;
   height: 3rem;
 }
 
 .subtitle {
+  opacity: 0;
   font-size: 32px;
   font-weight: 300;
   text-align: center;
@@ -125,7 +127,7 @@ ul li {
 .orange {
   background: linear-gradient(
     149deg,
-    rgba(249, 212, 35, 0.7) 30.69%,
+    rgba(249, 203, 35, 0.848) 30.69%,
     rgba(255, 78, 80, 0.7) 69.42%
   );
   animation: liquid 6s ease-in-out infinite;
@@ -156,7 +158,7 @@ ul li {
 .blue {
   background: linear-gradient(
     90deg,
-    #4facfeb3 0%,
+    rgba(79, 172, 254, 0.702) 0%,
     rgba(0, 242, 254, 0.7) 100%
   );
   animation: liquid 6s ease-in-out infinite;
@@ -165,7 +167,7 @@ ul li {
 .purple {
   background: linear-gradient(
     90deg,
-    #c471f5b3 0%,
+    rgba(196, 112, 245, 0.702) 0%,
     rgba(250, 113, 205, 0.7) 100%
   );
   animation: liquid 6s ease-in-out infinite;
@@ -908,7 +910,7 @@ textarea {
 }
 
 .pricing_buttons button:nth-child(1):hover ~ .circlespan {
-  left: 15%;
+  left: 14%;
 }
 
 .pricing_buttons button:nth-child(2):hover ~ .circlespan {
@@ -916,7 +918,7 @@ textarea {
 }
 
 .pricing_buttons button:nth-child(3):hover ~ .circlespan {
-  left: 85%;
+  left: 86%;
 }
 
 .btn1 {

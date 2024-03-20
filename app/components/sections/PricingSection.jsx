@@ -13,7 +13,7 @@ import CheckSvg from "../ui/CheckSvg";
 
 function PricingSection() {
   const [activeCards, setActiveCards] = useState(1);
-  const [circlePosition, setCirclePosition] = useState("15%");
+  const [circlePosition, setCirclePosition] = useState("14%");
 
   const handleCirclePosition = (position) => {
     setCirclePosition(position);
@@ -279,7 +279,7 @@ function PricingSection() {
           <button
             onClick={() => {
               setActiveCards(1);
-              handleCirclePosition("15%");
+              handleCirclePosition("14%");
             }}
           >
             Websites
@@ -295,7 +295,7 @@ function PricingSection() {
           <button
             onClick={() => {
               setActiveCards(3);
-              handleCirclePosition("85%");
+              handleCirclePosition("86%");
             }}
           >
             Mobile Apps
