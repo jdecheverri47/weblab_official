@@ -33,8 +33,8 @@ function ContactSection() {
       gsap.from(".card_text_container p", {
         opacity: 0,
         ease: "power4.out",
-        delay: 2,
-        duration: 2,
+        delay: 1,
+        duration: 1.5,
         scrollTrigger: {
           trigger: "#Contact",
           start: "top center",
@@ -47,8 +47,8 @@ function ContactSection() {
       gsap.from("form", {
         opacity: 0,
         ease: "power4.out",
-        delay: 3,
-        duration: 2,
+        delay: 2,
+        duration: 1.5,
         scrollTrigger: {
           trigger: "#Contact",
           start: "top center",

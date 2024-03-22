@@ -1,5 +1,6 @@
 "use client";
 import { useState, useLayoutEffect, useRef } from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,6 +21,8 @@ import settings from "/public/images/ajuste.png";
 
 import LeftArrow from "../ui/LeftArrow";
 import RightArrow from "../ui/RightArrow";
+
+import "../../styles/transitions.css";
 
 function BenefitSection() {
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -55,7 +58,7 @@ function BenefitSection() {
       description:
         "We ensure uninterrupted support and maintenance to keep your products running smoothly and efficiently 24/7",
       image: techSupport,
-      icon: settings
+      icon: settings,
     },
     {
       id: 4,
@@ -68,6 +71,50 @@ function BenefitSection() {
   ];
 
   const currentItem = data[carouselIndex];
+
+  const infoComponent = currentItem && (
+    <div>
+      <div className="w-[4.5rem] h-[4.5rem] rounded-full bg-black flex items-center justify-center benefit_icon my-5">
+        <Image alt="" src={currentItem.icon} className="w-[2.8rem]" priority />
+      </div>
+      <div className="title_container_benefits">
+        <h1 className="title_card">{currentItem.title}</h1>
+      </div>
+      <div className="description_container_benefits">
+        <p className="description_benefits">{currentItem.description}</p>
+      </div>
+      <div
+        className="button_container_benefits"
+        style={{
+          padding: "10px",
+        }}
+      >
+        <ButtonWeb
+          href="#Contact"
+          text="Contact us"
+          color="white"
+          backgroundColor="black"
+          width="10rem"
+          height="3.5rem"
+        />
+      </div>
+    </div>
+  );
+
+  const illustrationPerk = currentItem && (
+    <Image
+      alt=""
+      src={currentItem.image}
+      fill
+      className="image_cover"
+      priority={true}
+      style={{
+        objectFit: "cover",
+        position: "absolute",
+        zIndex: "0",
+      }}
+    />
+  );
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -149,83 +196,66 @@ function BenefitSection() {
   return (
     <section id="Benefits">
       <div className="benefits_container">
-        {currentItem && (
-          <div className="container info" key={currentItem.id}>
-            <div className="w-[4.5rem] h-[4.5rem] rounded-full bg-black flex items-center justify-center benefit_icon">
-              <Image alt="" src={currentItem.icon} className="w-[2.8rem]" priority />
-            </div>
-            <div className="title_container_benefits">
-              <h1 className="title_card">{currentItem.title}</h1>
-            </div>
-            <div className="description_container_benefits">
-              <p className="description_benefits">{currentItem.description}</p>
-            </div>
-            <div
-              className="button_container_benefits"
-              style={{
-                padding: "10px",
-              }}
+        <div className="container info">
+          <SwitchTransition>
+            <CSSTransition
+              classNames="fade"
+              key={currentItem.id}
+              addEndListener={(node, done) =>
+                addEventListener("transitionend", done, false)
+              }
             >
-              <ButtonWeb
-                href="#Contact"
-                text="Contact us"
-                color="white"
-                backgroundColor="black"
-                width="10rem"
-                height="3.5rem"
-              />
-            </div>
-          </div>
-        )}
-        <div className="container image" style={{ display: "flex" }}>
-          {currentItem && (
-            <Image
-              alt=""
-              src={currentItem.image}
-              fill
-              className="image_cover"
-              priority={true}
-              style={{
-                objectFit: "cover",
-                position: "absolute",
-                zIndex: "0",
-              }}
-            />
-          )}
-          <div
-            className="carousel_buttons"
-            style={{
-              position: "relative",
-              zIndex: "2",
-              marginTop: "auto",
-              display: "flex",
-            }}
-          >
-            <ButtonWeb
-              color="white"
-              backgroundColor="black"
-              width="5.5rem"
-              height="2.4rem"
-              onClick={prevIndex}
-            >
-              <div style={{ position: "absolute", zIndex: "2" }}>
-                <LeftArrow />
-              </div>
-            </ButtonWeb>
-            <ButtonWeb
-              color="white"
-              backgroundColor="black"
-              width="5.5rem"
-              height="2.4rem"
-              margin="0 0 0 1rem"
-              onClick={nextIndex}
-            >
-              <div style={{ position: "absolute", zIndex: "2" }}>
-                <RightArrow />
-              </div>
-            </ButtonWeb>
-          </div>
+              {infoComponent}
+            </CSSTransition>
+          </SwitchTransition>
         </div>
+        <SwitchTransition>
+          <CSSTransition
+            classNames="fade"
+            key={currentItem.id}
+            addEndListener={(node, done) =>
+              addEventListener("transitionend", done, false)
+            }
+          >
+            <div className="container image" style={{ display: "flex" }}>
+              {illustrationPerk}
+
+              <div
+                className="carousel_buttons"
+                style={{
+                  position: "relative",
+                  zIndex: "2",
+                  marginTop: "auto",
+                  display: "flex",
+                }}
+              >
+                <ButtonWeb
+                  color="white"
+                  backgroundColor="black"
+                  width="5.5rem"
+                  height="2.4rem"
+                  onClick={prevIndex}
+                >
+                  <div style={{ position: "absolute", zIndex: "2" }}>
+                    <LeftArrow />
+                  </div>
+                </ButtonWeb>
+                <ButtonWeb
+                  color="white"
+                  backgroundColor="black"
+                  width="5.5rem"
+                  height="2.4rem"
+                  margin="0 0 0 1rem"
+                  onClick={nextIndex}
+                >
+                  <div style={{ position: "absolute", zIndex: "2" }}>
+                    <RightArrow />
+                  </div>
+                </ButtonWeb>
+              </div>
+            </div>
+          </CSSTransition>
+        </SwitchTransition>
       </div>
     </section>
   );

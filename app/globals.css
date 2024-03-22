@@ -127,7 +127,7 @@ ul li {
 .orange {
   background: linear-gradient(
     149deg,
-    rgba(249, 203, 35, 0.848) 30.69%,
+    #f9cb23d8 30.69%,
     rgba(255, 78, 80, 0.7) 69.42%
   );
   animation: liquid 6s ease-in-out infinite;
