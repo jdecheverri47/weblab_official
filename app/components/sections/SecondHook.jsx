@@ -99,9 +99,9 @@ function SecondHook() {
   }, []);
 
   return (
-    <section id="SecondHook">
+    <section id="SecondHook" >
       <Circle color="orange" left="0" bottom="80%" zIndex="0" />
-      <Circle color="blue" bottom="50%" zIndex="0" right="-10%" />
+      <Circle color="blue" bottom="50%" zIndex="0" right="10%"/>
       {/* <Circle color="purple" bottom="0" zIndex="-1" /> */}
 
       <div className="second_hook_container flex justify-center items-center">

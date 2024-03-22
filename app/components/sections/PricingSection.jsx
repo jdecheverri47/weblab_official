@@ -192,6 +192,46 @@ function PricingSection() {
     ],
   };
 
+  const cardsRender = cards[activeCards].map((card) => {
+    return (
+      <div key={card.id} className="cards_pricing_anim">
+        <PricingCard
+          keyNumber={activeCards}
+          cardName={card.cardName}
+          cardPrice={card.cardPrice}
+          description={card.description}
+          afterLabel={card.afterLabel}
+          backgroundColor={card.backgroundColor}
+        >
+          {card.perks.map((perk, index) => {
+            return (
+              <div
+                key={index}
+                style={{
+                  display: "flex",
+                  alignItems: "start",
+                  justifyContent: "center",
+                  padding: "0",
+                }}
+              >
+                <CheckSvg />
+                <p
+                  style={{
+                    color: "#fff",
+                    fontSize: "18px",
+                    marginLeft: "10px",
+                  }}
+                >
+                  {perk}
+                </p>
+              </div>
+            );
+          })}
+        </PricingCard>
+      </div>
+    );
+  });
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({});
@@ -308,46 +348,7 @@ function PricingSection() {
           />
         </div>
 
-        <div className="pricing_group">
-          {cards[activeCards].map((card) => {
-            return (
-              <div key={card.id} className="cards_pricing_anim">
-                <PricingCard
-                  cardName={card.cardName}
-                  cardPrice={card.cardPrice}
-                  description={card.description}
-                  afterLabel={card.afterLabel}
-                  backgroundColor={card.backgroundColor}
-                >
-                  {card.perks.map((perk, index) => {
-                    return (
-                      <div
-                        key={index}
-                        style={{
-                          display: "flex",
-                          alignItems: "start",
-                          justifyContent: "center",
-                          padding: "0",
-                        }}
-                      >
-                        <CheckSvg />
-                        <p
-                          style={{
-                            color: "#fff",
-                            fontSize: "18px",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          {perk}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </PricingCard>
-              </div>
-            );
-          })}
-        </div>
+        <div className="pricing_group">{cardsRender}</div>
       </div>
     </section>
   );
