@@ -1,13 +1,18 @@
-'use client'
+"use client";
 import Image from "next/image";
 import logo from "/public/images/logo.png";
 import ButtonWeb from "./ButtonWeb";
-import '@/app/styles/navbar.css';
+import "@/app/styles/navbar.css";
 
 import { useState, useEffect } from "react";
 
 function Header() {
-  const [scroll, setScroll] = useState(Window.scrollY);
+  const [scroll, setScroll] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.scrollY;
+    }
+    return 0;
+  });
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -20,13 +25,15 @@ function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scroll]);
 
   return (
-    <header className={visible ? 'navbar navbar-visible' : 'navbar navbar-hidden'}>
-      <nav >
+    <header
+      className={visible ? "navbar navbar-visible" : "navbar navbar-hidden"}
+    >
+      <nav>
         <Image
           alt=""
           src={logo}
