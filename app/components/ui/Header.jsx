@@ -7,7 +7,7 @@ import '@/app/styles/navbar.css';
 import { useState, useEffect } from "react";
 
 function Header() {
-  const [scroll, setScroll] = useState(window.scrollY);
+  const [scroll, setScroll] = useState(Window.scrollY);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
