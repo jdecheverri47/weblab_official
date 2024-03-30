@@ -20,18 +20,9 @@ function HookSection() {
           end: "+=1000",
           scrub: 2,
           markers: false,
+          pinSpacing: false,
         },
       });
-
-      tl.to(
-        "#Hook",
-        {
-          yPercent: -50,
-          ease: "none",
-          duration: 1,
-        },
-        0
-      );
 
       tl.fromTo(
         ".title_container_hook",
@@ -41,7 +32,7 @@ function HookSection() {
           duration: 1,
         },
         {
-          yPercent: 40,
+          yPercent: 10,
           ease: "none",
           duration: 1,
         },
@@ -88,6 +79,8 @@ function HookSection() {
 
     return () => ctx.revert();
   }, []);
+
+  
   return (
     <section id="Hook">
       <div className="title_container_hook flex justify-center items-center">
@@ -109,7 +102,7 @@ function HookSection() {
         </p>
       </div>
 
-      <div className="h-[130%]">
+      <div className="h-[80%]">
         <Scene />
         {/* <SceneMobile /> */}
       </div>

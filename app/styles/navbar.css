@@ -1,0 +1,77 @@
+:root {
+  --orangeText: linear-gradient(90deg, #f83600 0%, #f9d423 100%);
+  --blueText: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  --purpleText: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  --greenText: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.li-ben {
+  transition: all 0.3s ease-in-out;
+  background: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.li-ben:hover {
+  transition: all 0.3s ease-in-out;
+  background: orange;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.li-ser {
+  transition: all 0.3s ease-in-out;
+  background: #000000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.li-ser:hover {
+  transition: all 0.3s ease-in-out;
+  background: #4facfe;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.li-pri {
+  transition: all 0.3s ease-in-out;
+  background: #000000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.li-pri:hover {
+  transition: all 0.3s ease-in-out;
+  background: #f093fb;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.li-ab {
+  transition: all 0.3s ease-in-out;
+  background: #000000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.li-ab:hover {
+  transition: all 0.3s ease-in-out;
+  background: #43e97b;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}

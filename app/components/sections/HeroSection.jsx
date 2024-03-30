@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 
 import ButtonWeb from "../ui/ButtonWeb";
 import Circle from "../ui/Circle";
@@ -12,6 +12,8 @@ import Background from "../ui/Background";
 gsap.registerPlugin(ScrollTrigger);
 
 function HeroSection() {
+  const heroRef = useRef(null);
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(".title.hero", {
@@ -76,8 +78,23 @@ function HeroSection() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: "#Hero",
+        start: () => heroRef.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", 
+        end: () => heroRef.offsetHeight < window.innerHeight ? "bottom bottom" : "bottom top",
+        pin: true,
+        pinSpacing: false,
+        scrub: 2,
+        markers: false,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="Hero">
+    <section id="Hero" ref={heroRef}>
     <Background />
       <div className="title_container">
         <h1 className="title hero">Designing the Future</h1>

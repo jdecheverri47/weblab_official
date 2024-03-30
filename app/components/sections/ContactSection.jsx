@@ -61,8 +61,8 @@ function ContactSection() {
       gsap.from(".hook_end", {
         opacity: 0,
         ease: "power4.out",
-        delay: 4,
-        duration: 2,
+        delay: 2.5,
+        duration: 1.5,
         scrollTrigger: {
           trigger: "#Contact",
           start: "top center",
