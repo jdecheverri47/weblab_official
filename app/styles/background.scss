@@ -215,7 +215,7 @@ html, body {
   position: absolute;
   z-index: 2;
   background-color: white;
-  filter: blur(50px);
+  backdrop-filter: blur(50px);
   opacity: 0.1;
 }
 
