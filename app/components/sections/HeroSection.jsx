@@ -117,7 +117,7 @@ function HeroSection() {
 
       <div className="subtitle_container">
         <p className="subtitle">
-          We build the best websites and apps for your business.
+          We build the best websites and apps for your startups.
         </p>
       </div>
 
