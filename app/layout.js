@@ -13,19 +13,22 @@ export const metadata = {
 const GTWalsheimPro = localFont({
   src: [
     {
-      path: "/fonts/GTWalsheimPro-Regular.ttf",
+      path: "fonts/GTWalsheimPro-Regular.ttf",
       weight: "400",
       style: "normal",
+      display: "swap",
     },
     {
-      path: "/fonts/GTWalsheimPro-Bold.ttf",
+      path: "fonts/GTWalsheimPro-Bold.ttf",
       weight: "700",
       style: "normal",
+      display: "swap",
     },
     {
-      path: "/fonts/GTWalsheimPro-Medium.ttf",
+      path: "fonts/GTWalsheimPro-Medium.ttf",
       weight: "500",
       style: "normal",
+      display: "swap",
     },
   ],
 });
