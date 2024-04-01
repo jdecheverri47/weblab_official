@@ -10,9 +10,6 @@ p {
   font-family: "Inter", sans-serif;
 }
 
-h1 {
-  font-family: "GT Walsheim Pro", sans-serif;
-}
 
 :root {
   --orangeText: linear-gradient(90deg, #f83600 0%, #f9d423 100%);
@@ -142,7 +139,6 @@ ul li {
   color: #676767;
   text-align: center;
   letter-spacing: -1px;
-  letter-spacing: -2.52px;
 }
 
 .orange {
