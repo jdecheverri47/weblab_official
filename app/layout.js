@@ -7,22 +7,23 @@ export const metadata = {
   title: "WebLabs | Software Development Agency",
   description:
     "We are a software development agency that creates web and mobile applications for businesses and startups.",
+  
 };
 
 const GTWalsheimPro = localFont({
   src: [
     {
-      path: "fonts/GTWalsheimPro-Regular.ttf",
+      path: "/fonts/GTWalsheimPro-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "fonts/GTWalsheimPro-Bold.ttf",
+      path: "/fonts/GTWalsheimPro-Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "fonts/GTWalsheimPro-Medium.ttf",
+      path: "/fonts/GTWalsheimPro-Medium.ttf",
       weight: "500",
       style: "normal",
     },
