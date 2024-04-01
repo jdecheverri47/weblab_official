@@ -216,6 +216,7 @@ ul li {
   }
 
   .subtitle {
+    padding: 0 1rem;
     font-size: 22px;
     letter-spacing: -1px;
   }
@@ -225,6 +226,9 @@ ul li {
   }
 
   .title_container:nth-of-type(2) {
+    height: 10rem;
+  }
+  .title_container:nth-of-type(3) {
     height: 5.5rem;
   }
 }
@@ -269,10 +273,12 @@ ul li {
 .left {
   left: 5rem;
   bottom: 20%;
+  z-index: 1;
 }
 
 .right {
   right: 5rem;
+  z-index: 1;
   bottom: 10%;
 }
 
@@ -288,13 +294,17 @@ canvas {
 }
 
 @media screen and (max-width: 768px) {
+  #hook {
+    padding: 2rem 0;
+    height: 100vh;
+  }
   .title_hook {
-    font-size: 40px;
-    letter-spacing: -3.36px;
+    font-size: 42px;
+    letter-spacing: -1.36px;
   }
 
   .title_container_hook {
-    padding-top: 2rem;
+    padding-top: 6rem;
   }
 
   .description {
@@ -309,7 +319,7 @@ canvas {
 
   .right {
     right: 0px;
-    bottom: -5%;
+    bottom: 10%;
   }
 
   canvas {
@@ -557,7 +567,7 @@ canvas {
   }
 
   .services_container_card:nth-child(3) .services_title_container {
-    height: 3rem;
+    height: 5rem;
   }
 
   .services_container_cards h1 {
@@ -815,7 +825,7 @@ textarea {
     flex-direction: column;
     gap: 1rem;
     padding: 20px;
-    height: 90%;
+    height: 80%;
   }
 
   .card_form_container {
@@ -824,6 +834,11 @@ textarea {
 
   .hook_end_container {
     margin-top: 10px !important;
+  }
+
+  .hook_end_container h1{
+    padding-top: 50px !important;
+    font-size: 2.5rem !important;
   }
 
   label {
@@ -953,7 +968,7 @@ textarea {
 @media screen and (max-width: 768px) {
   #Pricing {
     padding: 2rem 1.5rem;
-    height: 280vh;
+    height: fit-content;
     width: 100%;
   }
 
@@ -963,7 +978,7 @@ textarea {
 
   .pricing_title h1 {
     font-size: 65px;
-    letter-spacing: -5.36px;
+    letter-spacing: -3.36px;
   }
 
   .pricing_title {
@@ -977,6 +992,8 @@ textarea {
 
   .pricing_group {
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     gap: 3rem;
   }
 
