@@ -4,7 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata = {
-  title: "WebLab | Software Development Agency",
+  title: "WebLabs | Software Development Agency",
   description:
     "We are a software development agency that creates web and mobile applications for businesses and startups.",
 };

@@ -9,6 +9,11 @@
 p {
   font-family: "Inter", sans-serif;
 }
+
+h1 {
+  font-family: "GT Walsheim Pro";
+}
+
 :root {
   --orangeText: linear-gradient(90deg, #f83600 0%, #f9d423 100%);
   --blueText: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
@@ -476,7 +481,7 @@ canvas {
   font-style: normal;
   font-weight: 500;
   line-height: 103.622%;
-  letter-spacing: -6.72px;
+  letter-spacing: -4.72px;
 }
 
 .purple_text_gradient {
