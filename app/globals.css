@@ -73,8 +73,9 @@ ul li {
   }
 
   nav {
-    justify-content: center;
+    justify-content: flex-start;
     background: transparent;
+    padding: 0.7rem 2rem;
   }
 
   nav div {

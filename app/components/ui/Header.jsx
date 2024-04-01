@@ -37,10 +37,8 @@ function Header() {
         <Image
           alt=""
           src={logo}
-          style={{
-            width: "4rem",
-          }}
           priority={true}
+          className="w-[3rem] md:w-[4rem]"
         />
         <ul>
           <li className="li-ben">Benefits</li>
