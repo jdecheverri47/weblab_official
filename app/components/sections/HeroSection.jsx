@@ -16,86 +16,98 @@ function HeroSection() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.fromTo(".title.hero", {
-        y: 250,
-        ease: "power4.out",
-        duration: 1.5,
-        skewY: 4,
-        stagger: {
-          amount: 0.3,
+      gsap.fromTo(
+        ".title.hero",
+        {
+          y: 250,
+          ease: "power4.out",
+          duration: 1.5,
+          skewY: 4,
+          stagger: {
+            amount: 0.3,
+          },
+          scrollTrigger: {
+            trigger: "#Hero",
+            start: "top center",
+            toggleActions: "play none none none",
+            // markers: true,
+          },
         },
-        scrollTrigger: {
-          trigger: "#Hero",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
+        {
+          y: 0,
+          skewY: 0,
+          opacity: 1,
+          duration: 1.5,
+        }
+      );
+      gsap.fromTo(
+        ".subtitle",
+        {
+          opacity: 0,
+          ease: "power4.out",
+          delay: 1.5,
+          duration: 2.5,
+          stagger: {
+            amount: 0.3,
+          },
+          scrollTrigger: {
+            trigger: "#Hero",
+            start: "top center",
+            toggleActions: "play none none none",
+            // markers: true,
+          },
         },
-      }, {
-        y: 0,
-        skewY: 0,
-        opacity: 1,
-        duration: 1.5
-      });
-      gsap.fromTo(".subtitle", {
-        opacity: 0,
-        ease: "power4.out",
-        delay: 1.5,
-        duration: 2.5,
-        stagger: {
-          amount: 0.3,
-        },
-        scrollTrigger: {
-          trigger: "#Hero",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
-        },
-      }, {
-        opacity: 1,
-        delay: 1.5,
-        duration: 2.5
-      });
+        {
+          opacity: 1,
+          delay: 1.5,
+          duration: 2.5,
+        }
+      );
 
-      gsap.fromTo(".button_container", {
-        opacity: 0,
-        ease: "power4.out",
-        delay: 2,
-        duration: 2.5,
-        scrollTrigger: {
-          trigger: "#Hero",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
+      gsap.fromTo(
+        ".button_container",
+        {
+          opacity: 0,
+          ease: "power4.out",
+          delay: 2,
+          duration: 2.5,
+          scrollTrigger: {
+            trigger: "#Hero",
+            start: "top center",
+            toggleActions: "play none none none",
+            // markers: true,
+          },
         },
-      }, {
-        opacity: 1,
-        delay: 2,
-        duration: 2.5
-      
-      });
+        {
+          opacity: 1,
+          delay: 2,
+          duration: 2.5,
+        }
+      );
     });
 
     return () => ctx.revert();
   }, []);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: "#Hero",
-        start: () => heroRef.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", 
-        end: () => heroRef.offsetHeight < window.innerHeight ? "bottom bottom" : "bottom top",
-        pin: true,
-        pinSpacing: false,
-        scrub: 2,
-        markers: false,
-      });
+   let ctx = gsap.context(() => {
+    ScrollTrigger.create({
+      trigger: "#Hero",
+      start: () => heroRef.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
+      end: () => heroRef.offsetHeight < window.innerHeight ? "bottom bottom" : "bottom top",
+      pin: true,
+      pinSpacing: false,
+      scrub: 2,
+      markers: false,
     });
+   });
+    
     return () => ctx.revert();
   }, []);
 
   return (
     <section id="Hero" ref={heroRef}>
-    <Background />
+      <Background />
       <div className="title_container">
         <h1 className="title hero">Designing the Future</h1>
       </div>
@@ -127,7 +139,7 @@ function HeroSection() {
         />
 
         <ButtonWeb
-        href="#Contact"
+          href="#Contact"
           text="Contact us"
           color="white"
           backgroundColor="black"
