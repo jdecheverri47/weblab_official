@@ -305,7 +305,7 @@ canvas {
   }
 
   .title_container_hook {
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
   .description {
@@ -315,12 +315,12 @@ canvas {
 
   .left {
     left: 0px;
-    bottom: 25%;
+    bottom: 20%;
   }
 
   .right {
     right: 0px;
-    bottom: 5%;
+    bottom: 0%;
   }
 
   canvas {
