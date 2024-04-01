@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect, use, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -18,6 +18,15 @@ function PricingSection() {
   const handleCirclePosition = (position) => {
     setCirclePosition(position);
   };
+
+  const handleButtonClick = (index, position) => {
+    setActiveCards(index);
+    setCirclePosition(position);
+  }
+
+  const isMobile = () => {
+    return window.innerWidth < 768;
+  }
 
   const cards = {
     1: [
@@ -304,6 +313,14 @@ function PricingSection() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    if (isMobile()) {
+      handleButtonClick(1, "17.4%");
+    } else {
+      handleButtonClick(1, "14%");
+    }
+  }, []);
+
   return (
     <section id="Pricing">
       <div className="pricing_container">
@@ -318,8 +335,7 @@ function PricingSection() {
         <div className="pricing_buttons">
           <button
             onClick={() => {
-              setActiveCards(1);
-              handleCirclePosition("14%");
+              handleButtonClick(1, isMobile() ? "17.4%" : "14%")
             }}
           >
             Websites
@@ -334,8 +350,7 @@ function PricingSection() {
           </button>
           <button
             onClick={() => {
-              setActiveCards(3);
-              handleCirclePosition("86%");
+              handleButtonClick(3, isMobile() ? "82.5%" : "86%");
             }}
           >
             Mobile Apps

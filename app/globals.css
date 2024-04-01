@@ -297,9 +297,10 @@ canvas {
 }
 
 @media screen and (max-width: 768px) {
-  #hook {
-    padding: 2rem 0;
+  #Hook {
+    padding: 4rem 0;
     height: 100vh;
+    padding-bottom: 0px;
   }
   .title_hook {
     font-size: 42px;
@@ -307,7 +308,7 @@ canvas {
   }
 
   .title_container_hook {
-    padding-top: 5rem;
+    padding-top: 0rem;
   }
 
   .description {
@@ -317,15 +318,16 @@ canvas {
 
   .left {
     left: 0px;
-    bottom: 20%;
+    bottom: 40%;
   }
 
   .right {
     right: 0px;
-    bottom: 0%;
+    bottom: 10%;
   }
 
   canvas {
+    margin-top: 0;
     height: 100vh !important;
     width: 100vw !important;
   }
@@ -1011,12 +1013,13 @@ textarea {
   }
 
   .pricing_buttons .circlespan {
-    width: 128px;
+    width: 110px;
   }
 
   .pricing_buttons {
     padding: 0 20px;
   }
+
 }
 /* Faq Section */
 
