@@ -89,16 +89,13 @@ function HookSection() {
         </h1>
       </div>
       <div className="description left">
-        <p>
-          We care the most about <br /> deliver top products with <br />
-          great aesthetics combined <br /> with functionalities
+        <p className="max-w-sm">
+          Break the rules of modern websites with beautiful 3D animations on your web.
         </p>
       </div>
       <div className="description right">
-        <p>
-          Custom solutions for each
-          <br /> project with AI tools <br />
-          implementations
+        <p className="max-w-sm">
+          Catch the eye of your customers with the best animations on the web. Say no to boring websites!
         </p>
       </div>
 

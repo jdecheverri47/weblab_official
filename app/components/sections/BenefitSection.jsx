@@ -150,7 +150,6 @@ function BenefitSection() {
       gsap.from(".benefit_icon", {
         opacity: 0,
         ease: "power4.out",
-        delay: 1,
         duration: 2.5,
         scrollTrigger: {
           trigger: "#Benefits",

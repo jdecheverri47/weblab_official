@@ -272,14 +272,14 @@ ul li {
 
 .left {
   left: 5rem;
-  bottom: 20%;
+  bottom: 25%;
   z-index: 1;
 }
 
 .right {
   right: 5rem;
   z-index: 1;
-  bottom: 10%;
+  bottom: 15%;
 }
 
 canvas {
