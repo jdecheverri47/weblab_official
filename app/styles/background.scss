@@ -139,7 +139,7 @@ html, body {
     width: var(--circle-size);
     height: var(--circle-size);
     top: calc(40% - var(--circle-size) / 2);
-    left: calc(55% - var(--circle-size) / 2);
+    left: calc(70% - var(--circle-size) / 2);
     border-radius: 50%;
     transform-origin: calc(50% - 400px);
     animation: moveInCircle 20s reverse 2s infinite;
@@ -155,7 +155,7 @@ html, body {
     width: var(--circle-size);
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2 + 200px);
-    left: calc(73% - var(--circle-size) / 2 - 500px);
+    left: calc(60% - var(--circle-size) / 2 - 500px);
     border-radius: 50%;
     transform-origin: calc(50% + 400px);
     animation: moveInCircle 40s linear 2s infinite;
