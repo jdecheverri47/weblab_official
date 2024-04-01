@@ -315,12 +315,12 @@ canvas {
 
   .left {
     left: 0px;
-    bottom: 30%;
+    bottom: 25%;
   }
 
   .right {
     right: 0px;
-    bottom: 10%;
+    bottom: 5%;
   }
 
   canvas {
