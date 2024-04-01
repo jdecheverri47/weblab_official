@@ -327,7 +327,7 @@ canvas {
   }
 
   canvas {
-    margin-top: 0;
+    margin-top: 50px;
     height: 100vh !important;
     width: 100vw !important;
   }
