@@ -89,7 +89,7 @@ function HeroSection() {
     return () => ctx.revert();
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
    let ctx = gsap.context(() => {
     ScrollTrigger.create({
       trigger: "#Hero",
@@ -97,7 +97,7 @@ function HeroSection() {
       end: () => heroRef.offsetHeight < window.innerHeight ? "bottom bottom" : "bottom top",
       pin: true,
       pinSpacing: false,
-      scrub: 2,
+      scrub: 4,
       markers: false,
     });
    });

@@ -17,7 +17,7 @@ function HookSection() {
         scrollTrigger: {
           trigger: "#Hook",
           start: "top 80%",
-          end: "+=1000",
+          end: "+=1500",
           scrub: 2,
           markers: false,
           pinSpacing: false,
