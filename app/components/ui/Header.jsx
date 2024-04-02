@@ -4,43 +4,77 @@ import logo from "/public/images/logo.png";
 import ButtonWeb from "./ButtonWeb";
 import "@/app/styles/navbar.css";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
+import gsap from "gsap";
+
 import Link from "next/link";
 
 function Header() {
-  const [scroll, setScroll] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.scrollY;
-    }
-    return 0;
-  });
-  const [visible, setVisible] = useState(true);
+  const [showHeader, setShowHeader] = useState(true);
+
+  const handleRevert = (ctx) => {
+    ctx.revert();
+    document.querySelector("header").style.transition =
+      "transform 0.5s ease-in-out";
+  };
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from("header", {
+        yPercent: -100,
+        ease: "power4.out",
+        onComplete: () => handleRevert(ctx),
+        delay: 3,
+        duration: 2.5,
+      });
+    });
+    return () => {
+      ctx.revert();
+    };
+  }, []);
 
   useEffect(() => {
+    let lastScroll = 0;
+
     const handleMouseMove = (e) => {
       const mouseY = e.clientY;
       if (mouseY <= 200) {
-        setVisible(true);
+        setShowHeader(true);
       }
     };
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const isVisible = scroll > currentScrollPos;
 
-      setScroll(currentScrollPos);
-      setVisible(isVisible);
-    };
+    function handleScroll() {
+      const currentScroll =
+        window.scrollY || document.documentElement.scrollTop;
+      const isScrolledToBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight;
+
+      const isScrollingDown = currentScroll > lastScroll;
+      const isScrollingUp = currentScroll < lastScroll;
+
+      const isScrolling = isScrollingDown && !isScrolledToBottom;
+
+      if (isScrolling) {
+        setShowHeader(false);
+      } else if (isScrollingUp || isScrolledToBottom) {
+        setShowHeader(true);
+      }
+
+      lastScroll = currentScroll;
+    }
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("mousemove", handleMouseMove);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [scroll]);
+  }, []);
 
   return (
     <header
-      className={visible ? "navbar navbar-visible" : "navbar navbar-hidden"}
+      className={showHeader ? "navbar navbar-visible" : "navbar navbar-hidden"}
     >
       <nav>
         <Image

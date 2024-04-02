@@ -10,7 +10,6 @@ p {
   font-family: "Inter", sans-serif;
 }
 
-
 :root {
   --orangeText: linear-gradient(90deg, #f83600 0%, #f9d423 100%);
   --blueText: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
@@ -34,11 +33,11 @@ header {
 }
 
 .navbar-visible {
-  top: 0;
+  transform: translateY(0);
 }
 
 .navbar-hidden {
-  top: -50%;
+  transform: translateY(-100%);
 }
 
 nav {
@@ -841,7 +840,7 @@ textarea {
     margin-top: 10px !important;
   }
 
-  .hook_end_container h1{
+  .hook_end_container h1 {
     padding-top: 50px !important;
     font-size: 2.5rem !important;
   }
@@ -1019,7 +1018,6 @@ textarea {
   .pricing_buttons {
     padding: 0 20px;
   }
-
 }
 /* Faq Section */
 
