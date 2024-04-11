@@ -249,7 +249,7 @@ function ProofSection() {
         />
       </div>
        <div
-        className="w-fit h-fit absolute top-[34%] -left-[30%]  lg:right-[10%] lg:top-[35%] z-30"
+        className="w-fit h-fit absolute top-[34%] -left-[35%] right-[0%] lg:left-[60%] lg:top-[35%] z-20"
         ref={moneymasteryRef}
       >
         <CardShowcase

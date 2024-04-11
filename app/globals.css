@@ -42,7 +42,7 @@ header {
 }
 
 .navbar-hidden {
-  transform: translateY(-120%);
+  transform: translateY(-120%) !important;
 }
 
 nav {
