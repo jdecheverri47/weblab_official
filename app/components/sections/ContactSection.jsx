@@ -298,6 +298,8 @@ function ContactSection() {
                   height="2.8rem"
                   fontSize="1rem"
                   margin="0 0 1rem 0 "
+                  shadow="shadow-lg"
+                  borderParams="1.5px solid #5c5c5c"
                 />
               </div>
             </form>
