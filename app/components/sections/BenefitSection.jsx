@@ -40,7 +40,7 @@ function BenefitSection() {
       id: 1,
       title: "Peak quality Design",
       description:
-        `At the heart of our ethos is a dedication to delivering top-tier products that not only meet but exceed expectations. We understand the importance of aesthetics in making your product stand out in a crowded market. That's why we go the extra mile, offering prototypes and wireframes to guarantee the perfect design for your vision.`,
+        `At the heart of our ethos is a dedication to delivering top-tier products. We understand the importance of aesthetics in making your product stand out in a crowded market. That's why we go the extra mile, offering prototypes and wireframes to guarantee the perfect design for your vision.`,
       image: DesignImage,
       icon: heart,
     },
@@ -73,7 +73,7 @@ function BenefitSection() {
   const currentItem = data[carouselIndex];
 
   const infoComponent = currentItem && (
-    <div>
+    <div className="info-container-box">
       <div className="w-[3.5rem] h-[3.5rem]  lg:w-[4.5rem] lg:h-[4.5rem] rounded-full bg-black flex items-center justify-center benefit_icon lg:my-5">
         <Image
           alt=""

@@ -407,7 +407,7 @@ canvas {
 @media screen and (max-width: 768px) {
   #Benefits {
     padding: 1.5rem 0;
-    height: 100vh;
+    height: 140vh;
     margin-bottom: 20px;
   }
 
@@ -416,7 +416,7 @@ canvas {
   }
 
   .description_container_benefits {
-    height: 8.5rem;
+    height: fit-content;
   }
 
   .benefits_container {
@@ -442,6 +442,10 @@ canvas {
 
   .container.image {
     height: 70%;
+  }
+
+  .info-container-box {
+    height: 100%;
   }
 }
 
@@ -568,9 +572,13 @@ canvas {
   .services_title {
     height: 8rem;
   }
+
+  .services_title_container {
+    height: 3rem;
+  }
   .services_container_text h1 {
-    font-size: 65px;
-    letter-spacing: -5px;
+    font-size: 56px;
+    letter-spacing: -2px;
   }
 
   .services_container_cards h2 {
@@ -578,18 +586,12 @@ canvas {
     letter-spacing: -2.36px;
   }
 
-  .services_container_card:nth-child(3) .services_title_container {
-    height: 5rem;
-  }
 
   .services_container_cards h1 {
     font-size: 38px;
     letter-spacing: -2.36px;
   }
 
-  .services_title_container {
-    height: 5rem;
-  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -716,6 +718,9 @@ canvas {
   background-color: #f0f0f0;
   position: relative;
   z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact_video {
@@ -816,7 +821,7 @@ form {
   .contact_container {
     height: 70%;
     width: 85vw;
-    top: 8%;
+    top: 1e%;
     left: 8%;
   }
 
