@@ -21,9 +21,8 @@ p {
 
 header {
   position: fixed;
-  top: -3%;
+  top: -10% ;
   left: 25%;
-  transform: translateX(-50%);
   margin: 10px auto;
   z-index: 100;
   width: 50%;
@@ -40,10 +39,6 @@ header {
 
 #button_header {
   font-size: 1rem !important;
-}
-
-.navbar-visible {
-  transform: translateY(50%);
 }
 
 .navbar-hidden {

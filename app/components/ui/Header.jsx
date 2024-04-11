@@ -15,13 +15,15 @@ function Header() {
   const handleRevert = (ctx) => {
     ctx.revert();
     document.querySelector("header").style.transition =
-      "transform 0.5s ease-in-out";
+      "transform 1s ease-in-out";
+
+    document.querySelector(".navbar-visible").style.transform = "translateY(150%)";
   };
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from("header", {
-        yPercent: -120,
+        yPercent: -100,
         ease: "power4.out",
         onComplete: () => handleRevert(ctx),
         delay: 3,
@@ -74,7 +76,7 @@ function Header() {
 
   return (
     <header
-      className={`${showHeader ? "navbar navbar-visible" : "navbar navbar-hidden"} shadow-lg`}
+      className={`${showHeader ? "navbar-visible" : "navbar-hidden"} navbar shadow-lg`}
     >
       <nav>
         <Image
