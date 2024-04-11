@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 import ButtonWeb from "../ui/ButtonWeb";
 import Circle from "../ui/Circle";
@@ -168,13 +168,13 @@ function HeroSection() {
           height="3.5rem"
           margin="0 0 0 1rem"
           borderParams="1.5px solid #5c5c5c"
-          shadow="shadow-lg" 
+          shadow="shadow-lg"
         />
       </div>
 
-      {/* <Circle color="orange" left="120px" bottom="-200px" zIndex="-1" />
+      <Circle color="orange" left="120px" bottom="-200px" zIndex="-1" />
       <Circle color="blue" bottom="-200px" zIndex="-1" />
-      <Circle color="purple" bottom="-200px" zIndex="-1" right="120px" /> */}
+      <Circle color="purple" bottom="-200px" zIndex="-1" right="120px" />
     </section>
   );
 }

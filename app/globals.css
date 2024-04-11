@@ -21,7 +21,7 @@ p {
 
 header {
   position: fixed;
-  top: -120%;
+  top: -3%;
   left: 25%;
   transform: translateX(-50%);
   margin: 10px auto;
@@ -43,7 +43,7 @@ header {
 }
 
 .navbar-visible {
-  transform: translateY(0);
+  transform: translateY(50%);
 }
 
 .navbar-hidden {
@@ -83,8 +83,8 @@ ul li {
   header {
     padding: 0;
     background: transparent;
-    width: 40%;
-    left: 32%;
+    width: 30%;
+    left: 36%;
   }
 
   nav {
@@ -148,8 +148,8 @@ ul li {
   .orange,
   .blue,
   .purple {
-    width: 240px !important;
-    height: 200px !important;
+    width: 300px !important;
+    height: 300px !important;
   }
 
   .orange {
@@ -204,6 +204,13 @@ ul li {
     border-radius: 60% 40% 40% 60% / 40% 60% 60% 40%;
     transform: translate(5px, 5px) scale(1.05);
   }
+}
+
+@media screen and (min-width: 768px){
+  .orange, .blue, .purple {
+    display: none;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
