@@ -226,30 +226,30 @@ function ProofSection() {
       <div className="bottom-gradient"></div>
       <div className="top-gradient"></div>
 
-      <div ref={bentoRef} className="w-fit h-fit absolute top-[4%] left-[4%] ">
+      <div ref={bentoRef} className="w-fit h-fit absolute -left-[25%] top-[4%] lg:left-[4%] ">
         <CardShowcase
           src="/images/offer/bento.png"
           position="top-[4%] left-[0%] scale-80"
         />
       </div>
-      <div className="w-fit h-fit absolute right-[6%] top-[7%]" ref={web3Ref}>
+      <div className="w-fit h-fit absolute -right-[25%] lg:right-[6%] top-[7%]" ref={web3Ref}>
         <CardShowcase
           src="/images/offer/web3.0.png"
           position="right-[4%] top-[7%] z-10 scale-80"
         />
       </div>
       <div
-        className="w-fit h-fit absolute left-[8%] top-[34%] z-30"
+        className="w-fit h-fit absolute left-[12%] top-[20%] lg:top-[34%] z-30"
         ref={figmaRef}
       >
         <CardShowcase
           src="/images/offer/figma.png"
-          position="left-[6%] top-[34%] scale-120 z-20"
+          position="left-[6%] top-[34%] z-20"
           shadow="shadow-2xl"
         />
       </div>
-      <div
-        className="w-fit h-fit absolute right-[10%] top-[35%] z-30"
+       <div
+        className="w-fit h-fit absolute top-[34%] -left-[30%]  lg:right-[10%] lg:top-[35%] lg:z-30"
         ref={moneymasteryRef}
       >
         <CardShowcase
@@ -259,7 +259,7 @@ function ProofSection() {
         />
       </div>
       <div
-        className="w-fit h-fit absolute left-[2%] bottom-[3%] z-10"
+        className="w-fit h-fit absolute bottom-[15%] -left-[25%] lg:left-[2%] lg:bottom-[3%] z-10"
         ref={triptrapRef}
       >
         <CardShowcase
@@ -268,7 +268,7 @@ function ProofSection() {
         />
       </div>
       <div
-        className="w-fit h-fit absolute right-[6%] bottom-[3%]"
+        className="w-fit h-fit absolute bottom-[6%] -right-[25%] lg:right-[10%] lg:bottom-[3%]"
         ref={braqlabRef}
       >
         <CardShowcase
@@ -278,7 +278,7 @@ function ProofSection() {
         />
       </div>
       <div
-        className="w-fit h-fit absolute right-[40%] top-[4%] z-10"
+        className="w-fit h-fit absolute top-[30%] -right-[25%] md:right-[40%] md:top-[4%] z-10"
         ref={darkPurpleRef}
       >
         <CardShowcase
@@ -287,7 +287,7 @@ function ProofSection() {
         />
       </div>
       <div
-        className="w-fit h-fit absolute right-[40%] top-[35%] z-20"
+        className="w-fit h-fit absolute -right-[20%] top-[50%] md:right-[40%] md:top-[35%] z-20"
         ref={shoesRef}
       >
         <CardShowcase
@@ -297,7 +297,7 @@ function ProofSection() {
         />
       </div>
       <div
-        className="w-fit h-fit absolute right-[38%] bottom-[3%]"
+        className="w-fit h-fit absolute bottom-[0%] md:right-[38%] md:bottom-[3%]"
         ref={musicRef}
       >
         <CardShowcase
