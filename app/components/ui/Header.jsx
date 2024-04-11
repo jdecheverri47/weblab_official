@@ -21,7 +21,7 @@ function Header() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from("header", {
-        yPercent: -100,
+        yPercent: -120,
         ease: "power4.out",
         onComplete: () => handleRevert(ctx),
         delay: 3,
@@ -74,25 +74,25 @@ function Header() {
 
   return (
     <header
-      className={showHeader ? "navbar navbar-visible" : "navbar navbar-hidden"}
+      className={`${showHeader ? "navbar navbar-visible" : "navbar navbar-hidden"} shadow-lg`}
     >
       <nav>
         <Image
           alt=""
           src={logo}
           priority={true}
-          className="w-[3rem] md:w-[4rem]"
+          className="w-[3rem] lg:ml-6 "
         />
-        <ul>
+        <ul className="">
           <Link href="#Benefits">
             <li className="li-ben">Benefits</li>
           </Link>
           <Link href="#Services">
             <li className="li-ser">Services</li>
           </Link>
-          <Link href="#Pricing">
+          {/* <Link href="#Pricing">
             <li className="li-pri">Pricing</li>
-          </Link>
+          </Link> */}
           <Link href="#Faq">
             <li className="li-ab">FAQ</li>
           </Link>
@@ -103,9 +103,12 @@ function Header() {
             text="Contact Us"
             color="white"
             backgroundColor="black"
-            width="9rem"
-            height="3rem"
-            margin="0 0 0 1.5rem"
+            width="7rem"
+            height="2.5rem"
+            margin="0 0 0 2.5rem"
+            className="button_header"
+            shadow="shadow-lg"
+            borderParams="1.5px solid #5c5c5c"
           />
         </div>
       </nav>

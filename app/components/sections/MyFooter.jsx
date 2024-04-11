@@ -28,8 +28,8 @@ function MyFooter() {
         <div className="right_container">
           <div className="contact_weblab_info">
             <h2>Contact Us</h2>
-            <h2>sales@weblabcreative.com</h2>
-            <h2>+1 2878881111</h2>
+            <h2>support@weblabs.com.co</h2>
+            <h2>+57 3022166275</h2>
           </div>
           <div className="social_media">
             <h2 className="hidden lg:block" >Social Media</h2>

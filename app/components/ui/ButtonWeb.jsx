@@ -12,6 +12,7 @@ function ButtonWeb(props) {
     "linear-gradient(to right, #f9d423 0%, #ff4e50 100%)",
     "linear-gradient(to right, #0acffe 0%, #495aff 100%)",
     "linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%)",
+    "linear-gradient(to right, #43e97b 0%, #38f9d7 100%)"
   ];
 
   const handleMouseMove = (e) => {
@@ -36,7 +37,7 @@ function ButtonWeb(props) {
         onMouseEnter={changeBackground}
         onMouseMove={handleMouseMove}
         onClick={props.onClick}
-        className={styles.contact_button}
+        className={`${styles.contact_button} ${props.shadow}`}
         style={{
           "--background": background,
           "--x": `${mousePosition.x}px`,
@@ -49,7 +50,7 @@ function ButtonWeb(props) {
           margin: props.margin,
         }}
       >
-        <span className={styles.button_text}>{props.text}</span>
+        <span id={props.className} className={styles.button_text}>{props.text}</span>
         {props.children}
       </button>
     </a>

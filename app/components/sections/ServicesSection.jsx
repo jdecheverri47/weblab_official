@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function ServicesSection() {
-  
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({});
@@ -100,18 +99,20 @@ function ServicesSection() {
         duration: 4,
       });
 
-      tl.to(".services_container_text", {
-        yPercent: -50,
-        ease: "none",
-        duration: 4,
-      }, 0);
-
+      tl.to(
+        ".services_container_text",
+        {
+          yPercent: -50,
+          ease: "none",
+          duration: 4,
+        },
+        0
+      );
     });
     return () => ctx.revert();
-
   }, []);
   return (
-    <section id="Services">
+    <section id="Services" className="p-10 ">
       <div className="services_container">
         <div className="services_container_text pt-[2rem]">
           <div className="services_title">
@@ -129,9 +130,11 @@ function ServicesSection() {
                 <h1>Websites Development</h1>
               </div>
               <p>
-                We design and develop websites that are not only visually
-                compelling, but have the functionality and advanced programming
-                to deliver leads, clients and revenues.
+                Crafting websites that captivate visually is just the beginning
+                for us. We focus on combining striking aesthetics with advanced
+                programming, ensuring your site not only draws attention but
+                also drives tangible results, such as leads, clients, and
+                revenue.
               </p>
             </div>
           </div>
@@ -142,10 +145,10 @@ function ServicesSection() {
                 <h1>Web App Development</h1>
               </div>
               <p>
-                We create web applications that go beyond aesthetic allure,
-                embedding advanced functionality and innovative programming to
-                not only captivate users but also drive engagement, efficiency,
-                and business growth.
+                Our approach to web application development transcends mere
+                aesthetics. We infuse advanced functionality and innovative
+                programming to not only captivate users but also to foster
+                engagement, enhance efficiency, and propel business growth.
               </p>
             </div>
           </div>
@@ -156,9 +159,10 @@ function ServicesSection() {
                 <h1>Mobile Development</h1>
               </div>
               <p>
-                We engineer mobile applications that blend striking design with
-                robust functionality, tailored to enhance user experience while
-                driving effective engagement and fostering business success.
+                Crafting mobile applications involves a delicate balance between
+                eye-catching design and robust functionality. Our focus is on
+                tailoring each app to enhance user experience, drive effective
+                engagement, and ultimately foster business success.
               </p>
             </div>
           </div>

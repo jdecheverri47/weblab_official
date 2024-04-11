@@ -32,7 +32,7 @@ function HookSection() {
           duration: 1,
         },
         {
-          yPercent: 10,
+          yPercent: 20,
           ease: "none",
           duration: 1,
         },
@@ -42,6 +42,7 @@ function HookSection() {
       tl.from(
         ".description.left",
         {
+          yPercent: 20,
           opacity: 0,
           duration: 0.3,
         },
@@ -60,6 +61,7 @@ function HookSection() {
       tl.from(
         ".description.right",
         {
+          yPercent: 20,
           opacity: 0,
           duration: 0.3,
         },
@@ -84,7 +86,7 @@ function HookSection() {
   return (
     <section id="Hook">
       <div className="title_container_hook flex justify-center items-center">
-        <h1 className="title_hook lg:max-w-[800px]">
+        <h1 className="text-4xl mt-[2rem] lg:mt-0 lg:text-7xl leading-tighter text-center tracking-tight  lg:max-w-[800px]">
           The highest quality for software production in the market
         </h1>
       </div>

@@ -7,7 +7,7 @@
 
 .li-ben {
   transition: all 0.3s ease-in-out;
-  background: black;
+  background: #727272;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15,7 +15,7 @@
 
 .li-ben:hover {
   transition: all 0.3s ease-in-out;
-  background: orange;
+  background: #ffa500;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -24,7 +24,7 @@
 
 .li-ser {
   transition: all 0.3s ease-in-out;
-  background: #000000;
+  background: #727272;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -42,7 +42,7 @@
 
 .li-pri {
   transition: all 0.3s ease-in-out;
-  background: #000000;
+  background: #727272;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -60,7 +60,7 @@
 
 .li-ab {
   transition: all 0.3s ease-in-out;
-  background: #000000;
+  background: #727272;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -69,7 +69,8 @@
 
 .li-ab:hover {
   transition: all 0.3s ease-in-out;
-  background: #43e97b;
+  /* background: #43e97b; */
+  background: #f093fb;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

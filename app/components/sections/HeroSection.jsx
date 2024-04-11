@@ -9,6 +9,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Background from "../ui/Background";
 
+import "../../styles/heroanim.scss";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function HeroSection() {
@@ -22,7 +24,7 @@ function HeroSection() {
           y: 250,
           ease: "power4.out",
           duration: 1.5,
-          skewY: 4,
+          skewY: 12,
           stagger: {
             amount: 0.3,
           },
@@ -90,52 +92,71 @@ function HeroSection() {
   }, []);
 
   useLayoutEffect(() => {
-   let ctx = gsap.context(() => {
-    ScrollTrigger.create({
-      trigger: "#Hero",
-      start: () => heroRef.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
-      end: () => heroRef.offsetHeight < window.innerHeight ? "bottom bottom" : "bottom top",
-      pin: true,
-      pinSpacing: false,
-      scrub: 4,
-      markers: false,
+    let ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: "#Hero",
+        start: () =>
+          heroRef.offsetHeight < window.innerHeight
+            ? "top top"
+            : "bottom bottom",
+        end: () =>
+          heroRef.offsetHeight < window.innerHeight
+            ? "bottom bottom"
+            : "bottom top",
+        pin: true,
+        pinSpacing: false,
+        scrub: 4,
+        markers: false,
+      });
     });
-   });
-    
+
     return () => ctx.revert();
   }, []);
 
   return (
     <section id="Hero" ref={heroRef}>
       <Background />
-      <div className="title_container">
-        <h1 className="title hero">Designing the Future</h1>
+      <div className="flex flex-col justify-center items-center w-fit lg:flex-row">
+        <div className="title_container py-2 flex w-fit">
+          <h1 className="title hero prueba text-8xl font-medium tracking-tight px-2 ">
+            Designing the
+          </h1>
+        </div>
+        <div className="title_container py-2 flex ml-5">
+          <h1 className="title hero prueba text-8xl font-medium tracking-tight px-2 ">
+            Future
+          </h1>
+        </div>
       </div>
       <div className="title_container">
-        <h1 className="title hero ">of the Web</h1>
+        <h1 className="title hero text-8xl font-medium tracking-tight px-2">
+          of the Web
+        </h1>
       </div>
 
-      <div className="subtitle_container">
-        <p className="subtitle">
+      <div className="subtitle_container mt-4">
+        <p className="subtitle text-gray-500 text-3xl text-center">
           We build the best websites and apps for your startups.
         </p>
       </div>
 
       <div
         style={{
-          marginTop: "2rem",
+          marginTop: "1.2rem",
           display: "flex",
         }}
         className="button_container opacity-0"
       >
         <ButtonWeb
-          href="#Pricing"
-          text="See plans"
+          href="#Benefits"
+          text="See perks"
           color="black"
           backgroundColor="white"
           width="10rem"
           height="3.5rem"
           margin="0 1rem 0 0"
+          borderParams="1.5px solid #f0f0f0"
+          shadow="shadow-lg"
         />
 
         <ButtonWeb
@@ -146,6 +167,8 @@ function HeroSection() {
           width="10rem"
           height="3.5rem"
           margin="0 0 0 1rem"
+          borderParams="1.5px solid #5c5c5c"
+          shadow="shadow-lg" 
         />
       </div>
 

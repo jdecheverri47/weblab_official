@@ -40,7 +40,7 @@ function BenefitSection() {
       id: 1,
       title: "Peak quality Design",
       description:
-        "We care the most about deliver top products with great aesthetics combined with functionalities",
+        `At the heart of our ethos is a dedication to delivering top-tier products that not only meet but exceed expectations. We understand the importance of aesthetics in making your product stand out in a crowded market. That's why we go the extra mile, offering prototypes and wireframes to guarantee the perfect design for your vision.`,
       image: DesignImage,
       icon: heart,
     },
@@ -48,7 +48,7 @@ function BenefitSection() {
       id: 2,
       title: "Flexible Pricing",
       description:
-        "We prioritize offering flexible pricing options to suit your needs and budget, hit us up for a quote now!",
+        "Your satisfaction is our priority, which is why we offer flexible pricing and payment plans tailored to your unique needs and budget. Our aim is to ensure you receive the highest quality product at the best possible value, empowering you to make the most informed decisions for your business.",
       image: handsImage,
       icon: money,
     },
@@ -56,7 +56,7 @@ function BenefitSection() {
       id: 3,
       title: "Uninterrupted Support and Maintenance",
       description:
-        "We ensure uninterrupted support and maintenance to keep your products running smoothly and efficiently 24/7",
+        "We're committed to providing seamless support and maintenance, ensuring your products operate smoothly and efficiently around the clock. Our dedicated team is always available to address any questions or concerns you may have, ensuring your peace of mind every step of the way.",
       image: techSupport,
       icon: settings,
     },
@@ -64,7 +64,7 @@ function BenefitSection() {
       id: 4,
       title: "Any Platform, Every Possibility",
       description:
-        "We develop for any platform, exploring every possibility to meet your requirements, and exceed your expectations",
+        "We thrive on exploring every avenue to ensure your vision comes to life in the most impactful way possible. By tailoring our approach to embrace diverse platforms, we empower your product to resonate with a wider audience, reaching more people than ever before.",
       image: platform,
       icon: rocket,
     },
@@ -74,11 +74,16 @@ function BenefitSection() {
 
   const infoComponent = currentItem && (
     <div>
-      <div className="w-[4.5rem] h-[4.5rem] rounded-full bg-black flex items-center justify-center benefit_icon my-5">
-        <Image alt="" src={currentItem.icon} className="w-[2.8rem]" priority />
+      <div className="w-[3.5rem] h-[3.5rem]  lg:w-[4.5rem] lg:h-[4.5rem] rounded-full bg-black flex items-center justify-center benefit_icon lg:my-5">
+        <Image
+          alt=""
+          src={currentItem.icon}
+          className="w-[2rem] lg:w-[2.8rem]"
+          priority
+        />
       </div>
       <div className="title_container_benefits">
-        <h1 className="title_card">{currentItem.title}</h1>
+        <h1 className="title_card tracking-tight">{currentItem.title}</h1>
       </div>
       <div className="description_container_benefits">
         <p className="description_benefits">{currentItem.description}</p>
@@ -96,6 +101,8 @@ function BenefitSection() {
           backgroundColor="black"
           width="10rem"
           height="3.5rem"
+          borderParams="1.5px solid #5c5c5c"
+          shadow="shadow-lg"
         />
       </div>
     </div>
@@ -106,7 +113,7 @@ function BenefitSection() {
       alt=""
       src={currentItem.image}
       fill
-      className="image_cover"
+      className="image_cover shadow-inner"
       priority={true}
       style={{
         objectFit: "cover",
@@ -234,6 +241,8 @@ function BenefitSection() {
                   width="5.5rem"
                   height="2.4rem"
                   onClick={prevIndex}
+                  borderParams="1.5px solid #5c5c5c"
+                  shadow="shadow-lg"
                 >
                   <div style={{ position: "absolute", zIndex: "2" }}>
                     <LeftArrow />
@@ -246,6 +255,8 @@ function BenefitSection() {
                   height="2.4rem"
                   margin="0 0 0 1rem"
                   onClick={nextIndex}
+                  borderParams="1.5px solid #5c5c5c"
+                  shadow="shadow-lg"
                 >
                   <div style={{ position: "absolute", zIndex: "2" }}>
                     <RightArrow />

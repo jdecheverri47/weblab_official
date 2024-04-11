@@ -1,0 +1,27 @@
+.prueb{
+  display: block;
+  animation-name: cross-fade-blur;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.prueba {
+  text-wrap: nowrap;
+}
+
+@keyframes cross-fade-blur {
+  0% {
+    opacity: 0;
+    filter: blur(1rem);
+  }
+  20%,
+  60% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    filter: blur(1rem);
+  }
+}

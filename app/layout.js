@@ -1,13 +1,13 @@
 import Header from "./components/ui/Header";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { NextUIProvider } from "@nextui-org/react";
 import "./globals.css";
 
 export const metadata = {
   title: "WebLabs | Software Development Agency",
   description:
     "We are a software development agency that creates web and mobile applications for businesses and startups.",
-  
 };
 
 const GTWalsheimPro = localFont({

@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.10",
     "@react-three/drei": "^9.90.0",
     "@react-three/fiber": "^8.15.12",
     "@splinetool/loader": "^0.9.517",
     "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^2.2.6",
     "@vercel/speed-insights": "^1.0.10",
+    "framer-motion": "^11.0.25",
     "gsap": "^3.12.3",
     "next": "14.0.0",
     "react": "^18",
