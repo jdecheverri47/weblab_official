@@ -126,7 +126,7 @@ function FaqSection() {
               backgroundColor="black"
               width="10rem"
               height="3.5rem"
-              borderParams="1.5px solid #5c5c5c"
+              borderParams="2px solid #5c5c5c"
               shadow="shadow-lg"
             />
           </div>
