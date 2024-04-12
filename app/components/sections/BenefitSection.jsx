@@ -86,7 +86,7 @@ function BenefitSection() {
         <h1 className="title_card tracking-tight">{currentItem.title}</h1>
       </div>
       <div className="description_container_benefits">
-        <p className="description_benefits">{currentItem.description}</p>
+        <p className="description_benefits text-gray-500">{currentItem.description}</p>
       </div>
       <div
         className="button_container_benefits"

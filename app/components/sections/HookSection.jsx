@@ -91,12 +91,12 @@ function HookSection() {
         </h1>
       </div>
       <div className="description left">
-        <p className="max-w-[250px] md:max-w-sm">
+        <p className="max-w-[250px] md:max-w-sm text-gray-500">
           Break the rules of modern websites with beautiful 3D animations on your web.
         </p>
       </div>
       <div className="description right">
-        <p className="max-w-[250px] md:max-w-sm">
+        <p className="max-w-[250px] md:max-w-sm text-gray-500">
           Catch the eye of your customers with the best animations on the web. Say no to boring websites!
         </p>
       </div>

@@ -129,7 +129,7 @@ function ServicesSection() {
               <div className="services_title_container md:h-[6rem] 2xl:h-fit">
                 <h1>Websites Development</h1>
               </div>
-              <p>
+              <p className="text-gray-500">
                 Crafting websites that captivate visually is just the beginning
                 for us. We focus on combining striking aesthetics with advanced
                 programming, ensuring your site not only draws attention but
@@ -144,7 +144,7 @@ function ServicesSection() {
               <div className="services_title_container md:h-[6rem] 2xl:h-fit">
                 <h1>Web App Development</h1>
               </div>
-              <p>
+              <p className="text-gray-500">
                 Our approach to web application development transcends mere
                 aesthetics. We infuse advanced functionality and innovative
                 programming to not only captivate users but also to foster
@@ -158,7 +158,7 @@ function ServicesSection() {
               <div className="services_title_container md:h-[6rem] 2xl:h-fit">
                 <h1>Mobile Development</h1>
               </div>
-              <p>
+              <p className="text-gray-500">
                 Crafting mobile applications involves a delicate balance between
                 eye-catching design and robust functionality. Our focus is on
                 tailoring each app to enhance user experience, drive effective

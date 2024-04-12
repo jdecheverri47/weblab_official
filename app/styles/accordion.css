@@ -18,7 +18,9 @@
 .answer {
   width: 90%;
   margin-left: 1rem;
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -1.36px;
   font-family: 'Inter';
   max-height: 0;
   overflow: hidden;

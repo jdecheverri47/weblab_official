@@ -248,10 +248,9 @@ ul li {
   text-align: center;
   font-size: 28px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 103.622%; /* 49.739px */
   letter-spacing: -1.36px;
-  color: #555555;
 }
 
 .left {
@@ -385,7 +384,7 @@ canvas {
   padding: 10px;
   font-size: 24px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 36px;
   letter-spacing: -1.36px;
   max-width: 600px;
@@ -545,7 +544,7 @@ canvas {
 .services_container_cards p {
   font-size: 20px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 30px;
   letter-spacing: -1.36px;
   max-width: 500px;
@@ -607,7 +606,7 @@ canvas {
   }
 
   .services_container_cards p {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .services_container_card_text {

@@ -84,12 +84,14 @@ function Header() {
       } navbar shadow-lg`}
     >
       <nav>
+        <Link href="https://weblabs.com.co">
         <Image
           alt=""
           src={logo}
           priority={true}
           className="w-[3rem] lg:ml-6 "
         />
+        </Link>
         <ul className="">
           <Link href="#Benefits">
             <li className="li-ben">Benefits</li>
