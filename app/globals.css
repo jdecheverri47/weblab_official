@@ -713,9 +713,7 @@ canvas {
   background-color: #f0f0f0;
   position: relative;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .contact_video {
@@ -811,6 +809,9 @@ form {
   #Contact {
     padding: 14px;
     height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact_container {
