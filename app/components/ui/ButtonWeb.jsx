@@ -2,6 +2,7 @@
 
 import styles from "../../styles/ButtonWeb.module.css";
 import { useState, useRef } from "react";
+import Link from "next/link";
 
 function ButtonWeb(props) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -33,11 +34,13 @@ function ButtonWeb(props) {
   return (
     <a href={props.href}>
       <button
+        disabled={props.disabled}
         ref={buttonRef}
         onMouseEnter={changeBackground}
         onMouseMove={handleMouseMove}
         onClick={props.onClick}
-        className={`${styles.contact_button} ${props.shadow}`}
+        type={props.type}
+        className={`${styles.contact_button} ${props.shadow} ${props.className}`}
         style={{
           "--background": background,
           "--x": `${mousePosition.x}px`,

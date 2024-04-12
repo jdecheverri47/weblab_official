@@ -4,14 +4,18 @@ import ButtonWeb from "../ui/ButtonWeb";
 import Circle from "../ui/Circle";
 
 import { Input, Textarea } from "@nextui-org/react";
-
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ContactSection() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
   const handleRevert = (ctx) => {
     ctx.kill();
   };
@@ -190,6 +194,34 @@ function ContactSection() {
     return () => ctx.revert();
   }, []);
 
+  const redirect = () => {
+    router.push("https://cal.com/jose.echeverri");
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const form = e.target;
+    const name = form.name.value;
+    const company = form.company.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    try {
+      const docRef = await addDoc(collection(db, "Messages"), {
+        name: name,
+        company: company,
+        email: email,
+        message: message,
+      });
+      console.log("Document written with ID: ", docRef.id);
+      form.reset();
+      setLoading(false);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
+
   return (
     <section id="Contact">
       {/* <Circle color="purple" top="-20%" zIndex="0" left="0" /> */}
@@ -228,13 +260,13 @@ function ContactSection() {
             </div>
           </div>
           <div className="card_form_container">
-            <form className="mt-2">
+            <form className="mt-2" onSubmit={handleSubmit} >
               <div className="form_group">
                 <Input
                   size="lg"
                   variant="bordered"
                   classNames={{
-                    input: ["bg-white"],
+                    input: ["bg-white", ],
                     innerWrapper: ["bg-white"],
                     inputWrapper: ["bg-white", "shadow-md"],
                   }}
@@ -242,11 +274,12 @@ function ContactSection() {
                   id="name"
                   name="name"
                   placeholder="Name"
-                  
+                  isDisabled={loading}
                 />
               </div>
               <div className="form_group">
                 <Input
+                  isDisabled={loading}
                   size="lg"
                   variant="bordered"
                   classNames={{
@@ -262,6 +295,7 @@ function ContactSection() {
               </div>
               <div className="form_group">
                 <Input
+                  isDisabled={loading}
                   classNames={{
                     input: ["bg-white"],
                     innerWrapper: ["bg-white"],
@@ -277,6 +311,7 @@ function ContactSection() {
               </div>
               <div className="form_group">
                 <Textarea
+                  isDisabled={loading}
                   classNames={{
                     input: ["bg-white"],
                     innerWrapper: ["bg-white"],
@@ -299,18 +334,19 @@ function ContactSection() {
                   fontSize="1rem"
                   shadow="shadow-lg"
                   borderParams="2px solid #5c5c5c"
+                  type="submit"
                 />
                 <h2 className="text-center font-medium text-gray-500">OR</h2>
                 <ButtonWeb
                   text="Book a Call"
-                  href="#Contact"
-                  backgroundColor="white"
-                  color="black"
+                  backgroundColor="#ffffff"
+                  color="#000000"
                   width="9rem"
                   height="3rem"
                   fontSize="1rem"
-                  shadow="shadow-lg"
+                  shadow="shadow-lg "
                   borderParams="2px solid #f0f0f0"
+                  onClick={redirect}
                 />
               </div>
             </form>
