@@ -17,7 +17,10 @@ function Header() {
     document.querySelector("header").style.transition =
       "transform 1s ease-in-out";
 
-    document.querySelector(".navbar-visible").style.transform = "translateY(150%)";
+    if (document.querySelector(".navbar-visible")) {
+      document.querySelector(".navbar-visible").style.transform =
+        "translateY(150%)";
+    }
   };
 
   useLayoutEffect(() => {
@@ -76,7 +79,9 @@ function Header() {
 
   return (
     <header
-      className={`${showHeader ? "navbar-visible" : "navbar-hidden"} navbar shadow-lg`}
+      className={`${
+        showHeader ? "navbar-visible" : "navbar-hidden"
+      } navbar shadow-lg`}
     >
       <nav>
         <Image
