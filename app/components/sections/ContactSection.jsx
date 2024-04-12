@@ -203,7 +203,7 @@ function ContactSection() {
           muted={true}
           className="h-full w-full object-cover shadow-inner"
         >
-          <source src="/videos/new_york.mp4" type="video/mp4" />
+          <source src="/videos/keyboard.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="contact_container shadow-xl border-2 border-[#e3e3e3] bg-white bg-opacity-95">
@@ -289,17 +289,28 @@ function ContactSection() {
                   placeholder="Message"
                 ></Textarea>
               </div>
-              <div className="h-fit w-full flex justify-end items-center">
+              <div className="h-fit w-full flex justify-center items-center gap-4 mt-5">
                 <ButtonWeb
                   text="Send Now!"
                   color="white"
-                  backgroundColor="black"
+                  backgroundColor="#000000"
                   width="9rem"
                   height="2.8rem"
                   fontSize="1rem"
-                  margin="0 0 1rem 0 "
                   shadow="shadow-lg"
-                  borderParams="1.5px solid #5c5c5c"
+                  borderParams="2px solid #5c5c5c"
+                />
+                <h2 className="text-center font-medium text-gray-500">OR</h2>
+                <ButtonWeb
+                  text="Book a Call"
+                  href="#Contact"
+                  backgroundColor="white"
+                  color="black"
+                  width="9rem"
+                  height="2.8rem"
+                  fontSize="1rem"
+                  shadow="shadow-lg"
+                  borderParams="2px solid #f0f0f0"
                 />
               </div>
             </form>
