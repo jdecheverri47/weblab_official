@@ -390,6 +390,12 @@ canvas {
   max-width: 600px;
 }
 
+.loading_bar {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border-top-right-radius: 25px; 
+  border-bottom-right-radius: 25px;
+}
+
 .description_container_benefits {
   overflow: hidden;
   height: fit-content;

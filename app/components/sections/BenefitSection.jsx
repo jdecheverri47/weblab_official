@@ -1,5 +1,5 @@
 "use client";
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState, useLayoutEffect, useEffect, useRef } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 import gsap from "gsap";
@@ -26,21 +26,31 @@ import "../../styles/transitions.css";
 
 function BenefitSection() {
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [timeoutId, setTimeoutId] = useState(null);
+  const [isIntersecting, setIsIntersecting] = useState(null);
+  const componentRef = useRef(null);
 
   const prevIndex = () => {
     setCarouselIndex((index) => (index === 0 ? 3 : index - 1));
+    clearTimeout(timeoutId);
+    clearInterval(isIntersecting)
+    setLoadingProgress(0);
   };
 
   const nextIndex = () => {
     setCarouselIndex((index) => (index === 3 ? 0 : index + 1));
+    clearTimeout(timeoutId);
+    clearInterval(isIntersecting);
+    setLoadingProgress(0);
+
   };
 
   const data = [
     {
       id: 1,
       title: "Peak quality Design",
-      description:
-        `At the heart of our ethos is a dedication to delivering top-tier products. We understand the importance of aesthetics in making your product stand out in a crowded market. That's why we go the extra mile, offering prototypes and wireframes to guarantee the perfect design for your vision.`,
+      description: `At the heart of our ethos is a dedication to delivering top-tier products. We understand the importance of aesthetics in making your product stand out in a crowded market. That's why we go the extra mile, offering prototypes and wireframes to guarantee the perfect design for your vision.`,
       image: DesignImage,
       icon: heart,
     },
@@ -86,7 +96,9 @@ function BenefitSection() {
         <h1 className="title_card tracking-tight">{currentItem.title}</h1>
       </div>
       <div className="description_container_benefits">
-        <p className="description_benefits text-gray-500">{currentItem.description}</p>
+        <p className="description_benefits text-gray-500">
+          {currentItem.description}
+        </p>
       </div>
       <div
         className="button_container_benefits"
@@ -113,13 +125,8 @@ function BenefitSection() {
       alt=""
       src={currentItem.image}
       fill
-      className="image_cover shadow-inner"
+      className="image_cover shadow-inner object-cover"
       priority={true}
-      style={{
-        objectFit: "cover",
-        position: "absolute",
-        zIndex: "0",
-      }}
     />
   );
 
@@ -183,24 +190,53 @@ function BenefitSection() {
     return () => ctx.revert();
   }, []);
 
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     gsap.from(".benefit_title", {
-  //       y: 100,
-  //       ease: "power4.out",
-  //       delay: 1,
-  //       skewY: 7,
-  //       stagger: {
-  //         amount: 0.3,
-  //       },
-  //     });
-  //   });
+  useEffect(() => {
+    const ref = componentRef.current;
+    let timer;
+    let indexTimer;
 
-  //   return () => ctx.revert();
-  // }, []);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let currentProgress = 0;
+          timer = setInterval(() => {
+            if (currentProgress <= 101) {
+              currentProgress += 100/270;
+              setLoadingProgress(currentProgress);
+            }
+          }, 25); // Actualiza cada 100ms
+
+          // Lógica para avanzar al siguiente índice después de 7 segundos
+          indexTimer = setTimeout(() => {
+            nextIndex();
+          }, 7000);
+        } else {
+          // Limpiar los temporizadores si el componente sale de la vista
+          clearInterval(timer);
+          clearTimeout(indexTimer);
+          setLoadingProgress(0);
+        }
+      },
+      { threshold: 0.5 } // Umbral de visibilidad del 50%
+    );
+
+    if (ref) {
+      observer.observe(ref);
+    }
+
+    // Detener la observación cuando el componente se desmonte
+    return () => {
+      if (ref) {
+        observer.unobserve(ref);
+      }
+      // Limpiar los temporizadores si el componente se desmonta
+      clearInterval(timer);
+      clearTimeout(indexTimer);
+    };
+  }, [carouselIndex]);
 
   return (
-    <section id="Benefits">
+    <section id="Benefits" className="relative" ref={componentRef}>
       <div className="benefits_container">
         <div className="container info">
           <SwitchTransition>
@@ -223,7 +259,15 @@ function BenefitSection() {
               addEventListener("transitionend", done, false)
             }
           >
-            <div className="container image" style={{ display: "flex" }}>
+            <div
+              className="container image shadow-inner relative overflow-hidden"
+              style={{ display: "flex" }}
+            >
+              <div
+                className="loading_bar absolute z-20 h-[20px] left-0 bottom-0"
+                style={{ width: `${loadingProgress}%` }}
+              />
+
               {illustrationPerk}
 
               <div
