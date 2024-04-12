@@ -201,15 +201,15 @@ function BenefitSection() {
           let currentProgress = 0;
           timer = setInterval(() => {
             if (currentProgress <= 101) {
-              currentProgress += 100/270;
+              currentProgress += 100/1850;
               setLoadingProgress(currentProgress);
             }
-          }, 25); // Actualiza cada 100ms
+          }, 5); // Actualiza cada 100ms
 
           // Lógica para avanzar al siguiente índice después de 7 segundos
           indexTimer = setTimeout(() => {
             nextIndex();
-          }, 7000);
+          }, 10000);
         } else {
           // Limpiar los temporizadores si el componente sale de la vista
           clearInterval(timer);
@@ -264,7 +264,7 @@ function BenefitSection() {
               style={{ display: "flex" }}
             >
               <div
-                className="loading_bar absolute z-20 h-[20px] left-0 bottom-0"
+                className="loading_bar absolute z-20 h-[10px] left-0 bottom-0"
                 style={{ width: `${loadingProgress}%` }}
               />
 
