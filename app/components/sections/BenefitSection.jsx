@@ -101,7 +101,7 @@ function BenefitSection() {
           backgroundColor="black"
           width="10rem"
           height="3.5rem"
-          borderParams="1.5px solid #5c5c5c"
+          borderParams="2px solid #5c5c5c"
           shadow="shadow-lg"
         />
       </div>
@@ -241,7 +241,7 @@ function BenefitSection() {
                   width="5.5rem"
                   height="2.4rem"
                   onClick={prevIndex}
-                  borderParams="1.5px solid #5c5c5c"
+                  borderParams="2px solid #5c5c5c"
                   shadow="shadow-lg"
                 >
                   <div style={{ position: "absolute", zIndex: "2" }}>
@@ -255,7 +255,7 @@ function BenefitSection() {
                   height="2.4rem"
                   margin="0 0 0 1rem"
                   onClick={nextIndex}
-                  borderParams="1.5px solid #5c5c5c"
+                  borderParams="2px solid #5c5c5c"
                   shadow="shadow-lg"
                 >
                   <div style={{ position: "absolute", zIndex: "2" }}>

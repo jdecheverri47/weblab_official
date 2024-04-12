@@ -110,7 +110,7 @@ function Header() {
             margin="0 0 0 2.5rem"
             className="button_header"
             shadow="shadow-lg"
-            borderParams="1.5px solid #5c5c5c"
+            borderParams="2px solid #5c5c5c"
           />
         </div>
       </nav>

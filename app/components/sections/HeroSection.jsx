@@ -155,7 +155,7 @@ function HeroSection() {
           width="10rem"
           height="3.5rem"
           margin="0 1rem 0 0"
-          borderParams="1.5px solid #f0f0f0"
+          borderParams="2px solid #f0f0f0"
           shadow="shadow-lg"
         />
 
@@ -167,7 +167,7 @@ function HeroSection() {
           width="10rem"
           height="3.5rem"
           margin="0 0 0 1rem"
-          borderParams="1.5px solid #5c5c5c"
+          borderParams="2px solid #5c5c5c"
           shadow="shadow-lg"
         />
       </div>
