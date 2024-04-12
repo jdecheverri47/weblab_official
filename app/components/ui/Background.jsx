@@ -3,7 +3,7 @@
 import "../../styles/background.scss";
 import { useEffect, useRef } from "react";
 
-function Background() {
+function Background({ classnames }) {
   const interBubbleRef = useRef(null);
   let curX = 0;
   let curY = 0;
@@ -38,7 +38,7 @@ function Background() {
     };
   }, []);
   return (
-    <div className="gradient-bg">
+    <div className={`gradient-bg ${classnames}`}>
       <div className="filter-mobile"/>
         <svg xmlns="http://www.w3.org/2000/svg">
           <defs>
