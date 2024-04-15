@@ -20,10 +20,10 @@ export default function Home() {
         <HookSection />
         <BenefitSection />
         <ServicesSection />
+        <article className="w-full bg-[#f0f0f0] h-[10vh]" />
         <ProofSection />
-        {/* <SecondHook /> */}
+        <article className="w-full bg-[#f0f0f0] h-[10vh]" />
         <ContactSection />
-        {/* <PricingSection /> */}
         <FaqSection />
         <MyFooter /> 
       </main>

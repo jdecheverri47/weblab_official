@@ -29,7 +29,6 @@ function Header() {
         yPercent: -100,
         ease: "power4.out",
         onComplete: () => handleRevert(ctx),
-        delay: 1,
         duration: 2.5,
       });
     });
