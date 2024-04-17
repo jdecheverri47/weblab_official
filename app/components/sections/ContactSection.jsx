@@ -324,7 +324,7 @@ function ContactSection() {
                   placeholder="Message"
                 ></Textarea>
               </div>
-              <div className="h-fit w-full flex justify-center items-center gap-4 mt-5">
+              <div className="h-fit w-full flex justify-center items-center gap-2 md:gap-4 mt-2 mb-4  md:mt-5">
                 <ButtonWeb
                   text="Send Now!"
                   color="white"
@@ -352,18 +352,6 @@ function ContactSection() {
             </form>
           </div>
         </div>
-        {/* <div>or</div> */}
-
-        {/* <div>
-          <ButtonWeb
-            text="Book a Call"
-            href="#Contact"
-            backgroundColor="black"
-            color="white"
-            width="10rem"
-            height="3.5rem"
-          />
-        </div> */}
       </div>
     </section>
   );
