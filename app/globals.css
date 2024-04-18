@@ -22,7 +22,7 @@ p {
 header {
   position: fixed;
   top: -10% ;
-  left: 25%;
+  left: 25.2%;
   margin: 10px auto;
   z-index: 100;
   width: 50%;
@@ -723,12 +723,12 @@ canvas {
 
 .contact_video {
   width: 80vw;
-  height: 90vh;
+  height: 100%;
 }
 
 .contact_container {
   position: absolute;
-  top: 15%;
+  top: 11%;
   right: 30%;
   width: fit-content;
   height: 78%;
@@ -1115,7 +1115,7 @@ form {
   width: 100%;
   height: 100vh;
   padding: 6rem;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   position: relative;
 }
 
@@ -1277,6 +1277,10 @@ footer {
 
 .contact_weblab_info h2:nth-child(1) {
   font-weight: 600;
+}
+
+.top-gradient.footer-grad {
+  background: linear-gradient(180deg, #ffffff 0%, #fafafa00 100%);
 }
 
 @media screen and (max-width: 768px) {

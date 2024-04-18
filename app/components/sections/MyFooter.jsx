@@ -9,7 +9,7 @@ function MyFooter() {
   return (
     <footer className="relative">
     <Background classnames="opacity-70" />
-    <div className="top-gradient absolute right-0"/>
+    <div className="top-gradient footer-grad absolute right-0"/>
 
       <div className="footer_container  relative z-20">
 

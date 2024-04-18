@@ -225,7 +225,7 @@ function ContactSection() {
   return (
     <section id="Contact">
       {/* <Circle color="purple" top="-20%" zIndex="0" left="0" /> */}
-      <div className="contact_video absolute z-10 bg-white rounded-[25px] overflow-hidden shadow-inner">
+      <div className="contact_video relative z-10 bg-white rounded-[25px] overflow-hidden shadow-inner">
         <video
           width={350}
           height={300}
@@ -238,7 +238,7 @@ function ContactSection() {
           <source src="/videos/keyboard.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="contact_container shadow-xl border-2 border-[#e3e3e3] bg-white bg-opacity-95">
+      <div className="contact_container shadow-xl border-1 border-[#e3e3e3] bg-white">
         <div className="contact_card">
           <div className="card_text_container">
             <div className="contact_title tracking-tighter">
