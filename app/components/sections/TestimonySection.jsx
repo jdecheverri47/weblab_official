@@ -89,7 +89,7 @@ const descriptionRef = useRef(null);
   return (
     <section id="TestiSection" className="bg-[#f0f4f9] w-full h-full lg:px-[8.5rem] pt-[3rem] lg:pt-[5rem] pb-[2rem] relative">
       <div className="w-full flex justify-center mb-7 px-[2rem] lg:px-0 pb-[1rem]  flex-col items-center gap-4">
-        <div className=" relative h-[3.5rem] overflow-hidden">
+        <div className=" relative h-[5rem] lg:h-[3.5rem] overflow-hidden">
           <h1 className="font-medium text-4xl text-center lg:text-6xl" ref={titleRef}>
             Our customers{" "}
             <strong className="bg-gradient-to-b from-[#FF72E1] to-[#F54C7A] text-transparent bg-clip-text">

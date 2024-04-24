@@ -10,7 +10,7 @@ function MyFooter() {
     <footer className="relative footer-layout bg-[#f0f4f9]">
       <div className="footer_container  relative z-20">
         <div className="left_container flex-wrap !w-full">
-          <div className="flex justify-around gap-[1rem] lg:gap-[5rem] w-full flex-wrap">
+          <div className="flex flex-col lg:flex-row justify-around gap-[2rem] lg:gap-[5rem] w-full flex-wrap">
             <div>
               <Image src={logo} alt="" className="w-[3rem]" />
             </div>
