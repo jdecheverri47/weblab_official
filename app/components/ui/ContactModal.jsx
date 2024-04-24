@@ -24,7 +24,7 @@ export default function ContactModal({
   color,
   className,
   size,
-  radius
+  radius,
 }) {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [loading, setLoading] = useState(false);
@@ -71,17 +71,17 @@ export default function ContactModal({
       >
         {buttonText}
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl" placement="center" scrollBehavior="inside">
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 justify-center items-center text-2xl">
+              <ModalHeader className="flex flex-col gap-1 justify-center items-center text-2xl w-full">
                 Contact us
               </ModalHeader>
               <ModalBody>
                 <div className="card_form_container">
                   <form onSubmit={handleSubmit}>
-                    <div className="flex gap-2">
+                    <div className="flex gap-4 lg:gap-2 flex-col lg:flex-row">
                       <ContactInput
                         type="text"
                         id="firstname"
@@ -101,7 +101,7 @@ export default function ContactModal({
                       />
                     </div>
 
-                    <div className="flex gap-2">
+                    <div className="flex gap-4 lg:gap-2 flex-col lg:flex-row mt-1 lg:mt-0">
                       <ContactInput
                         type="email"
                         id="email"
@@ -120,9 +120,9 @@ export default function ContactModal({
                         loading={loading}
                       />
                     </div>
-                    <div className="flex gap-2">
-                    <ContactSelect loading={loading}/>
-                    <ContactInput
+                    <div className="flex gap-4 lg:gap-2 flex-col lg:flex-row mt-1 lg:mt-0">
+                      <ContactSelect loading={loading} />
+                      <ContactInput
                         type="tel"
                         id="phone"
                         name="phone"
@@ -131,14 +131,14 @@ export default function ContactModal({
                         loading={loading}
                       />
                     </div>
-                    <div className="form_group">
+                    <div className="form_group flex-col lg:flex-row">
                       <Textarea
                         isDisabled={loading}
                         classNames={{
                           input: ["bg-white"],
                           innerWrapper: ["bg-white"],
                           inputWrapper: ["bg-white"],
-                          label: ["font-medium text-md"],
+                          label: ["font-medium text-[16px] lg:text-md"],
                         }}
                         size="lg"
                         variant="bordered"

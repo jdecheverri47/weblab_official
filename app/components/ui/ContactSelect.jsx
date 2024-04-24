@@ -30,7 +30,7 @@ function ContactSelect({loading}) {
         variant="bordered"
         labelPlacement="outside"
         classNames={{
-          label: ["font-medium text-md"],
+          label: ["font-medium lg:text-md text-[16px]"],
         }}
         size="lg"
         isDisabled={loading}

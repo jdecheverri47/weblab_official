@@ -42,13 +42,15 @@ function MyFooter() {
                 <h3 className="text-lg font-medium border-b-1 border-gray-300 pb-3 mb-3">
                   Contact Us
                 </h3>
-                <li className="flex gap-2 justify-start items-center">
-                  <EnvelopeIcon className="w-4 h-4" /> support@weblabs.com.co
-                </li>
-                <li className="flex gap-2 justify-start items-center">
+                <div className="flex gap-2 justify-start items-center">
+                  <EnvelopeIcon className="w-4 h-4" />
+                  <li> support@weblabs.com.co</li>
+                </div>
+
+                <div className="flex gap-2 justify-start items-center">
                   <PhoneIcon className="w-4 h-4" />
-                  +57 3022166275
-                </li>
+                  <li>+57 3022166275</li>
+                </div>
               </ul>
             </div>
           </div>
@@ -58,30 +60,6 @@ function MyFooter() {
             </h2>
           </div>
         </div>
-
-        {/* <div className="right_container">
-          <div className="social_media">
-            <h2 className="hidden lg:block">Social Media</h2>
-            <div className="logos">
-              <Link href="https://www.tiktok.com/@weblabs_">
-                <Image
-                  src={tiktokLogo}
-                  alt=""
-                  priority
-                  className="w-[2.2rem] hover:opacity-50 transition-all duration-500 ease-in-out"
-                />
-              </Link>
-              <Link href="https://www.instagram.com/weblabs_/">
-                <Image
-                  src={instagram}
-                  alt=""
-                  priority
-                  className="w-[2rem] hover:opacity-50 transition-all duration-500 ease-in-out"
-                />
-              </Link>
-            </div>
-          </div>
-        </div> */}
       </div>
     </footer>
   );
