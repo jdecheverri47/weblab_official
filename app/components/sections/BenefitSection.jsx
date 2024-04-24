@@ -94,7 +94,7 @@ function BenefitSection() {
         />
       </div>
       <div className="title_container_benefits">
-        <h1 className="title_card tracking-normal">{currentItem.title}</h1>
+        <h1 className="title_card tracking-normal lg:text-5xl">{currentItem.title}</h1>
       </div>
       <div className="description_container_benefits">
         <p className="description_benefits text-gray-500">
@@ -108,7 +108,7 @@ function BenefitSection() {
         }}
       >
         <ContactModal
-          className="bg-black text-white w-[160px] text-[18px] h-[55px]"
+          className="bg-black text-white lg:w-[160px] lg:text-lg text-sm  lg:h-[55px]"
           size="lg"
           radius="full"
           buttonText="Contact us"

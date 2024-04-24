@@ -79,7 +79,7 @@ function Showcase() {
           scrollTrigger: {
             trigger: title,
             start: "center center",
-            end: "+=2550",
+            end: "+=2650",
             pin: true,
             scrub: 2,
             markers: false,

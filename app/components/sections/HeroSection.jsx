@@ -94,65 +94,42 @@ function HeroSection() {
     return () => ctx.revert();
   }, []);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: "#Hero",
-        start: () =>
-          heroRef.offsetHeight < window.innerHeight
-            ? "top top"
-            : "bottom bottom",
-        end: () =>
-          heroRef.offsetHeight < window.innerHeight
-            ? "bottom bottom"
-            : "bottom top",
-        pin: true,
-        pinSpacing: false,
-        scrub: 4,
-        markers: false,
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
+ 
 
   return (
     <section id="Hero" ref={heroRef}>
       <Background />
       <div className="flex flex-col justify-center items-center w-fit lg:flex-row">
         <div className="title_container py-2 flex w-fit">
-          <h1 className="title hero prueba text-8xl font-medium tracking-tight ">
+          <h1 className="title hero prueba text-7xl font-medium tracking-tight ">
             Designing the
           </h1>
         </div>
-        <div className="title_container py-2 flex md:ml-5">
-          <h1 className="title hero prueba text-8xl font-medium tracking-tight ">
+        <div className="title_container lg:py-2 flex md:ml-5">
+          <h1 className="title hero prueba text-7xl font-medium tracking-tight ">
             Future
           </h1>
         </div>
       </div>
       <div className="title_container">
-        <h1 className="title hero text-8xl font-medium tracking-tight px-2">
+        <h1 className="title hero text-7xl font-medium tracking-tight px-2">
           of the Web
         </h1>
       </div>
 
       <div className="subtitle_container mt-4">
-        <p className="subtitle text-gray-500 text-lg lg:text-3xl text-center px-8 lg:px-0">
+        <p className="subtitle text-gray-500 text-lg lg:text-2xl text-center px-8 lg:px-0">
           We build the best websites and apps for your startups.
         </p>
       </div>
 
       <div
-        style={{
-          marginTop: "1.2rem",
-          display: "flex",
-        }}
+        
         className="button_container flex gap-8 opacity-0"
       >
         <Link href="#Services">
           <Button
-            className="bg-white lg:w-[160px] lg:text-[18px] lg:h-[55px] border-gray-300 border-1 block"
+            className="bg-white lg:w-[140px] lg:text-[16px] lg:h-[50px] border-gray-300 border-1 block"
             size="lg"
             radius="full"
             variant="bordered"
@@ -161,7 +138,7 @@ function HeroSection() {
           </Button>
         </Link>
         <ContactModal
-          className="bg-black text-white lg:w-[160px] lg:text-[18px] lg:h-[55px]"
+          className="bg-black text-white lg:w-[140px] lg:text-[16px] lg:h-[50px]"
           size="lg"
           radius="full"
           buttonText="Contact us"
@@ -176,6 +153,7 @@ function HeroSection() {
         whoever believes in him shall not perish but have eternal life. Jn 3:16
         NIV
       </span>
+      <div className="absolute bottom-0 left-0 h-[5rem] w-full bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

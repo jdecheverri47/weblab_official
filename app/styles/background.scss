@@ -49,6 +49,29 @@ html, body {
   }
 }
 
+@keyframes moveInCircleMobile {
+  0% {
+    transform: otate(0deg);
+  }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    transform: rotate(-60deg);
+  }
+
+  75% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+ 
+}
+
 @keyframes moveVertical {
   0% {
     transform: translateY(0);
@@ -194,18 +217,7 @@ html, body {
     opacity: 1;
   }
 
-  // .interactive {
-  //   position: absolute;
-  //   background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-  //   mix-blend-mode: var(--blending);
 
-  //   width: 100%;
-  //   height: 100%;
-  //   top: -50%;
-  //   left: -50%;
-
-  //   opacity: 0.7;
-  // }
 }
 
 .filter-mobile {
@@ -213,19 +225,49 @@ html, body {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  z-index: 2;
-  background-color: white;
-  backdrop-filter: blur(50px);
-  opacity: 0.1;
+  z-index: 100;
+  backdrop-filter: blur(20px);
 }
 
-@media screen and (max-width: 768px) {
-  .gradient-bg {
-    display: none;
-  }
-  
+@media screen and (min-width: 360px) and (max-width: 768px){
   .filter-mobile {
     display: block;
   }
   
+  .gradient-bg{
+    .g1 {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .g2 {
+      width: 200px;
+      height: 200px;
+      animation: moveInCircleMobile 20s reverse 2s infinite;
+      top: 60%;
+      left: 40%;
+    }
+  
+    .g3 {
+      width: 200px;
+      height: 200px;
+    animation: moveInCircleMobile 40s linear 2s infinite;
+      top: 0%;
+      left: 0%;
+    }
+  
+    .g4 {
+      width: 200px;
+      height: 200px;
+      top: 35%;
+      left: 0%;
+    }
+  
+    .g5 {
+      width: 200px;
+      height: 200px;
+    animation: moveInCircleMobile 20s ease 2s infinite;
+
+    }
+  }
 }

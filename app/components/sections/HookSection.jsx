@@ -17,9 +17,9 @@ function HookSection() {
         scrollTrigger: {
           trigger: "#Hook",
           start: "top center",
-          end: "center center",
+          end: "bottom center",
           scrub: 2,
-          // markers: true,
+          markers: false,
           pinSpacing: false,
         },
       });
@@ -42,14 +42,14 @@ function HookSection() {
       yPercent: 100,
       ease: "power4.out",
       duration: 5,
-     })
+     }, 1)
 
      tl.from(".description.right", {
       opacity: 0,
       yPercent: 100,
       ease: "power4.out",
       duration: 5,
-     })
+     }, 1)
     });
 
     return () => ctx.revert();
@@ -59,8 +59,8 @@ function HookSection() {
   return (
     <section id="Hook">
       <div className="title_container_hook flex justify-center items-center">
-        <h1 className="lg:text-4xl text-3xl px-5 lg:mt-[2rem] lg:text-[62px] lg:leading-[4rem] text-center tracking-tight font-medium lg:max-w-[800px]">
-          The <strong className="bg-gradient-to-r from-sky-400 to-blue-400 text-transparent bg-clip-text font-medium ">highest quality</strong> for software production in the market
+        <h1 className="lg:text-6xl text-3xl px-5 lg:mt-[2rem] lg:leading-[4rem] text-center tracking-tight font-medium lg:max-w-[700px]">
+          The <strong className="bg-gradient-to-b from-[#5EA2EF] to-[#0072F5] text-transparent bg-clip-text font-medium ">highest quality</strong> for software production in the market
         </h1>
       </div>
       <div className="description left">

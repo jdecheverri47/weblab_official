@@ -87,7 +87,7 @@ function MethodologySection() {
           >
             <h1 className="text-4xl lg:text-6xl font-medium tracking-tight text-center lg:text-left">
               Our{" "}
-              <strong className="font-medium bg-gradient-to-r from-green-400 to-lime-400 text-transparent bg-clip-text">
+              <strong className="font-medium bg-gradient-to-b from-[#6FEE8D] to-[#17c964] text-transparent bg-clip-text">
                 essential
               </strong>{" "}
               <br /> process

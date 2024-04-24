@@ -15,7 +15,6 @@ import "swiper/css";
 gsap.registerPlugin(ScrollTrigger);
 
 function ServicesSection() {
-
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -52,92 +51,23 @@ function ServicesSection() {
           // markers: true,
         },
       });
-      gsap.from(".services_container_card_text h1", {
-        y: 150,
-        ease: "power4.out",
-        delay: 1.5,
-        duration: 2,
-        skewY: 4,
-        stagger: {
-          amount: 1,
-        },
-        scrollTrigger: {
-          trigger: "#Services",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
-        },
-      });
-
-      gsap.from(".services_container_card_text p", {
+      
+      gsap.from(".services-description", {
         opacity: 0,
         ease: "power4.out",
-        delay: 2,
         duration: 2,
-        stagger: {
-          amount: 1,
-        },
+        delay: 2,
         scrollTrigger: {
           trigger: "#Services",
           start: "top center",
           toggleActions: "play none none none",
-
-          // markers: true,
-        },
-      });
-      gsap.from(".services_container_card_text h2", {
-        opacity: 0,
-        ease: "power4.out",
-        delay: 2,
-        duration: 2,
-        stagger: {
-          amount: 1,
-        },
-        scrollTrigger: {
-          trigger: "#Services",
-          start: "top center",
-          toggleActions: "play none none none",
-
-          // markers: true,
-        },
+        }
       });
     });
 
     return () => ctx.revert();
   }, []);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#Services",
-          start: "top center",
-          end: "+=1000",
-          scrub: 1,
-          markers: false,
-        },
-      });
-
-      tl.to(".services_container_cards", {
-        yPercent: -15,
-        ease: "none",
-        duration: 4,
-      });
-
-      tl.to(
-        ".services_container_text",
-        {
-          yPercent: -25,
-          ease: "none",
-          duration: 4,
-        },
-        0
-      );
-    });
-    return () => ctx.revert();
-  }, []);
-
- 
   const cardsMobile = Services.map((service) => {
     return (
       <SwiperSlide key={service.id} className="w-full h-full">
@@ -167,41 +97,47 @@ function ServicesSection() {
   return (
     <section id="Services" className="lg:p-10">
       <div className="services_container">
-        <div className="services_container_text lg:pt-[2rem] lg:pl-[2.5rem]">
-          <div className="services_title">
-            <h1>No matter the situation,</h1>
+        <div className="services_container_text lg:pt-[2rem] lg:pl-[2.5rem] justify-center items-center">
+          <div className="services_title text-4xl lg:text-6xl">
+            <h1 className="text-4xl lg:text-6xl ">No matter the situation,</h1>
           </div>
           <div className="services_title">
-            <h1 className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text ">
+            <h1 className="text-4xl bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] text-transparent bg-clip-text lg:text-6xl">
               We have a solution.
             </h1>
           </div>
+          <div className="flex justify-center items-center mt-2">
+            <p className="text-lg lg:text-xl lg:mt-6 max-w-2xl text-center  services-description">
+              Whatever your unique idea or needs, we’ve got the tools and know
+              how to build your custom solution from discovery to deployment.
+            </p>
+          </div>
         </div>
-          <motion.div
-            className="w-full h-full mt-4 lg:mt-0 shadow-none gap-4 flex-wrap justify-center items-center lg:flex hidden"
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
+        <motion.div
+          className="w-full h-full mt-2 lg:mt-0 shadow-none gap-4 flex-wrap justify-center items-start lg:flex hidden"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          {cards}
+        </motion.div>
+        <motion.div
+          className="w-full h-[80%] mt-2 lg:mt-0 shadow-none flex lg:hidden gap-4 lg:flex-wrap justify-center items-start "
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <Swiper
+            spaceBetween={270}
+            slidesPerView={2}
+            loop
+            className="h-full w-full !overflow-visible"
           >
-            {cards}
-          </motion.div>
-          <motion.div
-            className="w-full h-[80%] mt-4 lg:mt-0 shadow-none flex lg:hidden gap-4 lg:flex-wrap justify-center items-center "
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            <Swiper
-              spaceBetween={270}
-              slidesPerView={2}
-              loop
-              className="h-full w-full !overflow-visible"
-            >
-              {cardsMobile}
-            </Swiper>
-          </motion.div>
+            {cardsMobile}
+          </Swiper>
+        </motion.div>
       </div>
     </section>
   );

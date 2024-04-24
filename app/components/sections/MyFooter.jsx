@@ -11,18 +11,6 @@ function MyFooter() {
       <div className="footer_container  relative z-20">
 
         <div className="left_container">
-          <Image
-            alt=""
-            src={logo}
-            style={{
-              width: "4rem",
-            }}
-            priority={true}
-          />
-          <div className="terms">
-            <h2>Privacy Policy</h2>
-            <h2>Terms and Conditions</h2>
-          </div>
           <div className="copyright">
             <h2>
               ©2023 WebLabs, LLC. <strong>All rights reserved.</strong>{" "}

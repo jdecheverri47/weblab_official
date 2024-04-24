@@ -62,6 +62,7 @@ function FaqSection() {
   const itemClasses = {
     content: "text-gray-500",
   };
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({});
@@ -69,7 +70,7 @@ function FaqSection() {
       gsap.from(".faq_text_container h1", {
         y: 250,
         ease: "power4.out",
-        duration: 2.5,
+        duration: 2,
         skewY: 4,
         stagger: {
           amount: 0.3,
@@ -82,11 +83,25 @@ function FaqSection() {
         },
       });
 
+      gsap.from(".description-text-faq", {
+        opacity: 0,
+        ease: "power4.out",
+        delay: 1.5,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#Faq",
+          start: "top center",
+          toggleActions: "play none none none",
+
+          // markers: true,
+        },
+      });
+
       gsap.from(".button_container_faq", {
         opacity: 0,
         ease: "power4.out",
         delay: 2,
-        duration: 2,
+        duration: 1,
         stagger: {
           amount: 1,
         },
@@ -101,8 +116,8 @@ function FaqSection() {
       gsap.from(".faq_questions", {
         opacity: 0,
         ease: "power4.out",
-        delay: 3,
-        duration: 2,
+        delay: 2.5,
+        duration: 1,
         stagger: {
           amount: 1,
         },
@@ -122,25 +137,25 @@ function FaqSection() {
   return (
     <section id="Faq">
       <div className="faq_container mt-[2rem] lg:mt-[5rem]">
-        <div >
-          <div className="faq_text flex flex-col items-center justify-center lg:items-start lg:justify-start">
-            <div className="faq_text_container pb-2">
+        <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start">
+          <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start text-center lg:text-left">
+            <div className="text-4xl lg:text-6xl font-medium faq_text_container pb-2">
               <h1>Have questions?</h1>
             </div>
             <div className="faq_text_container">
-              <h1
-                className="text_orange"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-              >
+              <h1 className="text-4xl lg:text-6xl font-medium bg-gradient-to-b from-[#FF705B] to-[#FFB457] bg-clip-text text-transparent w-full h-auto">
                 We have answers.
               </h1>
             </div>
+            <div className="mt-2 lg:mb-5 description-text-faq">
+              <p className="text-xl opacity-50">
+                You are free to make any questions as you need, we&apos;re here
+                to help!
+              </p>
+            </div>
             <div className="button_container_faq mt-5 lg:mt-0">
               <ContactModal
-                className="bg-black text-white text-[15px] w-[140px] h-[50px] lg:w-[160px] lg:text-[18px] lg:h-[55px]"
+                className="bg-black text-white text-[15px] w-[140px] h-[50px] lg:w-[150px] lg:text-[18px] lg:h-[50px]"
                 size="lg"
                 radius="full"
                 buttonText="Contact us"

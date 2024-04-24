@@ -1,7 +1,17 @@
 import testimonies from "@/app/data/Testimonies";
 import TestimonyCard from "../ui/TestimonyCard";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import { useLayoutEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function TestimonySection() {
+const titleRef = useRef(null);
+const descriptionRef = useRef(null);
+
   const colOne = testimonies.slice(0, 3).map((testimony, index) => {
     return (
       <TestimonyCard
@@ -46,11 +56,57 @@ function TestimonySection() {
     );
   });
 
-
+  useLayoutEffect(() => {
+    const title = titleRef.current;
+    const description = descriptionRef.current;
+    let ctx = gsap.context(() => {
+      gsap.from(title, {
+        y: 100,
+        ease: "power4.out",
+        duration: 2,
+        scrollTrigger: {
+          trigger: "#TestiSection",
+          start: "top center",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      }, 0);
+      gsap.from(description, {
+        opacity: 0,
+        ease: "power4.out",
+        duration: 2,
+        delay: 1,
+        scrollTrigger: {
+          trigger: "#TestiSection",
+          start: "top center",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      }, 2);
+    });
+    return () => ctx.revert();
+  }, []);
   return (
-    <section className="bg-[#f0f4f9] w-full h-full lg:px-[8.5rem] pt-[3rem] lg:pt-[5rem] pb-[2rem] relative">
-      <div className="w-full flex justify-center mb-7 px-[3rem] lg:px-0 pb-[1rem]">
-        <h1 className="font-medium text-[36px] text-center leading-8 lg:text-[76px]">Our customers <strong className="bg-gradient-to-r from-pink-400 to-red-500 text-transparent bg-clip-text">love us</strong> </h1>
+    <section id="TestiSection" className="bg-[#f0f4f9] w-full h-full lg:px-[8.5rem] pt-[3rem] lg:pt-[5rem] pb-[2rem] relative">
+      <div className="w-full flex justify-center mb-7 px-[2rem] lg:px-0 pb-[1rem]  flex-col items-center gap-4">
+        <div className=" relative h-[3.5rem] overflow-hidden">
+          <h1 className="font-medium text-4xl text-center lg:text-6xl" ref={titleRef}>
+            Our customers{" "}
+            <strong className="bg-gradient-to-b from-[#FF72E1] to-[#F54C7A] text-transparent bg-clip-text">
+              love us
+            </strong>{" "}
+          </h1>
+        </div>
+        <div className="lg:max-w-3xl">
+          <p
+            ref={descriptionRef}
+            className="text-center opacity-50 text-lg lg:text-xl test-description"
+          >
+            Our success in collaborating with clients is determined by effective
+            communication, mutual understanding, and a shared commitment to
+            achieving goals.
+          </p>
+        </div>
       </div>
       <div className="lg:grid lg:grid-cols-4 px-[1rem] w-full relative lg:px-[8rem] xl:px-[12rem] gap-5">
         <div className="flex flex-col gap-4">{colOne}</div>

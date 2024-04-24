@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-hidden">
       <body className={GoogleSans.className + " " + "overflow-hidden"}>
-          {/* <Header /> */}
+          <Header />
           {children}
         <SpeedInsights />
       </body>
