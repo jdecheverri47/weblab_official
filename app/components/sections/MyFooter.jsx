@@ -7,10 +7,7 @@ import Background from "../ui/Background";
 
 function MyFooter() {
   return (
-    <footer className="relative">
-    <Background classnames="opacity-70" />
-    <div className="top-gradient footer-grad absolute right-0"/>
-
+    <footer className="relative footer-layout bg-[#f0f4f9]">
       <div className="footer_container  relative z-20">
 
         <div className="left_container">
@@ -35,8 +32,8 @@ function MyFooter() {
         <div className="right_container">
           <div className="contact_weblab_info">
             <h2>Contact Us</h2>
-            <h2>support@weblabs.com.co</h2>
-            <h2>+57 3022166275</h2>
+            <h2 className="text-[16px]">support@weblabs.com.co</h2>
+            <h2 className="text-[16px]">+57 3022166275</h2>
           </div>
           <div className="social_media">
             <h2 className="hidden lg:block">Social Media</h2>

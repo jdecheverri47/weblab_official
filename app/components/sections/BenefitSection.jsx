@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Image from "next/image";
 import ButtonWeb from "../ui/ButtonWeb";
+import { Button } from "@nextui-org/react";
+import ContactModal from "../ui/ContactModal";
 import DesignImage from "/public/images/web_app.png";
 import handsImage from "/public/images/shaking_hands.jpg";
 import techSupport from "/public/images/support_team.jpg";
@@ -34,7 +36,7 @@ function BenefitSection() {
   const prevIndex = () => {
     setCarouselIndex((index) => (index === 0 ? 3 : index - 1));
     clearTimeout(timeoutId);
-    clearInterval(isIntersecting)
+    clearInterval(isIntersecting);
     setLoadingProgress(0);
   };
 
@@ -43,7 +45,6 @@ function BenefitSection() {
     clearTimeout(timeoutId);
     clearInterval(isIntersecting);
     setLoadingProgress(0);
-
   };
 
   const data = [
@@ -93,7 +94,7 @@ function BenefitSection() {
         />
       </div>
       <div className="title_container_benefits">
-        <h1 className="title_card tracking-tight">{currentItem.title}</h1>
+        <h1 className="title_card tracking-normal">{currentItem.title}</h1>
       </div>
       <div className="description_container_benefits">
         <p className="description_benefits text-gray-500">
@@ -106,15 +107,11 @@ function BenefitSection() {
           padding: "10px",
         }}
       >
-        <ButtonWeb
-          href="#Contact"
-          text="Contact us"
-          color="white"
-          backgroundColor="black"
-          width="10rem"
-          height="3.5rem"
-          borderParams="2px solid #5c5c5c"
-          shadow="shadow-lg"
+        <ContactModal
+          className="bg-black text-white w-[160px] text-[18px] h-[55px]"
+          size="lg"
+          radius="full"
+          buttonText="Contact us"
         />
       </div>
     </div>
@@ -201,7 +198,7 @@ function BenefitSection() {
           let currentProgress = 0;
           timer = setInterval(() => {
             if (currentProgress <= 101) {
-              currentProgress += 100/1850;
+              currentProgress += 100 / 1850;
               setLoadingProgress(currentProgress);
             }
           }, 5); // Actualiza cada 100ms
@@ -217,7 +214,7 @@ function BenefitSection() {
           setLoadingProgress(0);
         }
       },
-      { threshold: 0.5 } // Umbral de visibilidad del 50%
+      { threshold: 0.2 } // Umbral de visibilidad del 20%
     );
 
     if (ref) {
@@ -270,42 +267,27 @@ function BenefitSection() {
 
               {illustrationPerk}
 
-              <div
-                className="carousel_buttons"
-                style={{
-                  position: "relative",
-                  zIndex: "2",
-                  marginTop: "auto",
-                  display: "flex",
-                }}
-              >
-                <ButtonWeb
-                  color="white"
-                  backgroundColor="black"
-                  width="5.5rem"
-                  height="2.4rem"
-                  onClick={prevIndex}
-                  borderParams="2px solid #5c5c5c"
-                  shadow="shadow-lg"
+              <div className="carousel_buttons relative z-20 mt-auto flex gap-4">
+                <Button
+                  className="bg-black text-white text-[18px] w-[5rem] h-[2.3rem] "
+                  size="sm"
+                  radius="full"
+                  onPress={prevIndex}
                 >
                   <div style={{ position: "absolute", zIndex: "2" }}>
                     <LeftArrow />
                   </div>
-                </ButtonWeb>
-                <ButtonWeb
-                  color="white"
-                  backgroundColor="black"
-                  width="5.5rem"
-                  height="2.4rem"
-                  margin="0 0 0 1rem"
-                  onClick={nextIndex}
-                  borderParams="2px solid #5c5c5c"
-                  shadow="shadow-lg"
+                </Button>
+                <Button
+                  className="bg-black text-white text-[18px] w-[5rem] h-[2.3rem] "
+                  size="sm"
+                  radius="full"
+                  onPress={nextIndex}
                 >
                   <div style={{ position: "absolute", zIndex: "2" }}>
                     <RightArrow />
                   </div>
-                </ButtonWeb>
+                </Button>
               </div>
             </div>
           </CSSTransition>

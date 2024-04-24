@@ -1,13 +1,38 @@
 "use client";
 
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect, useState } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
+
+import Services from "@/app/data/Services";
+import ServicesCards from "../ui/ServicesCards";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ServicesSection() {
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 1.5,
+        duration: 2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 100 },
+    show: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeInOut" } },
+  };
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({});
@@ -102,7 +127,7 @@ function ServicesSection() {
       tl.to(
         ".services_container_text",
         {
-          yPercent: -50,
+          yPercent: -25,
           ease: "none",
           duration: 4,
         },
@@ -111,62 +136,72 @@ function ServicesSection() {
     });
     return () => ctx.revert();
   }, []);
+
+ 
+  const cardsMobile = Services.map((service) => {
+    return (
+      <SwiperSlide key={service.id} className="w-full h-full">
+        <ServicesCards
+          icon={service.id}
+          title={service.title}
+          description={service.description}
+          svg={service.svg}
+          item={item}
+        />
+      </SwiperSlide>
+    );
+  });
+
+  const cards = Services.map((service) => {
+    return (
+      <ServicesCards
+        key={service.id}
+        icon={service.id}
+        title={service.title}
+        description={service.description}
+        svg={service.svg}
+        item={item}
+      />
+    );
+  });
   return (
-    <section id="Services" className="p-10 ">
+    <section id="Services" className="lg:p-10">
       <div className="services_container">
-        <div className="services_container_text pt-[2rem]">
+        <div className="services_container_text lg:pt-[2rem] lg:pl-[2.5rem]">
           <div className="services_title">
             <h1>No matter the situation,</h1>
           </div>
           <div className="services_title">
-            <h1 className="purple_text_gradient">We have a solution.</h1>
+            <h1 className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text ">
+              We have a solution.
+            </h1>
           </div>
         </div>
-        <div className="services_container_cards pt-[5rem]">
-          <div className="services_container_card">
-            <div className="services_container_card_text">
-              <h2>01</h2>
-              <div className="services_title_container md:h-[6rem] 2xl:h-fit">
-                <h1>Websites Development</h1>
-              </div>
-              <p className="text-gray-500">
-                Crafting websites that captivate visually is just the beginning
-                for us. We focus on combining striking aesthetics with advanced
-                programming, ensuring your site not only draws attention but
-                also drives tangible results, such as leads, clients, and
-                revenue.
-              </p>
-            </div>
-          </div>
-          <div className="services_container_card">
-            <div className="services_container_card_text">
-              <h2>02</h2>
-              <div className="services_title_container md:h-[6rem] 2xl:h-fit">
-                <h1>Web App Development</h1>
-              </div>
-              <p className="text-gray-500">
-                Our approach to web application development transcends mere
-                aesthetics. We infuse advanced functionality and innovative
-                programming to not only captivate users but also to foster
-                engagement, enhance efficiency, and propel business growth.
-              </p>
-            </div>
-          </div>
-          <div className="services_container_card">
-            <div className="services_container_card_text">
-              <h2>03</h2>
-              <div className="services_title_container md:h-[6rem] 2xl:h-fit">
-                <h1>Mobile Development</h1>
-              </div>
-              <p className="text-gray-500">
-                Crafting mobile applications involves a delicate balance between
-                eye-catching design and robust functionality. Our focus is on
-                tailoring each app to enhance user experience, drive effective
-                engagement, and ultimately foster business success.
-              </p>
-            </div>
-          </div>
-        </div>
+          <motion.div
+            className="w-full h-full mt-4 lg:mt-0 shadow-none gap-4 flex-wrap justify-center items-center lg:flex hidden"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            {cards}
+          </motion.div>
+          <motion.div
+            className="w-full h-[80%] mt-4 lg:mt-0 shadow-none flex lg:hidden gap-4 lg:flex-wrap justify-center items-center "
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            <Swiper
+              spaceBetween={270}
+              slidesPerView={2}
+              loop
+              className="h-full w-full !overflow-visible"
+            >
+              {cardsMobile}
+            </Swiper>
+          </motion.div>
       </div>
     </section>
   );

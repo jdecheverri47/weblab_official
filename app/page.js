@@ -1,16 +1,15 @@
 'use client'
-import Image from "next/image";
 import HeroSection from "./components/sections/HeroSection";
 import HookSection from "./components/sections/HookSection";
 import BenefitSection from "./components/sections/BenefitSection";
 import ServicesSection from "./components/sections/ServicesSection";
-import SecondHook from "./components/sections/SecondHook";
-import ContactSection from "./components/sections/ContactSection";
-import PricingSection from "./components/sections/PricingSection";
 import FaqSection from "./components/sections/FaqSection";
 import MyFooter from "./components/sections/MyFooter";
-import ProofSection from "./components/sections/ProofSection";
 import { NextUIProvider } from "@nextui-org/react";
+import MethodologySection from "./components/sections/MethodologySection";
+import ContactModal from "./components/ui/ContactModal";
+import Showcase from "./components/sections/Showcase";
+import TestimonySection from "./components/sections/TestimonySection";
 
 export default function Home() {
   return (
@@ -20,12 +19,11 @@ export default function Home() {
         <HookSection />
         <BenefitSection />
         <ServicesSection />
-        <article className="w-full bg-[#f0f0f0] h-[10vh]" />
-        <ProofSection />
-        <article className="w-full bg-[#f0f0f0] h-[10vh]" />
-        <ContactSection />
+        <MethodologySection />
+        <Showcase />
+        <TestimonySection />
         <FaqSection />
-        <MyFooter /> 
+        <MyFooter />
       </main>
     </NextUIProvider>
   );

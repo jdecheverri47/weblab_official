@@ -16,10 +16,10 @@ function HookSection() {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#Hook",
-          start: "top 80%",
-          end: "+=1500",
+          start: "top center",
+          end: "center center",
           scrub: 2,
-          markers: false,
+          // markers: true,
           pinSpacing: false,
         },
       });
@@ -28,55 +28,28 @@ function HookSection() {
         ".title_container_hook",
         {
           yPercent: 0,
-          ease: "none",
           duration: 1,
         },
         {
           yPercent: 20,
-          ease: "none",
           duration: 1,
         },
         0
       );
 
-      tl.from(
-        ".description.left",
-        {
-          yPercent: 20,
-          opacity: 0,
-          duration: 0.3,
-        },
-        0.5
-      );
-      tl.to(
-        ".description.left",
-        {
-          yPercent: -140,
-          ease: "none",
-          duration: 1,
-        },
-        1
-      );
+     tl.from(".description.left", {
+      opacity: 0,
+      yPercent: 100,
+      ease: "power4.out",
+      duration: 5,
+     })
 
-      tl.from(
-        ".description.right",
-        {
-          yPercent: 20,
-          opacity: 0,
-          duration: 0.3,
-        },
-        0.5
-      );
-
-      tl.to(
-        ".description.right",
-        {
-          yPercent: -140,
-          ease: "none",
-          duration: 1,
-        },
-        1
-      );
+     tl.from(".description.right", {
+      opacity: 0,
+      yPercent: 100,
+      ease: "power4.out",
+      duration: 5,
+     })
     });
 
     return () => ctx.revert();
@@ -86,8 +59,8 @@ function HookSection() {
   return (
     <section id="Hook">
       <div className="title_container_hook flex justify-center items-center">
-        <h1 className="text-4xl mt-[2rem] lg:mt-0 lg:text-7xl leading-tighter text-center tracking-tight  lg:max-w-[800px]">
-          The highest quality for software production in the market
+        <h1 className="lg:text-4xl text-3xl px-5 lg:mt-[2rem] lg:text-[62px] lg:leading-[4rem] text-center tracking-tight font-medium lg:max-w-[800px]">
+          The <strong className="bg-gradient-to-r from-sky-400 to-blue-400 text-transparent bg-clip-text font-medium ">highest quality</strong> for software production in the market
         </h1>
       </div>
       <div className="description left">
@@ -96,7 +69,7 @@ function HookSection() {
         </p>
       </div>
       <div className="description right">
-        <p className="max-w-[250px] md:max-w-sm text-gray-500">
+        <p className="max-w-[250px] md:max-w-md text-gray-500">
           Catch the eye of your customers with the best animations on the web. Say no to boring websites!
         </p>
       </div>

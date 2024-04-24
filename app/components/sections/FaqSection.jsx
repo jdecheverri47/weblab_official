@@ -1,7 +1,8 @@
 "use client";
 
-import FaqAccordion from "../ui/FaqAccordion";
-import ButtonWeb from "../ui/ButtonWeb";
+import ContactModal from "../ui/ContactModal";
+import faqData from "@/app/data/FaqData";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,37 +11,57 @@ import { useLayoutEffect, useState, useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 function FaqSection() {
-  const faqData = [
-    {
-      question:
-        "Why should I pick WebLabs for my business?",
-      answer:
-        "At Weblabs, we're not just another software development company, we're your partners in crafting stunning digital experiences. Our focus is on creating websites that stand out in the market, seamless transitions, and immersive 3D models. \nBut it doesn't stop there. We're dedicated to your success every step of the way offering round-the-clock support and assistance with an additional three months of free support after completion. ",
-    },
-    {
-      question: "How long does it typically take to complete a project from start to finish?",
-      answer:
-        "Project timelines vary based on the complexity of the task at hand. Once we've gathered all the necessary information, we'll provide you with a precise estimated delivery time.",
-    },
-    {
-      question:
-        "Are you willing to negotiate the price of a project and the payment format?",
-      answer:
-        "In Weblabs we are always open to negotiate the price and the payment format. We want to make sure that every client has the best deal they can get based on the project they want to develop.",
-    },
-    {
-      question: "Do you do refunds?",
-      answer:
-        "Indeed, we understand the unique nature of our business, which is why we do not offer refunds for completed work. However, we do provide refunds for any outstanding work yet to be completed.",
-    },
-  ];
+  const faqs = faqData.map((faq, index) => {
+    return (
+      <AccordionItem
+        motionProps={{
+          variants: {
+            enter: {
+              y: 0,
+              opacity: 1,
+              height: "auto",
+              transition: {
+                height: {
+                  type: "spring",
+                  stiffness: 500,
+                  damping: 30,
+                  duration: 1,
+                },
+                opacity: {
+                  easings: "ease",
+                  duration: 1,
+                },
+              },
+            },
+            exit: {
+              y: -10,
+              opacity: 0,
+              height: 0,
+              transition: {
+                height: {
+                  easings: "ease",
+                  duration: 0.25,
+                },
+                opacity: {
+                  easings: "ease",
+                  duration: 0.3,
+                },
+              },
+            },
+          },
+        }}
+        key={index}
+        title={faq.question}
+        aria-label={faq.question}
+      >
+        {faq.answer}
+      </AccordionItem>
+    );
+  });
 
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  function toggleAccordion(index) {
-    setActiveIndex(index === activeIndex ? null : index)
-  }
-
+  const itemClasses = {
+    content: "text-gray-500",
+  };
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({});
@@ -100,48 +121,37 @@ function FaqSection() {
 
   return (
     <section id="Faq">
-      <div className="faq_container">
-        <div>
-          <div className="faq_text">
-            <div className="faq_text_container">
+      <div className="faq_container mt-[2rem] lg:mt-[5rem]">
+        <div >
+          <div className="faq_text flex flex-col items-center justify-center lg:items-start lg:justify-start">
+            <div className="faq_text_container pb-2">
               <h1>Have questions?</h1>
             </div>
             <div className="faq_text_container">
-            <h1
-              className="text_orange"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-            >
-              We have answers.
-            </h1>
+              <h1
+                className="text_orange"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              >
+                We have answers.
+              </h1>
             </div>
-          </div>
-          <div style={{ marginTop: "1rem" }} className="button_container_faq">
-            <ButtonWeb
-              href="#Contact"
-              text="Contact Us"
-              color="white"
-              backgroundColor="black"
-              width="10rem"
-              height="3.5rem"
-              borderParams="2px solid #5c5c5c"
-              shadow="shadow-lg"
-            />
+            <div className="button_container_faq mt-5 lg:mt-0">
+              <ContactModal
+                className="bg-black text-white text-[15px] w-[140px] h-[50px] lg:w-[160px] lg:text-[18px] lg:h-[55px]"
+                size="lg"
+                radius="full"
+                buttonText="Contact us"
+              />
+            </div>
           </div>
         </div>
         <div className="faq_questions">
-          {faqData.map((faq, index) => (
-            <FaqAccordion
-              key={index}
-              index={index}
-              question={faq.question}
-              answer={faq.answer}
-              isActive={activeIndex}
-              handleClick={() => toggleAccordion(index)}
-            />
-          ))}
+          <Accordion variant="splitted" itemClasses={itemClasses}>
+            {faqs}
+          </Accordion>
         </div>
       </div>
     </section>
