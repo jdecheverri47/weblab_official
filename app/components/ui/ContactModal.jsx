@@ -81,7 +81,7 @@ export default function ContactModal({
               <ModalBody>
                 <div className="card_form_container">
                   <form onSubmit={handleSubmit}>
-                    <div className="flex gap-4 lg:gap-2 flex-col lg:flex-row">
+                    <div className="flex gap-4 flex-col lg:flex-row items-start justify-center">
                       <ContactInput
                         type="text"
                         id="firstname"
@@ -101,7 +101,7 @@ export default function ContactModal({
                       />
                     </div>
 
-                    <div className="flex gap-4 lg:gap-2 flex-col lg:flex-row mt-1 lg:mt-0">
+                    <div className="flex gap-4  flex-col lg:flex-row mt-1 lg:mt-0 items-start justify-center">
                       <ContactInput
                         type="email"
                         id="email"
@@ -120,7 +120,7 @@ export default function ContactModal({
                         loading={loading}
                       />
                     </div>
-                    <div className="flex gap-4 lg:gap-2 flex-col lg:flex-row mt-1 lg:mt-0">
+                    <div className="flex gap-4  flex-col lg:flex-row mt-1 lg:mt-0 items-start justify-center">
                       <ContactSelect loading={loading} />
                       <ContactInput
                         type="tel"
@@ -137,7 +137,7 @@ export default function ContactModal({
                         classNames={{
                           input: ["bg-white"],
                           innerWrapper: ["bg-white"],
-                          inputWrapper: ["bg-white"],
+                          inputWrapper: ["bg-white border-1"],
                           label: ["font-medium text-[16px] lg:text-md"],
                         }}
                         size="lg"

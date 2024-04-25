@@ -31,6 +31,7 @@ function ContactSelect({loading}) {
         labelPlacement="outside"
         classNames={{
           label: ["font-medium lg:text-md text-[16px]"],
+          trigger: [" border-1"]
         }}
         size="lg"
         isDisabled={loading}

@@ -9,7 +9,7 @@ function ContactInput({ loading, type, id, name, placeholder, label }) {
         classNames={{
           input: ["bg-white"],
           innerWrapper: ["bg-white"],
-          inputWrapper: ["bg-white"],
+          inputWrapper: ["bg-white  border-1"],
           label: ["font-medium"],
         }}
         size="lg"
