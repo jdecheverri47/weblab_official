@@ -32,7 +32,7 @@ function Header() {
             {/* <Image alt="" src={logo} priority={true} className="w-[7rem] " /> */}
             <h1 className="font-bold text-2xl tracking-tighter bg-gradient-to-t from-black to-gray-500 text-transparent bg-clip-text px-2">WebLabs</h1>
           </Link>
-          <ul className="ml-10 mt-2">
+          <ul className="ml-10 mt-1">
             <Link href="#Benefits">
               <li className="li-ben">Benefits</li>
             </Link>
