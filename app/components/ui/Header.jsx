@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "/public/images/logo.png";
+import logo from "/public/images/WebLabs-logo.png";
 import "@/app/styles/navbar.css";
 import { useState, useEffect, useLayoutEffect } from "react";
 
@@ -29,7 +29,8 @@ function Header() {
       <nav className="px-[8.5rem]">
         <div className="flex gap-10">
           <Link href="https://weblabs.com.co">
-            <Image alt="" src={logo} priority={true} className="w-[2.8rem] " />
+            {/* <Image alt="" src={logo} priority={true} className="w-[7rem] " /> */}
+            <h1 className="font-bold text-2xl tracking-tighter bg-gradient-to-t from-black to-gray-500 text-transparent bg-clip-text px-2">WebLabs</h1>
           </Link>
           <ul className="ml-10">
             <Link href="#Benefits">
