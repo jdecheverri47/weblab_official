@@ -54,6 +54,7 @@ ul {
   list-style: none;
   gap: 4rem;
   margin-left: auto;
+  height: 100%;
 }
 
 ul li {
@@ -71,12 +72,12 @@ ul li {
   header {
     padding: 0;
     background: transparent;
-    width: 30%;
+    width: 100%;
     left: 0%;
   }
 
   nav {
-    justify-content: center;
+    justify-content: flex-start;
     background: transparent;
     padding: 0.4rem 0rem;
   }
@@ -991,4 +992,8 @@ footer.footer-layout {
     align-items: flex-start;
     gap: 0.5rem;
   }
+}
+
+.ai-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }

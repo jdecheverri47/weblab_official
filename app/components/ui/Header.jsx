@@ -26,13 +26,13 @@ function Header() {
 
   return (
     <header  className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-      <nav className="px-[8.5rem]">
-        <div className="flex gap-10">
+      <nav className="px-[1rem] lg:px-[8.5rem]">
+        <div className="flex gap-10 items-center">
           <Link href="https://weblabs.com.co">
             {/* <Image alt="" src={logo} priority={true} className="w-[7rem] " /> */}
             <h1 className="font-bold text-2xl tracking-tighter bg-gradient-to-t from-black to-gray-500 text-transparent bg-clip-text px-2">WebLabs</h1>
           </Link>
-          <ul className="ml-10">
+          <ul className="ml-10 mt-2">
             <Link href="#Benefits">
               <li className="li-ben">Benefits</li>
             </Link>
