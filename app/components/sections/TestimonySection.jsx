@@ -108,7 +108,7 @@ const descriptionRef = useRef(null);
           </p>
         </div>
       </div>
-      <div className="lg:grid lg:grid-cols-4 px-[1rem] w-full relative lg:px-[8rem] xl:px-[12rem] gap-5">
+      <div className="lg:grid lg:grid-cols-4 px-[1rem] w-full relative lg:px-[2rem] 2xl:px-[12rem] gap-5">
         <div className="flex flex-col gap-4">{colOne}</div>
         <div className="hidden lg:flex flex-col gap-4 ">{colTwo}</div>
         <div className="hidden lg:flex flex-col gap-4">{colThree}</div>

@@ -409,6 +409,13 @@ canvas {
   }
 }
 
+@media screen and (width <= 1280px) {
+  #Benefits {
+    padding: 1.5rem 4rem;
+
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .title_card {
     font-size: 62px;

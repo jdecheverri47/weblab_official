@@ -29,7 +29,7 @@ function MyFooter() {
               </ul>
             </div>
             <div className="list-footer">
-              <ul className="flex flex-col gap-3 justify-between items-start">
+              <ul className="flex flex-col gap-3 justify-between lg:justify-start items-start">
                 <h3 className="text-lg font-medium border-b-1 border-gray-300 pb-3 mb-3">
                   Careers
                 </h3>
@@ -38,7 +38,7 @@ function MyFooter() {
               </ul>
             </div>
             <div className="list-footer">
-              <ul className="flex flex-col gap-3 justify-between items-start">
+              <ul className="flex flex-col gap-3 justify-between lg:justify-start items-start">
                 <h3 className="text-lg font-medium border-b-1 border-gray-300 pb-3 mb-3">
                   Contact Us
                 </h3>
