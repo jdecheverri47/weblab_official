@@ -72,14 +72,15 @@ function Showcase() {
     let mm = gsap.matchMedia(),
       breakPoint = 800;
 
-    mm.add("(max-width: 768px)",
+ 
+    mm.add("(width <= 768px)",
       (context) => {
         // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
         let tl = gsap.timeline({
           scrollTrigger: {
             trigger: title,
             start: "center center",
-            end: "+=2650",
+            end: "+=2550",
             pin: true,
             scrub: 2,
             markers: false,
@@ -100,7 +101,85 @@ function Showcase() {
       }
     );
 
-    mm.add("(min-width: 769px)", (context) => {
+    mm.add("(width > 768px) and (width <= 1024px)", (context) => {
+      // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: title,
+          start: "center center",
+          end: "+=1100",
+          pin: true,
+          scrub: 2,
+          markers: false,
+          pinSpacing: true,
+        },
+      });
+      gsap.to(title, {
+        scale: 1.0,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 80%",
+          end: "bottom center",
+          scrub: 2,
+          markers: false,
+        },
+      });
+    });
+
+    mm.add("(width > 1024px) and (width <= 1300px) ", (context) => {
+      // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: title,
+          start: "center center",
+          end: "+=1350",
+          pin: true,
+          scrub: 2,
+          markers: false,
+          pinSpacing: true,
+        },
+      });
+      gsap.to(title, {
+        scale: 1.0,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 80%",
+          end: "bottom center",
+          scrub: 2,
+          markers: false,
+        },
+      });
+    });
+
+    mm.add("(width > 1300px) and (width < 1550px) ", (context) => {
+      // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: title,
+          start: "center center",
+          end: "+=1500",
+          pin: true,
+          scrub: 2,
+          markers: false,
+          pinSpacing: true,
+        },
+      });
+      gsap.to(title, {
+        scale: 1.0,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 80%",
+          end: "bottom center",
+          scrub: 2,
+          markers: false,
+        },
+      });
+    });
+
+    mm.add("(width > 1500px) ", (context) => {
       // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -127,6 +206,7 @@ function Showcase() {
     });
 
     return () => mm.revert();
+
   }, []);
 
   useLayoutEffect(() => {
@@ -134,7 +214,7 @@ function Showcase() {
     const columnLeft = columnLeftRef.current;
     const columnRight = columnRightRef.current;
     const columnCenter = columnCenterRef.current;
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1023) {
       const ctx = gsap.context(() => {
         gsap.from(columnLeft, {
           opacity: 0.8,

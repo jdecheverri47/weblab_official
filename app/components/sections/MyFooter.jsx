@@ -55,7 +55,7 @@ function MyFooter() {
             </div>
           </div>
           <div className="copyright mt-5">
-            <h2>
+            <h2 className="!text-sm">
               ©2023 WebLabs, LLC. <strong>All rights reserved.</strong>{" "}
             </h2>
           </div>
