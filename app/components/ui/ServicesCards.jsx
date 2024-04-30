@@ -5,7 +5,7 @@ function ServicesCards({ icon, title, description, svg, item }) {
   return (
     <motion.div variants={item}>
       <Card
-        className="group/card w-full h-[350px] min-w-[300px] lg:min-w-[400px] lg:w-[300px] lg:h-[350px] lg:max-h-[400px] border-1 p-4 hover:shadow-md hover:shadow-[#b249f834] !transition-all !duration-300 ease-in-out !hover:transition-all hover:duration-300 hover:ease-in-out hover:-translate-y-1 rounded-[25px]"
+        className="group/card w-full h-[350px] min-w-[300px] lg:min-w-[400px] lg:w-[300px] lg:h-[350px] lg:max-h-[400px] border-1 p-4 hover:shadow-md hover:border-[#b249f8] !transition-all !duration-300 ease-in-out !hover:transition-all hover:duration-300 hover:ease-in-out hover:-translate-y-1 rounded-[25px]"
         shadow="none"
         isPressable
       >
