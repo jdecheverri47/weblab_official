@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 
-import Services from "@/app/data/Services";
+import { Services } from "@/app/data/Services";
 import ServicesCards from "../ui/ServicesCards";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -51,7 +51,7 @@ function ServicesSection() {
           // markers: true,
         },
       });
-      
+
       gsap.from(".services-description", {
         opacity: 0,
         ease: "power4.out",
@@ -61,7 +61,7 @@ function ServicesSection() {
           trigger: "#Services",
           start: "top center",
           toggleActions: "play none none none",
-        }
+        },
       });
     });
 
@@ -86,16 +86,16 @@ function ServicesSection() {
     return (
       <ServicesCards
         key={service.id}
-        icon={service.id}
         title={service.title}
         description={service.description}
-        svg={service.svg}
         item={item}
-      />
+      >
+        <service.svg className="w-8 h-8 text-gray-300 group-hover/card:text-fuchsia-600 group/card:transition-all group/card:duration-300 group/card:ease-in-out group-hover/card:transition-all group-hover/card:duration-300 group-hover/card:ease-in-out " />
+      </ServicesCards>
     );
   });
   return (
-    <section id="Services" className="lg:p-10">
+    <section id="Services" className="lg:py-10">
       <div className="services_container">
         <div className="services_container_text lg:pt-[2rem] lg:pl-[2.5rem] justify-center items-center">
           <div className="services_title text-4xl lg:text-6xl">
@@ -106,15 +106,15 @@ function ServicesSection() {
               We have a solution.
             </h1>
           </div>
-          <div className="flex justify-center items-center mt-2">
-            <p className="text-lg lg:text-xl lg:mt-6 max-w-2xl text-center  services-description">
+          <div className="flex justify-center items-center ">
+            <p className="mt-2 max-w-2xl text-center services-description">
               Whatever your unique idea or needs, we’ve got the tools and know
               how to build your custom solution from discovery to deployment.
             </p>
           </div>
         </div>
         <motion.div
-          className="w-full h-full mt-2 lg:mt-0 shadow-none gap-4 flex-wrap justify-center items-start lg:flex hidden"
+          className="w-full h-full mt-2 lg:mt-0 shadow-none gap-4  flex-wrap justify-center items-start lg:flex hidden media-services"
           variants={container}
           initial="hidden"
           whileInView="show"

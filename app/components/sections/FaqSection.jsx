@@ -148,7 +148,7 @@ function FaqSection() {
               </h1>
             </div>
             <div className="mt-2 lg:mb-5 description-text-faq">
-              <p className="text-xl opacity-50">
+              <p className="text-[18px] max-w-lg">
                 You are free to make any questions as you need, we&apos;re here
                 to help!
               </p>

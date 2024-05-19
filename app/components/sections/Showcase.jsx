@@ -179,7 +179,7 @@ function Showcase() {
       });
     });
 
-    mm.add("(width > 1500px) ", (context) => {
+    mm.add("(width > 1550px) ", (context) => {
       // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
       let tl = gsap.timeline({
         scrollTrigger: {

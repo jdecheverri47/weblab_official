@@ -7,7 +7,7 @@
 
 .li-ben {
   transition: all 0.3s ease-in-out;
-  background: #727272;
+  background: #000000;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -24,7 +24,7 @@
 
 .li-ser {
   transition: all 0.3s ease-in-out;
-  background: #727272;
+  background: #000000;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -42,7 +42,7 @@
 
 .li-pri {
   transition: all 0.3s ease-in-out;
-  background: #727272;
+  background: #000000;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -60,7 +60,7 @@
 
 .li-ab {
   transition: all 0.3s ease-in-out;
-  background: #727272;
+  background: #000000;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

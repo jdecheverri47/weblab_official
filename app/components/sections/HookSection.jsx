@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,6 +11,8 @@ import SceneMobile from "../ui/SceneMobile";
 gsap.registerPlugin(ScrollTrigger);
 
 function HookSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({
@@ -55,6 +57,13 @@ function HookSection() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
   
   return (
     <section id="Hook">
@@ -64,19 +73,18 @@ function HookSection() {
         </h1>
       </div>
       <div className="description left">
-        <p className="max-w-[250px] md:max-w-sm text-gray-500">
+        <p className="max-w-[250px] md:max-w-sm">
           Break the rules of modern websites with beautiful 3D animations on your web.
         </p>
       </div>
       <div className="description right">
-        <p className="max-w-[250px] md:max-w-md text-gray-500">
+        <p className="max-w-[250px] md:max-w-md">
           Catch the eye of your customers with the best animations on the web. Say no to boring websites!
         </p>
       </div>
 
       <div className="h-[80%]">
-        <Scene />
-        {/* <SceneMobile /> */}
+        {isMobile ? <SceneMobile /> : <Scene />}
       </div>
     </section>
   );

@@ -1,14 +1,7 @@
 "use client";
 import { useState, useLayoutEffect, useEffect, useRef } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
-
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 import Image from "next/image";
-import ButtonWeb from "../ui/ButtonWeb";
 import { Button } from "@nextui-org/react";
 import ContactModal from "../ui/ContactModal";
 import DesignImage from "/public/images/web_app.png";
@@ -97,7 +90,7 @@ function BenefitSection() {
         <h1 className="title_card tracking-normal lg:text-5xl">{currentItem.title}</h1>
       </div>
       <div className="description_container_benefits">
-        <p className="description_benefits text-gray-500">
+        <p className="description_benefits">
           {currentItem.description}
         </p>
       </div>
@@ -127,66 +120,7 @@ function BenefitSection() {
     />
   );
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(".title_card", {
-        y: 120,
-        ease: "power4.out",
-        duration: 2.5,
-        skewY: 7,
-        stagger: {
-          amount: 0.3,
-        },
-        scrollTrigger: {
-          trigger: "#Benefits",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
-        },
-      });
-
-      gsap.from(".description_benefits", {
-        opacity: 0,
-        ease: "power4.out",
-        delay: 1,
-        duration: 2.5,
-        scrollTrigger: {
-          trigger: "#Benefits",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
-        },
-      });
-
-      gsap.from(".benefit_icon", {
-        opacity: 0,
-        ease: "power4.out",
-        duration: 2.5,
-        scrollTrigger: {
-          trigger: "#Benefits",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
-        },
-      });
-
-      gsap.from(".button_container_benefits", {
-        opacity: 0,
-        ease: "power4.out",
-        delay: 2,
-        duration: 2.5,
-        scrollTrigger: {
-          trigger: "#Benefits",
-          start: "top center",
-          toggleActions: "play none none none",
-          // markers: true,
-        },
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
-
+  
   useEffect(() => {
     const ref = componentRef.current;
     let timer;

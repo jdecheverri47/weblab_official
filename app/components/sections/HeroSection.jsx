@@ -2,8 +2,6 @@
 
 import { useLayoutEffect, useRef } from "react";
 
-import ButtonWeb from "../ui/ButtonWeb";
-import Circle from "../ui/Circle";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

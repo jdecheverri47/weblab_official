@@ -7,6 +7,7 @@ function TestimonyCard({ image, name, testimony }) {
       className="p-4 bg-white rounded-[25px]"
       initial={{ y: 15, opacity: 0.9, scale: 0.9 }}
       whileInView={{ y: 0, opacity: 1, scale: 1}}
+      viewport={{once: true}}
     >
       <div className="w-full justify-start">
         <div className="flex justify-start items-center gap-3">
@@ -14,7 +15,7 @@ function TestimonyCard({ image, name, testimony }) {
           <span className="font-medium">{name}</span>
         </div>
         <div className="mt-3">
-          <p className="text-gray-500">{testimony}</p>
+          <p className="text-gray-500 text-[16px]">{testimony}</p>
         </div>
       </div>
     </motion.div>

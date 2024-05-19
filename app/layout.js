@@ -34,7 +34,7 @@ const GoogleSans = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={GoogleSans.className + " " + "overflow-hidden"}>
+      <body className={GoogleSans.className }>
           <Header />
           {children}
         <SpeedInsights />

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import HeroSection from "./components/sections/HeroSection";
 import HookSection from "./components/sections/HookSection";
 import BenefitSection from "./components/sections/BenefitSection";
@@ -10,11 +10,13 @@ import MethodologySection from "./components/sections/MethodologySection";
 import ContactModal from "./components/ui/ContactModal";
 import Showcase from "./components/sections/Showcase";
 import TestimonySection from "./components/sections/TestimonySection";
+import Chatbot from "./components/ui/Chatbot";
+import Copyright from "./components/ui/Copyright";
 
 export default function Home() {
   return (
     <NextUIProvider>
-      <main>
+      <main className="overflow-hidden">
         <HeroSection />
         <HookSection />
         <BenefitSection />
@@ -23,7 +25,9 @@ export default function Home() {
         <Showcase />
         <TestimonySection />
         <FaqSection />
-        <MyFooter />
+        <MyFooter background="bg-gray-200" />
+        <Copyright />
+        {/* <Chatbot /> */}
       </main>
     </NextUIProvider>
   );
