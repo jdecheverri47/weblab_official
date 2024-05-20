@@ -19,7 +19,7 @@ function HeroImage() {
         duration: 2,
         ease: "power4.inOut",
         scrollTrigger: {
-          markers: true,
+          // markers: true,
           trigger: ".courtain-container",
           start: "top bottom",
           toggleActions: "play none none none",
