@@ -151,7 +151,7 @@ function HeroSection() {
         whoever believes in him shall not perish but have eternal life. Jn 3:16
         NIV
       </span>
-      <div className="absolute bottom-0 left-0 h-[5rem] w-full bg-gradient-to-t from-white to-transparent" />
+      <div className="absolute bottom-0 left-0 h-[2.5rem] w-full bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
