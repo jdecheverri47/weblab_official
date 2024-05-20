@@ -3,7 +3,6 @@
 import ContactModal from "../ui/ContactModal";
 import faqData from "@/app/data/FaqData";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useState, useEffect } from "react";
@@ -155,11 +154,12 @@ function FaqSection() {
             </div>
             <div className="button_container_faq mt-5 lg:mt-0">
               <ContactModal
-                className="bg-black text-white text-[15px] w-[140px] h-[50px] lg:w-[150px] lg:text-[18px] lg:h-[50px]"
+                className="bg-orange-200 text-orange-900 text-[14px] w-[130px] h-[45px] font-medium"
                 size="lg"
                 radius="full"
                 buttonText="Contact us"
               />
+
             </div>
           </div>
         </div>

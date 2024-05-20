@@ -94,7 +94,7 @@ function MethodologySection() {
             </h1>
             <div className="mt-5">
               <ContactModal
-                className="bg-green-400 text-white lg:text-lg text-sm"
+                className="bg-green-200 text-green-900 font-medium text-sm w-[160px] h-[45px]"
                 size="lg"
                 radius="full"
                 buttonText="Work With Us!"

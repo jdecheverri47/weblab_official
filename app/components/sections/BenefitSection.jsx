@@ -101,7 +101,7 @@ function BenefitSection() {
         }}
       >
         <ContactModal
-          className="bg-black text-white lg:w-[160px] lg:text-lg text-sm  lg:h-[55px]"
+          className="bg-blue-200 text-blue-900 w-[130px] text-sm h-[45px] font-medium"
           size="lg"
           radius="full"
           buttonText="Contact us"
