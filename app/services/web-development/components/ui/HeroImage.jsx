@@ -20,7 +20,7 @@ function HeroImage() {
         ease: "power4.inOut",
         scrollTrigger: {
           trigger: ".courtain-container",
-          start: "top center",
+          start: "top bottom",
           toggleActions: "play none none none",
         }
       }, 0);
