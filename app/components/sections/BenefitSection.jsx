@@ -116,7 +116,7 @@ function BenefitSection() {
       src={currentItem.image}
       fill
       className="image_cover shadow-inner object-cover"
-      priority={true}
+      priority
     />
   );
 
