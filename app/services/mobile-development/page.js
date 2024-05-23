@@ -5,7 +5,6 @@ import MyFooter from "@/app/components/sections/MyFooter";
 import Copyright from "@/app/components/ui/Copyright";
 import HeroImage from "./components/ui/HeroImage";
 import ColaborateSection from "@/app/components/ui/ColaborateSection";
-import Benefits from "./components/sections/Benefits";
 
 function page() {
   return (
@@ -35,8 +34,7 @@ function page() {
       <Divider />
       <HowWeMakeIt />
       <ColaborateSection background="bg-amber-400" />
-      <Benefits />
-      {/* <FaqSection /> */}
+      <FaqSection />
       <MyFooter background="bg-[#ccd1d4]" />
       <Copyright />
     </>

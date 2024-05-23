@@ -33,25 +33,25 @@ const services = [
   {
     name: "Mobile Development",
     description: "Your customers’ data will be safe and secure",
-    href: "#",
+    href: "/services/mobile-development",
     icon: DevicePhoneMobileIcon,
   },
   {
     name: "Machine Learning / AI",
     description: "Connect with third-party tools",
-    href: "#",
+    href: "/services/machine-learning-ai",
     icon: SparklesIcon,
   },
   {
     name: "Cloud Computing",
     description: "Build strategic funnels that will convert",
-    href: "#",
+    href: "/services/cloud-computing",
     icon: CloudIcon,
   },
   {
     name: "AR/VR Development",
     description: "Build strategic funnels that will convert",
-    href: "#",
+    href: "/services/ar-vr-development",
     icon: CubeTransparentIcon,
   },
 ];

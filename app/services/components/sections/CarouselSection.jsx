@@ -84,7 +84,7 @@ function CarouselSection() {
       className="w-full h-[100dvh] flex flex-col items-start justify-center p-[5rem] pb-[3rem]"
       ref={scrollWrapperRef}
     >
-      <article className="flex flex-col justify-center items-center mt-[2rem] w-full">
+      <article className="flex flex-col justify-center items-center mt-[5rem] w-full">
         <div className="text-7xl font-medium flex justify-center">
           <h1>Our</h1>
           <span>&nbsp;</span>

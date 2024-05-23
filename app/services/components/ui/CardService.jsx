@@ -10,7 +10,7 @@ import { PlusIcon } from "@heroicons/react/24/solid";
 function CardService({ image, children, id }) {
   return (
     <Card
-      className="w-[600px] h-[400px] relative "
+      className="w-[500px] h-[350px] relative "
       id={id}
     >
       {children}

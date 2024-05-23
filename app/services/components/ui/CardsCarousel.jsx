@@ -66,20 +66,6 @@ const CardsCarousel = forwardRef(function CardsCarousel(props, ref) {
           </CardService>
         </div>
         <div>
-          <CardService image={backend}>
-            <div className="absolute left-[18%] top-[5%] max-w-[220px] z-20  flex flex-col">
-              <div className="h-fit">
-                <h2 className="font-medium text-xl text-gray-400">
-                  Backend Development
-                </h2>
-                <h2 className="font-medium text-3xl">
-                  Building servers has never been <strong className="text-green-500 font-medium">easier.</strong>
-                </h2>
-              </div>
-            </div>
-          </CardService>
-        </div>
-        <div>
           <CardService image={ai} id="ml-dev-card">
             <div className="absolute left-[5%] bottom-[8%] max-w-[400px] z-20  flex flex-col">
               <div className="h-fit">

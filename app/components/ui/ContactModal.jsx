@@ -150,16 +150,7 @@ export default function ContactModal({
                       ></Textarea>
                     </div>
                     <div className="flex justify-end my-3 gap-2">
-                      <Button
-                        color="danger"
-                        variant="light"
-                        radius="lg"
-                        onPress={onClose}
-                        size="md"
-                        className="text-md w-[6rem]"
-                      >
-                        Close
-                      </Button>
+
                       <Button
                         color="primary"
                         type="submit"
