@@ -2,7 +2,7 @@ import React from "react";
 
 function BentoGrid() {
   return (
-    <section className="w-full h-full px-[20%] py-[5rem]">
+    <section className="w-full h-full px-[15%] py-[5rem]">
       <div className="flex flex-col w-full items-center justify-center">
         <h3 className="text-[16px] font-medium py-[2px] px-[8px] border-1 rounded-[4px] border-[#dadce0] mb-[12px]">
           Benefits
