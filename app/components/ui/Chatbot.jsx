@@ -10,7 +10,6 @@ import {
   CardHeader,
   Input,
 } from "@nextui-org/react";
-import Sparkle from "../svgs/Sparkle";
 
 export default function Chatbot() {
   return (
@@ -22,7 +21,6 @@ export default function Chatbot() {
             variant="flat"
             className="capitalize min-w-unit-10 w-[65px] h-[65px] rounded-full flex items-center justify-center ai-shadow"
           >
-            <Sparkle />
           </Button>
         </PopoverTrigger>
         <PopoverContent  >
