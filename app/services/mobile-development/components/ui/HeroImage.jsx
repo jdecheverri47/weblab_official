@@ -2,7 +2,7 @@
 import { useLayoutEffect } from "react";
 
 import Image from "next/image";
-import web from "@/public/images/lady-web.jpg";
+import web from "@/public/images/girl-phone.jpg";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";

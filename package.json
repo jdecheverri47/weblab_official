@@ -24,6 +24,7 @@
     "firebase": "^10.11.0",
     "framer-motion": "^11.1.5",
     "gsap": "^3.12.3",
+    "lottie-react": "^2.4.0",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18",

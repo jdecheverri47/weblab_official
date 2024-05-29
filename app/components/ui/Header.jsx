@@ -140,19 +140,19 @@ function Header() {
               href="#"
               className="text-sm font-medium leading-6 opacity-80"
             >
-              Features
+              Blog
             </a>
             <a
               href="#"
               className="text-sm font-medium leading-6 opacity-80"
             >
-              Marketplace
+              Media
             </a>
             <a
               href="#"
               className="text-sm font-medium leading-6 opacity-80"
             >
-              Company
+              About Us
             </a>
           </Popover.Group>
         </div>
