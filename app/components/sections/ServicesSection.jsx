@@ -11,6 +11,7 @@ import ServicesCards from "../ui/ServicesCards";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import BackgroundSecond from "../ui/BackgroundSecond";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,19 +91,19 @@ function ServicesSection() {
         description={service.description}
         item={item}
       >
-        <service.svg className="w-8 h-8 text-gray-300 group-hover/card:text-fuchsia-600 group/card:transition-all group/card:duration-300 group/card:ease-in-out group-hover/card:transition-all group-hover/card:duration-300 group-hover/card:ease-in-out " />
+        <service.svg className="w-8 h-8 text-gray-300 group-hover/card:text-indigo-600 group/card:transition-all group/card:duration-300 group/card:ease-in-out group-hover/card:transition-all group-hover/card:duration-300 group-hover/card:ease-in-out " />
       </ServicesCards>
     );
   });
   return (
     <section id="Services" className="lg:py-10">
-      <div className="services_container">
+      <div className="services_container z-30 relative">
         <div className="services_container_text lg:pt-[2rem] lg:pl-[2.5rem] justify-center items-center">
           <div className="services_title text-4xl lg:text-6xl">
             <h1 className="text-4xl lg:text-6xl ">No matter the situation,</h1>
           </div>
           <div className="services_title">
-            <h1 className="text-4xl bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] text-transparent bg-clip-text lg:text-6xl">
+            <h1 className="text-4xl bg-gradient-to-b from-cyan-400 to-indigo-600 text-transparent bg-clip-text lg:text-6xl">
               We have a solution.
             </h1>
           </div>
@@ -114,7 +115,7 @@ function ServicesSection() {
           </div>
         </div>
         <motion.div
-          className="w-full h-full mt-2 lg:mt-0 shadow-none gap-4  flex-wrap justify-center items-start lg:flex hidden media-services"
+          className="w-[70%] h-full mt-2 lg:mt-0 shadow-none gap-10  flex-wrap justify-center items-start lg:flex hidden media-services"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -139,6 +140,8 @@ function ServicesSection() {
           </Swiper>
         </motion.div>
       </div>
+
+      <BackgroundSecond />
     </section>
   );
 }

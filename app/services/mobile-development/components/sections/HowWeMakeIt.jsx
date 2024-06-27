@@ -7,7 +7,7 @@ import userCentric from "@/public/images/image1.gif";
 function HowWeMakeIt() {
   return (
     <section className="w-[100dvw] h-full px-[10%] py-[5rem]">
-      <div className="flex flex-col items-between justify-center gap-[3rem]">
+      <div className="flex flex-col items-center justify-center gap-[3rem]">
         <div className="w-fit mb-[12px]">
             <div className="w-full flex items-center justify-center">
               <h2 className="font-medium text-[16px] px-[8px] py-[4px] border-1 rounded-[4px] border-[#dadce0]">
@@ -17,7 +17,7 @@ function HowWeMakeIt() {
         </div>
 
         <article className=" flex flex-col gap-[5rem]">
-          <div className="w-full flex items-center justify-between">
+          <div className="w-full flex gap-[8rem] items-center justify-between px-10">
             <div className="w-[550px] h-[350px]">
               <div className="flex flex-col items-start gap-3">
                 <h2 className="text-3xl font-medium">
@@ -43,7 +43,7 @@ function HowWeMakeIt() {
               />
             </div>
           </div>
-          <div className="w-full flex flex-row-reverse items-center justify-between">
+          <div className="w-full flex flex-row-reverse items-center justify-between px-10">
             <div className="w-[550px] h-[350px]">
               <div className="flex flex-col items-start gap-3">
                 <h2 className="text-3xl font-medium">User-Centric Design</h2>
@@ -66,7 +66,7 @@ function HowWeMakeIt() {
               />
             </div>
           </div>
-          <div className="w-full flex items-between justify-between ">
+          <div className="w-full flex items-between justify-between px-10 ">
             <div className="w-[550px] h-[350px]">
               <div className="flex flex-col items-start gap-3 ">
                 <h2 className="text-3xl font-medium">Rigorous Quality Assurance</h2>

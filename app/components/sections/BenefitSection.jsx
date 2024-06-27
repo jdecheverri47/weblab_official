@@ -8,7 +8,7 @@ import DesignImage from "/public/images/web_app.png";
 import handsImage from "/public/images/shaking_hands.jpg";
 import techSupport from "/public/images/support_team.jpg";
 import platform from "/public/images/platform.jpg";
-
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import heart from "/public/images/amor.png";
 import money from "/public/images/gran-venta.png";
 import rocket from "/public/images/puesta-en-marcha.png";
@@ -101,10 +101,11 @@ function BenefitSection() {
         }}
       >
         <ContactModal
-          className="bg-blue-200 text-blue-900 w-[130px] text-sm h-[45px] font-medium"
-          size="lg"
+          className="bg-indigo-500 text-white w-[130px] text-[16px] h-[40px] pl-4 pr-2"
+          size="md"
           radius="full"
           buttonText="Contact us"
+          endcontent={<ChevronRightIcon className="text-white w-5 h-5" />}
         />
       </div>
     </div>

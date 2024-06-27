@@ -1,5 +1,6 @@
 import HowWeMakeIt from "./components/sections/HowWeMakeIt";
 import { Divider } from "@nextui-org/react";
+import FaqSection from "@/app/components/sections/FaqSection";
 import MyFooter from "@/app/components/sections/MyFooter";
 import Copyright from "@/app/components/ui/Copyright";
 import HeroImage from "./components/ui/HeroImage";
@@ -18,16 +19,15 @@ function page() {
             <h3 className="text-[16px] font-medium py-[2px] px-[8px] border-1 rounded-[4px] border-[#dadce0] mb-[12px]">
               Service
             </h3>
-            <h1 className="text-[3rem] font-bold mb-[12px] text-center leading-[3rem]">
-              Sculpting
-              <span className="text-blue-500"> Mobile Solutions </span> That
-              Move You Forward
+            <h1 className="text-[3rem] font-medium mb-[12px] text-center leading-[3rem]">
+              Unlock the Future with{" "}
+              <span className="text-orange-400"> AI-Powered</span> Solutions
             </h1>
             <p className="text-center max-w-3xl ">
-              we turn visionary ideas into powerful, user-centric mobile
-              applications. Our expert developers and designers collaborate with
-              you to create seamless, high-performance apps that captivate users
-              and drive growth.
+              Transform your business with cutting-edge Machine Learning and AI
+              services. From automatic text generation and stunning image
+              creation to advanced computer vision and sentiment analysis,
+              Weblabs brings the power of AI to your fingertips.
             </p>
           </div>
           <HeroImage />
@@ -35,8 +35,9 @@ function page() {
       </section>
       <Divider />
       <HowWeMakeIt />
-      <ColaborateSection background="bg-blue-500" />
+      <ColaborateSection background="bg-amber-400" />
       <Benefits />
+      {/* <FaqSection /> */}
       <MyFooter background="bg-[#ccd1d4]" />
       <Copyright />
     </>

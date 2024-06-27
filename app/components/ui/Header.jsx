@@ -6,7 +6,7 @@ import { useState, Fragment } from "react";
 import Link from "next/link";
 import ContactModal from "./ContactModal";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon, InformationCircleIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon, ChevronRightIcon, InformationCircleIcon } from "@heroicons/react/20/solid";
 
 import {
   CursorArrowRaysIcon,
@@ -41,19 +41,7 @@ const services = [
     description: "Connect with third-party tools",
     href: "/services/machine-learning-ai",
     icon: SparklesIcon,
-  },
-  {
-    name: "Cloud Computing",
-    description: "Build strategic funnels that will convert",
-    href: "/services/cloud-computing",
-    icon: CloudIcon,
-  },
-  {
-    name: "AR/VR Development",
-    description: "Build strategic funnels that will convert",
-    href: "/services/ar-vr-development",
-    icon: CubeTransparentIcon,
-  },
+  }
 ];
 
 const callsToAction = [
@@ -101,7 +89,7 @@ function Header() {
                       >
                         <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <item.icon
-                            className="h-6 w-6 text-gray-600 group-hover:text-blue-400"
+                            className="h-6 w-6 text-gray-600 group-hover:text-indigo-500"
                             aria-hidden="true"
                           />
                         </div>
@@ -158,10 +146,11 @@ function Header() {
         </div>
         <div>
           <ContactModal
-            className="bg-black text-white text-sm font-medium px-5"
+            className="bg-indigo-950 text-white text-[16px] font-medium pl-4 pr-2"
             size="md"
             radius="full"
             buttonText="Contact us"
+            endcontent={<ChevronRightIcon className="text-white w-5 h-5" />}
           />
         </div>
       </nav>

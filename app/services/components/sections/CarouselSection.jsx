@@ -22,11 +22,11 @@ function CarouselSection() {
           translateX: 0,
         },
         {
-          translateX: "-160dvw",
+          translateX: "-50dvw",
           scrollTrigger: {
             trigger: scrollTrigger,
             start: "top top",
-            end: "3000 bottom",
+            end: "1500 bottom",
             pin: true,
             scrub: 2,
             markers: false,
@@ -88,7 +88,7 @@ function CarouselSection() {
         <div className="text-7xl font-medium flex justify-center">
           <h1>Our</h1>
           <span>&nbsp;</span>
-          <h1 className="bg-gradient-to-t from-[#4facfe] to-[#00f2fe] text-transparent bg-clip-text ">
+          <h1 className="bg-gradient-to-t to-indigo-400 from-indigo-600 text-transparent bg-clip-text ">
             Services
           </h1>
         </div>

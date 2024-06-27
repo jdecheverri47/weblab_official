@@ -3,6 +3,7 @@
 import ContactModal from "../ui/ContactModal";
 import faqData from "@/app/data/FaqData";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useState, useEffect } from "react";
@@ -142,7 +143,7 @@ function FaqSection() {
               <h1>Have questions?</h1>
             </div>
             <div className="faq_text_container">
-              <h1 className="text-4xl lg:text-6xl font-medium bg-gradient-to-b from-[#FF705B] to-[#FFB457] bg-clip-text text-transparent w-full h-auto">
+              <h1 className="text-4xl lg:text-6xl font-medium bg-gradient-to-b from-cyan-400 to-indigo-600 bg-clip-text text-transparent w-full h-auto">
                 We have answers.
               </h1>
             </div>
@@ -154,10 +155,11 @@ function FaqSection() {
             </div>
             <div className="button_container_faq mt-5 lg:mt-0">
               <ContactModal
-                className="bg-orange-200 text-orange-900 text-[14px] w-[130px] h-[45px] font-medium"
-                size="lg"
+                className="bg-indigo-500 text-white text-[16px] w-[130px] h-[40px] pl-4 pr-2"
+                size="md"
                 radius="full"
                 buttonText="Contact us"
+                endcontent={<ChevronRightIcon className="text-white w-6 h-6" />}
               />
 
             </div>

@@ -2,7 +2,6 @@
 
 import { useLayoutEffect, useRef } from "react";
 
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Background from "../ui/Background";
@@ -11,6 +10,7 @@ import "../../styles/heroanim.scss";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import ContactModal from "../ui/ContactModal";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,8 +92,6 @@ function HeroSection() {
     return () => ctx.revert();
   }, []);
 
- 
-
   return (
     <section id="Hero" ref={heroRef}>
       <Background />
@@ -121,25 +119,19 @@ function HeroSection() {
         </p>
       </div>
 
-      <div
-        
-        className="button_container flex gap-8 opacity-0"
-      >
-        <Link href="#Services">
-          <Button
-            className="bg-white lg:w-[140px] lg:text-[16px] lg:h-[50px] border-gray-300 border-1 block"
-            size="lg"
-            radius="full"
-            variant="bordered"
-          >
+      <div className="button_container flex gap-8 opacity-0">
+        <Link href="#Services" className="hover:opacity-60 transition-all duration-300 ease-in-out">
+          <span className="px-6 lg:text-[16px] lg:h-[40px] relative z-30 flex items-center justify-center">
             See perks
-          </Button>
+            <ChevronRightIcon className="text-indigo-950 ml-4 w-6 h-6" />
+          </span>
         </Link>
         <ContactModal
-          className="bg-black text-white lg:w-[140px] lg:text-[16px] lg:h-[50px]"
-          size="lg"
+          className="bg-indigo-500  text-white lg:text-[16px] lg:h-[40px] pl-4 pr-2"
+          size="md"
           radius="full"
           buttonText="Contact us"
+          endcontent={<ChevronRightIcon className="text-white w-6 h-6" />}
         />
       </div>
 

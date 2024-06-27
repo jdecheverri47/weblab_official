@@ -17,6 +17,7 @@ import { db } from "../../firebase";
 import ContactInput from "./ContactInput";
 import PaperPlane from "./PaperPlane";
 import ContactSelect from "./ContactSelect";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 export default function ContactModal({
   buttonText,
@@ -25,6 +26,7 @@ export default function ContactModal({
   className,
   size,
   radius,
+  endcontent
 }) {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
   const [loading, setLoading] = useState(false);
@@ -68,6 +70,7 @@ export default function ContactModal({
         size={size}
         onPress={onOpen}
         radius={radius}
+        endContent={endcontent}
       >
         {buttonText}
       </Button>
@@ -155,9 +158,9 @@ export default function ContactModal({
                         color="primary"
                         type="submit"
                         size="md"
-                        radius="lg"
+                        radius="full"
                         isLoading={loading}
-                        className="bg-black text-md w-[7rem]"
+                        className="bg-indigo-500 text-md w-[7rem]"
                         endContent={<PaperPlane />}
                         spinner={
                           <svg

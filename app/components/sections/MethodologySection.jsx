@@ -2,6 +2,8 @@
 import processData from "@/app/data/ProcessData";
 import PlanningComponent from "../ui/PlanningComponent";
 
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef, useEffect } from "react";
@@ -94,10 +96,11 @@ function MethodologySection() {
             </h1>
             <div className="mt-5">
               <ContactModal
-                className="bg-green-200 text-green-900 font-medium text-sm w-[160px] h-[45px]"
-                size="lg"
+                className="bg-green-400 text-white text-[16px] w-[160px] h-[40px] pl-4 pr-2"
+                size="md"
                 radius="full"
                 buttonText="Work With Us!"
+                endcontent={<ChevronRightIcon className="text-white w-6 h-6" />}
               />
             </div>
           </div>

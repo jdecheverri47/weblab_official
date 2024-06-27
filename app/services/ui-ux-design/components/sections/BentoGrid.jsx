@@ -58,7 +58,7 @@ function BentoGrid() {
               <Lottie animationData={boost} />
             </div>
           </div>
-          <div className="grid col-span-6 border-1 border-[text-gray-200] rounded-[25px] max-h-[500px] overflow-hidden">
+          <div className="grid col-span-6 border-1 border-[text-gray-200] rounded-[25px] max-h-[600px] overflow-hidden">
             <div className="w-full h-full p-10">
               <div>
                 <h2 className="text-2xl font-medium">
