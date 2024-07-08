@@ -22,7 +22,7 @@ function HowWeMakeIt() {
               <div className="flex flex-col items-start gap-3">
                 <h2 className="text-3xl">User Experience</h2>
                 <p>
-                  WebLabs&apos;s design principles focus on the user, maintain
+                  WebLabs&rsquo;s design principles focus on the user, maintain
                   simplicity, ensure speed and efficiency, promote transparency,
                   and emphasize continuous improvement, setting a high standard
                   in the tech industry. These principles not only drive the
@@ -46,16 +46,12 @@ function HowWeMakeIt() {
               <div className="flex flex-col items-start gap-3">
                 <h2 className="text-3xl">User Interface Design</h2>
                 <p>
-                  Unlock the Power of Innovation with Big Techs Secrets. At
-                  WebLabs, years of extensive research and intricate study of
-                  big tech pioneers like Google, Apple, and Meta have enabled us
-                  to develop a unique set of internal guidelines. These
-                  principles guide our approach to software development, helping
-                  us to apply industry-leading insights without the need for
-                  reinventing the wheel. By leveraging these treasured secrets,
-                  we ensure that the products we deliver aren&apos;t just
-                  high-quality but also infused with the advanced strategies
-                  that drive global tech leaders.{" "}
+                  Unlock the Power of Innovation with Big Tech&rsquo;s Secrets. At
+                  WebLabs, we&rsquo;ve studied industry giants like Google, Apple, and
+                  Meta to create unique internal guidelines for software
+                  development. These principles allow us to apply top industry
+                  insights, ensuring our products are high-quality and infused
+                  with the advanced strategies of global tech leaders.
                 </p>
               </div>
             </div>
@@ -72,20 +68,14 @@ function HowWeMakeIt() {
               <div className="flex flex-col items-start gap-3 ">
                 <h2 className="text-3xl"> High-fidelity Prototypes</h2>
                 <p>
-                  Experience Universal Compatibility with our &rsquo;Fully
-                  Responsive&rsquo; Designs. At WebLabs, we nurture the
-                  interplay between aesthetics and functionality to construct
-                  web solutions that transcend boundaries of device and
-                  platform. Whether it&apos;s an ultra-HD desktop screen or a
-                  mobile device, our designs respond flawlessly across all
-                  interfaces, offering optimal viewing and interaction
-                  experience. But that&apos;s not all. Our commitment to
-                  responsiveness extends beyond the surface to incorporate
-                  enhanced performance and swift loading speeds. Embedded with
-                  SEO strategies, our fully optimized solutions don&apos;t just
-                  look and perform superbly; they also rank high on search
-                  engines. Unleash the power of total usability, top-tier
-                  performance, and impressive visibility with WebLabs.
+                  Experience Universal Compatibility with WebLabs&apos; Fully
+                  Responsive Designs. Our web solutions seamlessly adapt to any
+                  device, from ultra-HD desktops to mobile screens, ensuring
+                  optimal viewing and interaction. We prioritize aesthetics,
+                  functionality, and speed, providing fast-loading,
+                  SEO-optimized designs that perform excellently and rank high
+                  on search engines. Unlock top-tier performance and impressive
+                  visibility with WebLabs.
                 </p>
               </div>
             </div>

@@ -69,7 +69,7 @@ function HookSection() {
     <section id="Hook">
       <div className="title_container_hook flex justify-center items-center">
         <h1 className="lg:text-6xl text-3xl px-5 lg:mt-[2rem] lg:leading-[4rem] text-center tracking-tight font-medium lg:max-w-[700px]">
-          The <strong className="bg-gradient-to-t from-[#4facfe] to-[#00f2fe] text-transparent bg-clip-text font-medium ">highest quality</strong> for software production in the market
+          The <strong className="bg-gradient-to-b from-cyan-400 to-indigo-600 text-transparent bg-clip-text font-medium ">highest quality</strong> for software production in the market
         </h1>
       </div>
       <div className="description left">

@@ -89,14 +89,14 @@ function MethodologySection() {
           >
             <h1 className="text-4xl lg:text-6xl font-medium tracking-tight text-center lg:text-left">
               Our{" "}
-              <strong className="font-medium bg-gradient-to-b from-[#6FEE8D] to-[#17c964] text-transparent bg-clip-text">
+              <strong className="font-medium bg-gradient-to-b from-cyan-400 to-indigo-600 text-transparent bg-clip-text">
                 essential
               </strong>{" "}
               <br /> process
             </h1>
             <div className="mt-5">
               <ContactModal
-                className="bg-green-400 text-white text-[16px] w-[160px] h-[40px] pl-4 pr-2"
+                className="bg-indigo-500 text-white text-[16px] w-[160px] h-[40px] pl-4 pr-2"
                 size="md"
                 radius="full"
                 buttonText="Work With Us!"
@@ -112,7 +112,7 @@ function MethodologySection() {
         <div className="col-span-1 h-[200vh] lg:h-[96%] bg-[#f0f4f9] w-5 rounded-full overflow-hidden relative justify-center items-start mt-10">
           <motion.div
             style={{ scaleY: scrollYProgress, transformOrigin: "top" }}
-            className="w-full bg-gradient-to-b from-green-400 to-lime-400 h-full"
+            className="w-full bg-gradient-to-b from-cyan-400 to-indigo-600 h-full"
           />
         </div>
        </div>

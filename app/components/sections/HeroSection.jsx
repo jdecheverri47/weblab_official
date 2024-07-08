@@ -97,18 +97,18 @@ function HeroSection() {
       <Background />
       <div className="flex flex-col justify-center items-center w-fit lg:flex-row">
         <div className="title_container py-2 flex w-fit">
-          <h1 className="title hero prueba text-7xl font-medium tracking-tight ">
+          <h1 className="title hero prueba text-7xl font-medium tracking-tight text-indigo-950">
             Designing the
           </h1>
         </div>
         <div className="title_container lg:py-2 flex md:ml-5">
-          <h1 className="title hero prueba text-7xl font-medium tracking-tight ">
+          <h1 className="title hero prueba text-7xl font-medium tracking-tight text-indigo-950">
             Future
           </h1>
         </div>
       </div>
       <div className="title_container">
-        <h1 className="title hero text-7xl font-medium tracking-tight px-2">
+        <h1 className="title hero text-7xl font-medium tracking-tight px-2 text-indigo-950">
           of the Web
         </h1>
       </div>

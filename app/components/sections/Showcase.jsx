@@ -271,7 +271,7 @@ function Showcase() {
         ref={titleRef}
       >
         <div className="bg-white bg-opacity-80 border-2 border-grey-300 p-5 lg:p-10 h-fit w-fit rounded-[35px] lg:rounded-[50px] shadow-box-weblabs backdrop-blur-md">
-          <h1 className="text-[42px] lg:text-8xl font-medium tracking-tight relative showcase_title">
+          <h1 className="text-[42px] lg:text-8xl font-medium tracking-tight relative bg-clip-text bg-gradient-to-b from-indigo-950 to-indigo-900 text-transparent">
             Made in <strong className="font-medium  ">WebLabs</strong>{" "}
           </h1>
         </div>

@@ -92,7 +92,7 @@ const descriptionRef = useRef(null);
         <div className=" relative h-[5rem] lg:h-[3.5rem] overflow-hidden">
           <h1 className="font-medium text-4xl text-center lg:text-6xl" ref={titleRef}>
             Our customers{" "}
-            <strong className="bg-gradient-to-b from-[#FF72E1] to-[#F54C7A] text-transparent bg-clip-text">
+            <strong className="bg-gradient-to-b from-cyan-400 to-indigo-600 text-transparent bg-clip-text">
               love us
             </strong>{" "}
           </h1>
