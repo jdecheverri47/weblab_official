@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -78,6 +78,7 @@ function ServicesSection() {
           description={service.description}
           svg={service.svg}
           item={item}
+          link={service.link}
         />
       </SwiperSlide>
     );
@@ -90,6 +91,7 @@ function ServicesSection() {
         title={service.title}
         description={service.description}
         item={item}
+        link={service.link}
       >
         <service.svg className="w-8 h-8 text-gray-300 group-hover/card:text-indigo-600 group/card:transition-all group/card:duration-300 group/card:ease-in-out group-hover/card:transition-all group-hover/card:duration-300 group-hover/card:ease-in-out " />
       </ServicesCards>

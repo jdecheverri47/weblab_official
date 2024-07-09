@@ -48,9 +48,9 @@ function HeroImage() {
     
   }, []);
   return (
-    <div className="w-[75%] mt-10 flex items-center justify-center  rounded-[40px] relative courtain-container">
+    <div className="w-[75%] mt-10 flex items-center justify-center  rounded-[20px] relative courtain-container">
       <div id="courtain" className="absolute w-full h-full bottom-0 left-0 bg-white z-40" />
-      <div className="absolute w-full h-full top-0 left-0  z-30 rounded-[40px] shadow-inner-web" />
+      <div className="absolute w-full h-full top-0 left-0  z-30 rounded-[20px] shadow-inner-web" />
       <div className="absolute z-20 max-w-md top-[10%] left-[5%]">
         <h2 className="text-4xl text-white">
           Enhance your online presence and make your business grow...
@@ -64,7 +64,7 @@ function HeroImage() {
       <Image
         alt=""
         src={uiux}
-        className="object-cover rounded-[40px]"
+        className="object-cover rounded-[20px]"
         priority
       />
     </div>

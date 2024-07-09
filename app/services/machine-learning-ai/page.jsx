@@ -35,7 +35,7 @@ function page() {
       </section>
       <Divider />
       <HowWeMakeIt />
-      <ColaborateSection background="bg-orange-400" />
+      <ColaborateSection background="bg-orange-500" />
       <Benefits />
       {/* <FaqSection /> */}
       <MyFooter background="bg-[#ccd1d4]" />

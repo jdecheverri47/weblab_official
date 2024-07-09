@@ -5,7 +5,7 @@ import logo from "/public/images/logo.png";
 import Link from "next/link";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
-function MyFooter({background}) {
+function MyFooter({ background }) {
   return (
     <footer className={`relative footer-layout ${background}`}>
       <div className="footer_container  relative z-20">
@@ -16,13 +16,12 @@ function MyFooter({background}) {
                 <h3 className="text-lg font-medium border-b-2 border-black pb-2 mb-3">
                   Services
                 </h3>
-                <a href="/services/web-development"><li>Web Development</li></a>
-                <li>Mobile Development</li>
                 <li>UI/UX Design</li>
+                <a href="/services/web-development">
+                  <li>Web Development</li>
+                </a>
+                <li>Mobile Development</li>
                 <li>ML/AI</li>
-                <li>Backend Development</li>
-                <li>Cloud</li>
-                <li>AR/VR Development</li>
               </ul>
             </div>
             <div className="list-footer">

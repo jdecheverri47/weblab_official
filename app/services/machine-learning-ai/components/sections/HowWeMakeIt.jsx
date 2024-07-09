@@ -21,11 +21,12 @@ function HowWeMakeIt() {
         </div>
 
         <article className="flex gap-[2rem]">
-          <div className="flex flex-col items-start justify-center gap-[1rem] mb-[4rem]">
+          <div className="flex flex-col items-start justify-center gap-[1rem] mb-[8rem]">
             <LiaBrainSolid className="w-[6rem] h-[6rem] text-orange-400" />
             <h1 className="text-4xl font-bold">
               Leading-Edge Machine Learning Services for Modern Trends
             </h1>
+            <p className="text-gray-600">Offering state-of-the-art Machine Learning solutions tailored to the latest industry trends.</p>
           </div>
           <div className=" flex flex-col gap-[2rem]">
             <div className="flex gap-[2rem]">

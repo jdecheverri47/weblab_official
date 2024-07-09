@@ -74,11 +74,11 @@ export default function ContactModal({
       >
         {buttonText}
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="2xl" placement="center" scrollBehavior="inside">
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="3xl" placement="center" scrollBehavior="inside" >
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 justify-center items-center text-2xl w-full">
+              <ModalHeader className="flex flex-col gap-1 justify-center items-center text-2xl w-full my-4">
                 Contact us
               </ModalHeader>
               <ModalBody>

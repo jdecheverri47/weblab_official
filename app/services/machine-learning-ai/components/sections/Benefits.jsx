@@ -12,7 +12,18 @@ function Benefits() {
             Benefits
           </h3>
         </div>
-        <div className="grid grid-rows-3 gap-6 items-center justify-center mt-5"></div>
+        <div className="flex gap-[3rem] items-center justify-center mt-5">
+          <div className="w-[400px] h-[600px] border-1 border-gray-200 rounded-[12px]">
+
+          </div>
+          <div className="w-[400px] h-[600px] border-1 border-gray-200 rounded-[12px]">
+
+          </div>
+          <div className="w-[400px] h-[600px] border-1 border-gray-200 rounded-[12px]">
+
+          </div>
+
+        </div>
       </article>
     </section>
   );

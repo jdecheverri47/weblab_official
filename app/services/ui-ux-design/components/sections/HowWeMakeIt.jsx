@@ -20,16 +20,20 @@ function HowWeMakeIt() {
           <div className="w-full flex items-center justify-center gap-[4rem]">
             <div className="w-[550px] h-[350px]">
               <div className="flex flex-col items-start gap-3">
-                <h2 className="text-3xl">User Experience</h2>
+                <h2 className="text-3xl font-medium">User Experience</h2>
                 <p>
                   WebLabs&rsquo;s design principles focus on the user, maintain
                   simplicity, ensure speed and efficiency, promote transparency,
                   and emphasize continuous improvement, setting a high standard
-                  in the tech industry. These principles not only drive the
-                  design of its products but also resonate with a global
-                  audience, making technology more accessible and enjoyable to
-                  use. As we continue to evolve, these design tenets will
-                  undoubtedly continue to shape the future of digital design.
+                  in the tech industry.
+                </p>
+                <p>
+                  {" "}
+                  These principles not only drive the design of its products but
+                  also resonate with a global audience, making technology more
+                  accessible and enjoyable to use. As we continue to evolve,
+                  these design tenets will undoubtedly continue to shape the
+                  future of digital design.
                 </p>
               </div>
             </div>
@@ -44,18 +48,18 @@ function HowWeMakeIt() {
           <div className="w-full flex flex-row-reverse items-center justify-center gap-[4rem]">
             <div className="w-[550px] h-[350px]">
               <div className="flex flex-col items-start gap-3">
-                <h2 className="text-3xl">User Interface Design</h2>
+                <h2 className="text-3xl font-medium">User Interface Design</h2>
                 <p>
-                  Unlock the Power of Innovation with Big Tech&rsquo;s Secrets. At
-                  WebLabs, we&rsquo;ve studied industry giants like Google, Apple, and
-                  Meta to create unique internal guidelines for software
-                  development. These principles allow us to apply top industry
-                  insights, ensuring our products are high-quality and infused
-                  with the advanced strategies of global tech leaders.
+                  Unlock the Power of Innovation with Big Tech&rsquo;s Secrets.
+                  At WebLabs, we&rsquo;ve studied industry giants like Google,
+                  Apple, and Meta to create unique internal guidelines for
+                  software development. These principles allow us to apply top
+                  industry insights, ensuring our products are high-quality and
+                  infused with the advanced strategies of global tech leaders.
                 </p>
               </div>
             </div>
-            <div className="w-[550px] h-[350px] bg-gray-100 rounded-[30px] overflow-hidden border-1 border-gray-200">
+            <div className="w-[550px] h-[350px] bg-gray-100 rounded-[20px] overflow-hidden border-1 border-gray-200">
               <Image
                 alt="big tech logos"
                 src={retro}
@@ -66,7 +70,7 @@ function HowWeMakeIt() {
           <div className="w-full flex items-center justify-center gap-[4rem]">
             <div className="w-[550px] h-[350px]">
               <div className="flex flex-col items-start gap-3 ">
-                <h2 className="text-3xl"> High-fidelity Prototypes</h2>
+                <h2 className="text-3xl font-medium"> High-fidelity Prototypes</h2>
                 <p>
                   Experience Universal Compatibility with WebLabs&apos; Fully
                   Responsive Designs. Our web solutions seamlessly adapt to any
@@ -79,7 +83,7 @@ function HowWeMakeIt() {
                 </p>
               </div>
             </div>
-            <div className="w-[550px] h-[350px] rounded-[30px] overflow-hidden border-1 border-gray-200">
+            <div className="w-[550px] h-[350px] rounded-[20px] overflow-hidden border-1 border-gray-200">
               <Image
                 alt="big tech logos"
                 src={prototype}

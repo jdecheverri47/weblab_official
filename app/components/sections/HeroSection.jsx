@@ -97,18 +97,18 @@ function HeroSection() {
       <Background />
       <div className="flex flex-col justify-center items-center w-fit lg:flex-row">
         <div className="title_container py-2 flex w-fit">
-          <h1 className="title hero prueba text-7xl font-medium tracking-tight text-indigo-950">
+          <h1 className="title hero prueba text-7xl font-medium tracking-tight ">
             Designing the
           </h1>
         </div>
         <div className="title_container lg:py-2 flex md:ml-5">
-          <h1 className="title hero prueba text-7xl font-medium tracking-tight text-indigo-950">
+          <h1 className="title hero prueba text-7xl font-medium tracking-tight ">
             Future
           </h1>
         </div>
       </div>
       <div className="title_container">
-        <h1 className="title hero text-7xl font-medium tracking-tight px-2 text-indigo-950">
+        <h1 className="title hero text-7xl font-medium tracking-tight px-2 ">
           of the Web
         </h1>
       </div>
@@ -120,7 +120,7 @@ function HeroSection() {
       </div>
 
       <div className="button_container flex gap-8 opacity-0">
-        <Link href="#Services" className="hover:opacity-60 transition-all duration-300 ease-in-out">
+        <Link href="#Benefits" className="hover:opacity-60 transition-all duration-300 ease-in-out">
           <span className="px-6 lg:text-[16px] lg:h-[40px] relative z-30 flex items-center justify-center">
             See perks
             <ChevronRightIcon className="text-indigo-950 ml-4 w-6 h-6" />

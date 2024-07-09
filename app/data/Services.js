@@ -14,6 +14,7 @@ export const Services = [
     title: "UI/UX Design",
     description:
       "Our team creates visually captivating interfaces tailored to your brand, ensuring intuitive navigation and an unforgettable journey.",
+    link: "/services/ui-ux-design",
   },
   {
     id: 2,
@@ -21,21 +22,24 @@ export const Services = [
     svg: CursorArrowRaysIcon,
     description:
       "We focus on combining striking aesthetics with advanced programming, ensuring your site also drives tangible results, such as leads, clients, and revenue.",
-  },
+    link: "/services/web-development",
+    },
   {
     id: 3,
     svg: DevicePhoneMobileIcon,
     title: "Mobile Development",
     description:
       "Crafting innovative mobile solutions to elevate your business. From concept to launch, we ensure seamless development and stunning design for engaging user experiences.",
-  },
+    link: "/services/mobile-development",
+    },
   {
     id: 4,
     svg: SparklesIcon,
     title: "AI & Machine Learning",
     description:
       "From generative AI and language models to image generation and computer vision, we pioneer the integration of cutting-edge technologies.",
-  },
+    link: "/services/machine-learning-ai",
+    },
   // {
   //   id: 5,
   //   svg: CloudIcon,
