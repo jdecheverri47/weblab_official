@@ -160,8 +160,8 @@ export default function ContactModal({
                         size="md"
                         radius="full"
                         isLoading={loading}
-                        className="bg-indigo-500 text-md w-[7rem]"
-                        endContent={<PaperPlane />}
+                        className="bg-gradient-to-r from-fuchsia-400 to-sky-400 text-md w-[7rem] group"
+                        endContent={<PaperPlane className="group-hover:translate-x-1 transition-all ease-in-out duration-300" />}
                         spinner={
                           <svg
                             className="animate-spin h-5 w-5 text-current"

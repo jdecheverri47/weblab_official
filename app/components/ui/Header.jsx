@@ -146,7 +146,7 @@ function Header() {
         </div>
         <div>
           <ContactModal
-            className="bg-indigo-950 text-white text-[16px] font-medium pl-4 pr-2"
+            className="bg-black text-white text-[14px] font-medium pl-4 pr-2"
             size="md"
             radius="full"
             buttonText="Contact us"

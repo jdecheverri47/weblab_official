@@ -127,11 +127,11 @@ function HeroSection() {
           </span>
         </Link>
         <ContactModal
-          className="bg-indigo-500  text-white lg:text-[16px] lg:h-[40px] pl-4 pr-2"
+          className="bg-gradient-to-r from-fuchsia-400 to-sky-400  text-white lg:text-[16px] lg:h-[40px] pl-4 pr-3 group hover:scale-105 "
           size="md"
           radius="full"
           buttonText="Contact us"
-          endcontent={<ChevronRightIcon className="text-white w-6 h-6" />}
+          endcontent={<ChevronRightIcon className="text-white w-6 h-6 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />}
         />
       </div>
 
